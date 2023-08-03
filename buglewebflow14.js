@@ -19,6 +19,7 @@ $(document).ready(function () {
       $(".management_left").removeClass("hide_block");
       $(".management_right").addClass("hide_block");
       $(".management_right").removeClass("mobile_show_block");
+
       $(".manage_arrow_button").click(function (e) {
         console.log("Button cllicked");
         if (mobile_content1count === 6) {
@@ -136,8 +137,15 @@ $(document).ready(function () {
         console.log(content1count);
         if (content1count === 3) {
           content1count = 1;
+          mobile_content1count = 6;
         } else {
           content1count++;
+          if (content1count == 2) {
+            mobile_content1count = 4;
+          }
+          if (content1count == 2) {
+            mobile_content1count = 6;
+          }
         }
 
         if (content1count === 1) {
