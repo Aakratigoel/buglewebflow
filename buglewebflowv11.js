@@ -150,11 +150,14 @@ $(document).ready(function () {
           $(".management_right").removeClass("mobile_show_block");
           $(".management_right").removeClass("show_right_block");
         } else if (mobile_content1count == 2) {
+          console.log("content count", content1count);
+          console.log("mobile content count ", mobile_content1count);
           managementSection();
           $(".management_left").addClass("hide_block");
           $(".management_left").removeClass("mobile_show_block");
           $(".management_left").removeClass("show_left_block");
           $(".management_right").addClass("mobile_show_block");
+          $(".management_right").removeClass("show_right_block");
         }
       } else if (content1count == 2) {
         console.log("content count", content1count);
