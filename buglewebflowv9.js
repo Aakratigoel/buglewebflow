@@ -145,6 +145,7 @@ $(document).ready(function () {
         if (mobile_content1count === 1) {
           managementSection();
           $(".management_left").addClass("mobile_show_block");
+          $(".management_left").removeClass("show_left_block");
           $(".management_right").addClass("hide_block");
           $(".management_right").removeClass("mobile_show_block");
           $(".management_right").removeClass("show_right_block");
