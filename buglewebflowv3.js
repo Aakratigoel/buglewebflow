@@ -102,6 +102,8 @@ $(document).ready(function () {
   const organiseContentDisplay = () => {
     if (content1count === 1) {
       managementSection();
+      $(".management_left").addClass("show_left_block");
+      $(".management_right").addClass("show_right_block");
     }
 
     if (content1count === 2) {
