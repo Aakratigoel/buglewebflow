@@ -15,6 +15,10 @@ $(document).ready(function () {
     console.log("Entered mobile responsive");
     if (screen.width <= 992) {
       console.log("screen widtg condition true");
+      $(".management_left").addClass("mobile_show_block");
+      $(".management_left").removeClass("hide_block");
+      $(".management_right").addClass("hide_block");
+      $(".management_right").removeClass("mobile_show_block");
       $(".manage_arrow_button").click(function (e) {
         console.log("Button cllicked");
         if (mobile_content1count === 6) {
