@@ -14,6 +14,7 @@ $(document).ready(function () {
   const mobileResponsive = () => {
     console.log("Entered mobile responsive");
     if (screen.width <= 992) {
+      console.log("screen widtg condition true");
       $(".manage_arrow_button").click(function (e) {
         console.log("Button cllicked");
         if (mobile_content1count === 6) {
