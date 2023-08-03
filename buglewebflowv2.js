@@ -168,6 +168,17 @@ $(document).ready(function () {
           $(".waiver_right").addClass("mobile_show_block");
         }
       }
+
+      $(".manage_arrow_button").click(function (e) {
+        if (content1count === 3 && mobile_content1count === 6) {
+          content1count = 1;
+          mobile_content1count = 1;
+        } else {
+          content1count++;
+          mobile_content1count++;
+        }
+        organiseContentDisplay();
+      });
     } else {
       organiseContentDisplay();
     }
