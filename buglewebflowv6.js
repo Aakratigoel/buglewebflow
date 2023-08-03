@@ -140,7 +140,9 @@ $(document).ready(function () {
     if (screen.width <= 992) {
       console.log("For smaller screen");
       if (content1count === 1) {
-        if (mobile_content1count == 1) {
+        console.log("content count", content1count);
+        console.log("mobile content count ", mobile_content1count);
+        if (mobile_content1count === 1) {
           managementSection();
           $(".management_left").addClass("mobile_show_block");
           $(".management_right").addClass("hide_block");
@@ -150,6 +152,8 @@ $(document).ready(function () {
           $(".management_right").addClass("mobile_show_block");
         }
       } else if (content1count == 2) {
+        console.log("content count", content1count);
+        console.log("mobile content count ", mobile_content1count);
         if (mobile_content1count == 3) {
           registrationSection();
           $(".registration_left").addClass("mobile_show_block");
@@ -160,6 +164,8 @@ $(document).ready(function () {
           $(".registration_right").addClass("mobile_show_block");
         }
       } else if (content1count == 3) {
+        console.log("content count", content1count);
+        console.log("mobile content count ", mobile_content1count);
         if (mobile_content1count == 5) {
           waiverSection();
           $(".waiver_left").addClass("mobile_show_block");
