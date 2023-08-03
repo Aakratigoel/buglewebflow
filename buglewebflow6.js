@@ -17,6 +17,7 @@ $(document).ready(function () {
         console.log("Button cllicked");
         if (mobile_content1count === 6) {
           mobile_content1count = 1;
+          content1count = 1;
         } else {
           mobile_content1count++;
         }
