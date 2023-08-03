@@ -20,6 +20,9 @@ $(document).ready(function () {
           content1count = 1;
         } else {
           mobile_content1count++;
+          if (mobile_content1count % 2 == 0) {
+            content1count++;
+          }
         }
 
         console.log("mobile content count", mobile_content1count);
