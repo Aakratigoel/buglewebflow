@@ -146,9 +146,11 @@ $(document).ready(function () {
           managementSection();
           $(".management_left").addClass("mobile_show_block");
           $(".management_right").addClass("hide_block");
+          $(".management_right").removeClass("mobile_show_block");
         } else if (mobile_content1count == 2) {
           managementSection();
           $(".management_left").addClass("hide_block");
+          $(".management_left").removeClass("mobile_show_block");
           $(".management_right").addClass("mobile_show_block");
         }
       } else if (content1count == 2) {
