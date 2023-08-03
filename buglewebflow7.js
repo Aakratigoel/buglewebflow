@@ -23,6 +23,7 @@ $(document).ready(function () {
         }
 
         console.log("mobile content count", mobile_content1count);
+        console.log("content count", content1count);
 
         if (mobile_content1count === 1) {
           content1count = 1;
