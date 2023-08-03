@@ -14,11 +14,14 @@ $(document).ready(function () {
   const mobileResponsive = () => {
     if (screen.width <= 992) {
       $(".manage_arrow_button").click(function (e) {
+        console.log("Button cllicked");
         if (mobile_content1count === 6) {
           mobile_content1count = 1;
         } else {
           mobile_content1count++;
         }
+
+        console.log("mobile content count", mobile_content1count);
 
         if (mobile_content1count === 1) {
           content1count = 1;
