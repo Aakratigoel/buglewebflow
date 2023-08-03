@@ -126,6 +126,49 @@ $(document).ready(function () {
           $(".waiver_right").addClass("mobile_show_block");
         }
       });
+    } else {
+      $(".manage_arrow_button").click(function (e) {
+        console.log(content1count);
+        if (content1count === 3) {
+          content1count = 1;
+        } else {
+          content1count++;
+        }
+
+        if (content1count === 1) {
+          $(".tablink").first().addClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("show_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+        }
+
+        if (content1count === 2) {
+          $(".tablink:nth-of-type(2)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("hide_block");
+          $(".management").removeClass("show_block");
+          $(".registration").addClass("show_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+        }
+
+        if (content1count === 3) {
+          $(".tablink:nth-of-type(3)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".management").removeClass("show_block");
+          $(".management").addClass("hide_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").removeClass("hide_block");
+          $(".waiver").addClass("show_block");
+        }
+      });
     }
   };
 
@@ -134,48 +177,48 @@ $(document).ready(function () {
     mobileResponsive();
   });
 
-  $(".manage_arrow_button").click(function (e) {
-    console.log(content1count);
-    if (content1count === 3) {
-      content1count = 1;
-    } else {
-      content1count++;
-    }
+  // $(".manage_arrow_button").click(function (e) {
+  //   console.log(content1count);
+  //   if (content1count === 3) {
+  //     content1count = 1;
+  //   } else {
+  //     content1count++;
+  //   }
 
-    if (content1count === 1) {
-      $(".tablink").first().addClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management").addClass("show_block");
-      $(".registration").removeClass("show_block");
-      $(".registration").addClass("hide_block");
-      $(".waiver").addClass("hide_block");
-      $(".waiver").removeClass("show_block");
-    }
+  //   if (content1count === 1) {
+  //     $(".tablink").first().addClass("active-link");
+  //     $(".tablink:nth-of-type(2)").removeClass("active-link");
+  //     $(".tablink:nth-of-type(3)").removeClass("active-link");
+  //     $(".management").addClass("show_block");
+  //     $(".registration").removeClass("show_block");
+  //     $(".registration").addClass("hide_block");
+  //     $(".waiver").addClass("hide_block");
+  //     $(".waiver").removeClass("show_block");
+  //   }
 
-    if (content1count === 2) {
-      $(".tablink:nth-of-type(2)").addClass("active-link");
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management").addClass("hide_block");
-      $(".management").removeClass("show_block");
-      $(".registration").addClass("show_block");
-      $(".waiver").addClass("hide_block");
-      $(".waiver").removeClass("show_block");
-    }
+  //   if (content1count === 2) {
+  //     $(".tablink:nth-of-type(2)").addClass("active-link");
+  //     $(".tablink").first().removeClass("active-link");
+  //     $(".tablink:nth-of-type(3)").removeClass("active-link");
+  //     $(".management").addClass("hide_block");
+  //     $(".management").removeClass("show_block");
+  //     $(".registration").addClass("show_block");
+  //     $(".waiver").addClass("hide_block");
+  //     $(".waiver").removeClass("show_block");
+  //   }
 
-    if (content1count === 3) {
-      $(".tablink:nth-of-type(3)").addClass("active-link");
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".management").removeClass("show_block");
-      $(".management").addClass("hide_block");
-      $(".registration").removeClass("show_block");
-      $(".registration").addClass("hide_block");
-      $(".waiver").removeClass("hide_block");
-      $(".waiver").addClass("show_block");
-    }
-  });
+  //   if (content1count === 3) {
+  //     $(".tablink:nth-of-type(3)").addClass("active-link");
+  //     $(".tablink").first().removeClass("active-link");
+  //     $(".tablink:nth-of-type(2)").removeClass("active-link");
+  //     $(".management").removeClass("show_block");
+  //     $(".management").addClass("hide_block");
+  //     $(".registration").removeClass("show_block");
+  //     $(".registration").addClass("hide_block");
+  //     $(".waiver").removeClass("hide_block");
+  //     $(".waiver").addClass("show_block");
+  //   }
+  // });
 
   $(".control_arrow").click(function (e) {
     if (content2count === 3) {
