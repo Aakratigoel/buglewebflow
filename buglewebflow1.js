@@ -12,6 +12,7 @@ $(document).ready(function () {
   $(".tab3link").first().addClass("tab3-active-link");
 
   const mobileResponsive = () => {
+    console.log("Entered mobile responsive");
     if (screen.width <= 992) {
       $(".manage_arrow_button").click(function (e) {
         console.log("Button cllicked");
@@ -20,7 +21,7 @@ $(document).ready(function () {
           content1count = 1;
         } else {
           mobile_content1count++;
-          if (mobile_content1count % 2 != 0) {
+          if (mobile_content1count % 2 !== 0) {
             content1count++;
           }
         }
@@ -172,6 +173,7 @@ $(document).ready(function () {
   };
 
   mobileResponsive();
+
   $(window).resize(function () {
     mobileResponsive();
   });
