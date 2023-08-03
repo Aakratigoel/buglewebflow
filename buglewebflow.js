@@ -3,9 +3,133 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
+  let mobile_content1count = 1;
+  let mobile_content2count = 1;
+  let mobile_content3count = 1;
+
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("tab2-active-link");
   $(".tab3link").first().addClass("tab3-active-link");
+
+  const mobileResponsive = () => {
+    if (screen.width <= 992) {
+      $(".manage_arrow_button").click(function (e) {
+        if (mobile_content1count === 6) {
+          mobile_content1count = 1;
+        } else {
+          mobile_content1count++;
+        }
+
+        if (mobile_content1count === 1) {
+          content1count = 1;
+          $(".tablink").first().addClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("show_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+
+          $(".management_left").addClass("mobile_show_block");
+          $(".management_left").removeClass("hide_block");
+          $(".management_right").addClass("hide_block");
+          $(".management_right").removeClass("mobile_show_block");
+        }
+
+        if (mobile_content1count === 2) {
+          content1count = 1;
+          $(".tablink").first().addClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("show_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+
+          $(".management_left").removeClass("mobile_show_block");
+          $(".management_left").addClass("hide_block");
+          $(".management_right").removeClass("hide_block");
+          $(".management_right").addClass("mobile_show_block");
+        }
+
+        if (mobile_content1count === 3) {
+          content1count = 2;
+          $(".tablink:nth-of-type(2)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("hide_block");
+          $(".management").removeClass("show_block");
+          $(".registration").addClass("show_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+
+          $(".registration_left").addClass("mobile_show_block");
+          $(".registration_left").removeClass("hide_block");
+          $(".registration_right").addClass("hide_block");
+          $(".registration_right").removeClass("mobile_show_block");
+        }
+
+        if (mobile_content1count === 4) {
+          content1count = 2;
+          $(".tablink:nth-of-type(2)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(3)").removeClass("active-link");
+          $(".management").addClass("hide_block");
+          $(".management").removeClass("show_block");
+          $(".registration").addClass("show_block");
+          $(".waiver").addClass("hide_block");
+          $(".waiver").removeClass("show_block");
+
+          $(".registration_left").removeClass("mobile_show_block");
+          $(".registration_left").addClass("hide_block");
+          $(".registration_right").removeClass("hide_block");
+          $(".registration_right").addClass("mobile_show_block");
+        }
+
+        if (mobile_content1count === 5) {
+          content1count = 3;
+          $(".tablink:nth-of-type(3)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".management").removeClass("show_block");
+          $(".management").addClass("hide_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").removeClass("hide_block");
+          $(".waiver").addClass("show_block");
+
+          $(".waiver_left").addClass("mobile_show_block");
+          $(".waiver_left").removeClass("hide_block");
+          $(".waiver_right").addClass("hide_block");
+          $(".waiver_right").removeClass("mobile_show_block");
+        }
+        if (mobile_content1count === 6) {
+          content1count = 3;
+          $(".tablink:nth-of-type(3)").addClass("active-link");
+          $(".tablink").first().removeClass("active-link");
+          $(".tablink:nth-of-type(2)").removeClass("active-link");
+          $(".management").removeClass("show_block");
+          $(".management").addClass("hide_block");
+          $(".registration").removeClass("show_block");
+          $(".registration").addClass("hide_block");
+          $(".waiver").removeClass("hide_block");
+          $(".waiver").addClass("show_block");
+
+          $(".waiver_left").removeClass("mobile_show_block");
+          $(".waiver_left").addClass("hide_block");
+          $(".waiver_right").removeClass("hide_block");
+          $(".waiver_right").addClass("mobile_show_block");
+        }
+      });
+    }
+  };
+
+  mobileResponsive();
+  $(window).resize(function () {
+    mobileResponsive();
+  });
 
   $(".manage_arrow_button").click(function (e) {
     console.log(content1count);
