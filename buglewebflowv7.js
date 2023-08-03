@@ -192,6 +192,14 @@ $(document).ready(function () {
       organiseContentDisplay();
       $(".management_left").addClass("show_left_block");
       $(".management_right").addClass("show_right_block");
+      $(".manage_arrow_button").click(function (e) {
+        if (content1count === 3) {
+          content1count = 1;
+        } else {
+          content1count++;
+        }
+        organiseContentDisplay();
+      });
     }
   };
 
@@ -199,15 +207,6 @@ $(document).ready(function () {
 
   $(window).resize(function () {
     mobileResponsive();
-  });
-
-  $(".manage_arrow_button").click(function (e) {
-    if (content1count === 3) {
-      content1count = 1;
-    } else {
-      content1count++;
-    }
-    organiseContentDisplay();
   });
 
   $(".control_arrow").click(function (e) {
