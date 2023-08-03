@@ -140,11 +140,11 @@ $(document).ready(function () {
           mobile_content1count = 6;
         } else {
           content1count++;
-          if (content1count == 2) {
+          if (content1count === 2) {
             mobile_content1count = 4;
           }
-          if (content1count == 2) {
-            mobile_content1count = 6;
+          if (content1count === 1) {
+            mobile_content1count = 2;
           }
         }
 
