@@ -29,7 +29,6 @@ $(document).ready(function () {
         console.log("content count", content1count);
 
         if (mobile_content1count === 1) {
-          content1count = 1;
           $(".tablink").first().addClass("active-link");
           $(".tablink:nth-of-type(2)").removeClass("active-link");
           $(".tablink:nth-of-type(3)").removeClass("active-link");
@@ -46,7 +45,6 @@ $(document).ready(function () {
         }
 
         if (mobile_content1count === 2) {
-          content1count = 1;
           $(".tablink").first().addClass("active-link");
           $(".tablink:nth-of-type(2)").removeClass("active-link");
           $(".tablink:nth-of-type(3)").removeClass("active-link");
@@ -63,7 +61,6 @@ $(document).ready(function () {
         }
 
         if (mobile_content1count === 3) {
-          content1count = 2;
           $(".tablink:nth-of-type(2)").addClass("active-link");
           $(".tablink").first().removeClass("active-link");
           $(".tablink:nth-of-type(3)").removeClass("active-link");
@@ -80,7 +77,6 @@ $(document).ready(function () {
         }
 
         if (mobile_content1count === 4) {
-          content1count = 2;
           $(".tablink:nth-of-type(2)").addClass("active-link");
           $(".tablink").first().removeClass("active-link");
           $(".tablink:nth-of-type(3)").removeClass("active-link");
@@ -97,7 +93,6 @@ $(document).ready(function () {
         }
 
         if (mobile_content1count === 5) {
-          content1count = 3;
           $(".tablink:nth-of-type(3)").addClass("active-link");
           $(".tablink").first().removeClass("active-link");
           $(".tablink:nth-of-type(2)").removeClass("active-link");
@@ -114,7 +109,6 @@ $(document).ready(function () {
           $(".waiver_right").removeClass("mobile_show_block");
         }
         if (mobile_content1count === 6) {
-          content1count = 3;
           $(".tablink:nth-of-type(3)").addClass("active-link");
           $(".tablink").first().removeClass("active-link");
           $(".tablink:nth-of-type(2)").removeClass("active-link");
