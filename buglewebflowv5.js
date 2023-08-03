@@ -136,7 +136,9 @@ $(document).ready(function () {
     }
   };
   const mobileResponsive = () => {
+    console.log("Entered mobile responsiveness");
     if (screen.width <= 992) {
+      console.log("For smaller screen");
       if (content1count === 1) {
         if (mobile_content1count == 1) {
           managementSection();
@@ -180,6 +182,7 @@ $(document).ready(function () {
         organiseContentDisplay();
       });
     } else {
+      console.log("For larger screens");
       organiseContentDisplay();
       $(".management_left").addClass("show_left_block");
       $(".management_right").addClass("show_right_block");
