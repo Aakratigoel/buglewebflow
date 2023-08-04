@@ -273,7 +273,7 @@ if (screen.width <= 992) {
       $(".registration_2").removeClass("show_mobile_block");
       $(".waiver_1").addClass("hide_block");
       $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").addClas("hide_block");
+      $(".waiver_2").addClass("hide_block");
       $(".waiver_2").removeClass("show_mobile_block");
     }
 
