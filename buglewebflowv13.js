@@ -251,6 +251,7 @@ $(document).ready(function () {
 });
 
 if (screen.width <= 992) {
+  console.log("entered width");
   let mobile_content1count = 1;
   let mobile_content2count = 1;
   let mobile_content3count = 1;
@@ -259,6 +260,7 @@ if (screen.width <= 992) {
     $(".tablink").removeClass("active-link");
     $(this).addClass("active-link");
     const text = $(this).text();
+    console.log("text", text);
     if (text.indexOf("Event Registration") >= 0) {
       mobile_content1count = 3;
       $(".management_1").addClass("hide_block");
