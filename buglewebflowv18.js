@@ -440,6 +440,7 @@ if (screen.width <= 992) {
   };
 
   $(".mobile_manage_arrow").click(function (e) {
+    console.log("Mobile content", mobile_content1count);
     if (mobile_content1count === 6) {
       mobile_content1count = 1;
     } else {
