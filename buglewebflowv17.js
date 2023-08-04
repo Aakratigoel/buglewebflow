@@ -294,7 +294,7 @@ if (screen.width <= 992) {
     }
 
     if (text.indexOf("Digital Waivers") >= 0) {
-      content1count = 3;
+      mobile_content1count = 5;
       $(".management_1").removeClass("show_mobile_block");
       $(".management_1").addClass("hide_block");
       $(".management_2").removeClass("show_mobile_block");
@@ -308,5 +308,143 @@ if (screen.width <= 992) {
       $(".waiver_2").addClass("hide_block");
       $(".waiver_2").removeClass("show_mobile_block");
     }
+  });
+
+  const management_1_section = () => {
+    $(".tablink").first().addClass("active-link");
+    $(".tablink:nth-of-type(2)").removeClass("active-link");
+    $(".tablink:nth-of-type(3)").removeClass("active-link");
+    $(".management_1").removeClass("hide_block");
+    $(".management_1").addClass("show_mobile_block");
+    $(".management_2").addClass("hide_block");
+    $(".management_2").removeClass("show_mobile_block");
+    $(".registration_1").removeClass("show_mobile_block");
+    $(".registration_1").addClass("hide_block");
+    $(".registration_2").removeClass("show_mobile_block");
+    $(".registration_2").addClass("hide_block");
+    $(".waiver_1").addClass("hide_block");
+    $(".waiver_1").removeClass("show_mobile_block");
+    $(".waiver_2").addClass("hide_block");
+    $(".waiver_2").removeClass("show_mobile_block");
+  };
+
+  const management_2_section = () => {
+    $(".tablink").first().addClass("active-link");
+    $(".tablink:nth-of-type(2)").removeClass("active-link");
+    $(".tablink:nth-of-type(3)").removeClass("active-link");
+    $(".management_1").addClass("hide_block");
+    $(".management_1").removeClass("show_mobile_block");
+    $(".management_2").removeClass("hide_block");
+    $(".management_2").addClass("show_mobile_block");
+    $(".registration_1").removeClass("show_mobile_block");
+    $(".registration_1").addClass("hide_block");
+    $(".registration_2").removeClass("show_mobile_block");
+    $(".registration_2").addClass("hide_block");
+    $(".waiver_1").addClass("hide_block");
+    $(".waiver_1").removeClass("show_mobile_block");
+    $(".waiver_2").addClass("hide_block");
+    $(".waiver_2").removeClass("show_mobile_block");
+  };
+
+  const registration_1_section = () => {
+    $(".tablink").first().removeClass("active-link");
+    $(".tablink:nth-of-type(2)").addClass("active-link");
+    $(".tablink:nth-of-type(3)").removeClass("active-link");
+    $(".management_1").addClass("hide_block");
+    $(".management_1").removeClass("show_mobile_block");
+    $(".management_2").addClass("hide_block");
+    $(".management_2").removeClass("show_mobile_block");
+    $(".registration_1").addClass("show_mobile_block");
+    $(".registration_1").removeClass("hide_block");
+    $(".registration_2").removeClass("show_mobile_block");
+    $(".registration_2").addClass("hide_block");
+    $(".waiver_1").addClass("hide_block");
+    $(".waiver_1").removeClass("show_mobile_block");
+    $(".waiver_2").addClass("hide_block");
+    $(".waiver_2").removeClass("show_mobile_block");
+  };
+
+  const registration_2_section = () => {
+    $(".tablink").first().removeClass("active-link");
+    $(".tablink:nth-of-type(2)").addClass("active-link");
+    $(".tablink:nth-of-type(3)").removeClass("active-link");
+    $(".management_1").addClass("hide_block");
+    $(".management_1").removeClass("show_mobile_block");
+    $(".management_2").addClass("hide_block");
+    $(".management_2").removeClass("show_mobile_block");
+    $(".registration_1").removeClass("show_mobile_block");
+    $(".registration_1").addClass("hide_block");
+    $(".registration_2").addClass("show_mobile_block");
+    $(".registration_2").removeClass("hide_block");
+    $(".waiver_1").addClass("hide_block");
+    $(".waiver_1").removeClass("show_mobile_block");
+    $(".waiver_2").addClass("hide_block");
+    $(".waiver_2").removeClass("show_mobile_block");
+  };
+
+  const waiver_1_section = () => {
+    $(".tablink").first().removeClass("active-link");
+    $(".tablink:nth-of-type(2)").removeClass("active-link");
+    $(".tablink:nth-of-type(3)").addClass("active-link");
+    $(".management_1").addClass("hide_block");
+    $(".management_1").removeClass("show_mobile_block");
+    $(".management_2").addClass("hide_block");
+    $(".management_2").removeClass("show_mobile_block");
+    $(".registration_1").removeClass("show_mobile_block");
+    $(".registration_1").addClass("hide_block");
+    $(".registration_2").removeClass("show_mobile_block");
+    $(".registration_2").addClass("hide_block");
+    $(".waiver_1").removeClass("hide_block");
+    $(".waiver_1").addClass("show_mobile_block");
+    $(".waiver_2").addClass("hide_block");
+    $(".waiver_2").removeClass("show_mobile_block");
+  };
+
+  const waiver_2_section = () => {
+    $(".tablink").first().removeClass("active-link");
+    $(".tablink:nth-of-type(2)").removeClass("active-link");
+    $(".tablink:nth-of-type(3)").addClass("active-link");
+    $(".management_1").addClass("hide_block");
+    $(".management_1").removeClass("show_mobile_block");
+    $(".management_2").addClass("hide_block");
+    $(".management_2").removeClass("show_mobile_block");
+    $(".registration_1").removeClass("show_mobile_block");
+    $(".registration_1").addClass("hide_block");
+    $(".registration_2").removeClass("show_mobile_block");
+    $(".registration_2").addClass("hide_block");
+    $(".waiver_1").addClass("hide_block");
+    $(".waiver_1").removeClass("show_mobile_block");
+    $(".waiver_2").removeClass("hide_block");
+    $(".waiver_2").addClass("show_mobile_block");
+  };
+
+  const mobileOrganiseContentDisplay = () => {
+    if (mobile_content1count === 1) {
+      management_1_section();
+    }
+    if (mobile_content1count === 2) {
+      management_2_section();
+    }
+    if (mobile_content1count === 3) {
+      registration_1_section();
+    }
+    if (mobile_content1count === 4) {
+      registration_2_section();
+    }
+    if (mobile_content1count === 5) {
+      waiver_1_section();
+    }
+    if (mobile_content1count === 6) {
+      waiver_2_section();
+    }
+  };
+
+  $(".mobile_manage_arrow").click(function (e) {
+    if (mobile_content1count === 6) {
+      mobile_content1count = 1;
+    } else {
+      mobile_content1count++;
+    }
+    mobileOrganiseContentDisplay();
   });
 }
