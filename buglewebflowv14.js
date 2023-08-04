@@ -264,49 +264,49 @@ if (screen.width <= 992) {
     if (text.indexOf("Event Registration") >= 0) {
       mobile_content1count = 3;
       $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_block");
+      $(".management_1").removeClass("show_mobile_block");
       $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_block");
-      $(".registration_1").addClass("show_block");
+      $(".management_2").removeClass("show_mobile_block");
+      $(".registration_1").addClass("show_mobile_block");
       $(".registration_1").removeClass("hide_block");
       $(".registration_2").addClass("hide_block");
-      $(".registration_2").removeClass("show_block");
+      $(".registration_2").removeClass("show_mobile_block");
       $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_block");
+      $(".waiver_1").removeClass("show_mobile_block");
       $(".waiver_2").addClas("hide_block");
-      $(".waiver_2").removeClass("show_block");
+      $(".waiver_2").removeClass("show_mobile_block");
     }
 
     if (text.indexOf("Enterprise Account") >= 0) {
       mobile_content1count = 1;
       $(".management_1").removeClass("hide_block");
-      $(".management_1").addClass("show_block");
+      $(".management_1").addClass("show_mobile_block");
       $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_block");
-      $(".registration_1").removeClass("show_block");
+      $(".management_2").removeClass("show_mobile_block");
+      $(".registration_1").removeClass("show_mobile_block");
       $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_block");
+      $(".registration_2").removeClass("show_mobile_block");
       $(".registration_2").addClass("hide_block");
       $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_block");
+      $(".waiver_1").removeClass("show_mobile_block");
       $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_block");
+      $(".waiver_2").removeClass("show_mobile_block");
     }
 
     if (text.indexOf("Digital Waivers") >= 0) {
       content1count = 3;
-      $(".management_1").removeClass("show_block");
+      $(".management_1").removeClass("show_mobile_block");
       $(".management_1").addClass("hide_block");
-      $(".management_2").removeClass("show_block");
+      $(".management_2").removeClass("show_mobile_block");
       $(".management_2").addClass("hide_block");
-      $(".registration_1").removeClass("show_block");
+      $(".registration_1").removeClass("show_mobile_block");
       $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_block");
+      $(".registration_2").removeClass("show_mobile_block");
       $(".registration_2").addClass("hide_block");
       $(".waiver_1").removeClass("hide_block");
-      $(".waiver_1").addClass("show_block");
+      $(".waiver_1").addClass("show_mobile_block");
       $(".waiver_2").removeClass("hide_block");
-      $(".waiver_2").addClass("show_block");
+      $(".waiver_2").addClass("show_mobile_block");
     }
   });
 }
