@@ -305,8 +305,8 @@ if (screen.width <= 992) {
       $(".registration_2").addClass("hide_block");
       $(".waiver_1").removeClass("hide_block");
       $(".waiver_1").addClass("show_mobile_block");
-      $(".waiver_2").removeClass("hide_block");
-      $(".waiver_2").addClass("show_mobile_block");
+      $(".waiver_2").addClass("hide_block");
+      $(".waiver_2").removeClass("show_mobile_block");
     }
   });
 }
