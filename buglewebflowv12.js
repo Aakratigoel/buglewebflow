@@ -3,10 +3,6 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
-  let mobile_content1count = 1;
-  let mobile_content2count = 1;
-  let mobile_content3count = 1;
-
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("tab2-active-link");
   $(".tab3link").first().addClass("tab3-active-link");
@@ -135,86 +131,14 @@ $(document).ready(function () {
       crmSection();
     }
   };
-  const mobileResponsive = () => {
-    console.log("Entered mobile responsiveness");
-    if (screen.width <= 992) {
-      console.log("For smaller screen");
-      if (content1count === 1) {
-        console.log("content count", content1count);
-        console.log("mobile content count ", mobile_content1count);
-        if (mobile_content1count === 1) {
-          managementSection();
-          $(".management_left").addClass("mobile_show_block");
-          $(".management_left").removeClass("show_left_block");
-          $(".management_right").addClass("hide_block");
-          $(".management_right").removeClass("mobile_show_block");
-          $(".management_right").removeClass("show_right_block");
-        } else if (mobile_content1count == 2) {
-          console.log("content count", content1count);
-          console.log("mobile content count ", mobile_content1count);
-          managementSection();
-          $(".management_left").addClass("hide_block");
-          $(".management_left").removeClass("mobile_show_block");
-          $(".management_left").removeClass("show_left_block");
-          $(".management_right").addClass("mobile_show_block");
-          $(".management_right").removeClass("show_right_block");
-        }
-      } else if (content1count == 2) {
-        console.log("content count", content1count);
-        console.log("mobile content count ", mobile_content1count);
-        if (mobile_content1count == 3) {
-          registrationSection();
-          $(".registration_left").addClass("mobile_show_block");
-          $(".registration_right").addClass("hide_block");
-        } else if (mobile_content1count == 4) {
-          registrationSection();
-          $(".registration_left").addClass("hide_block");
-          $(".registration_right").addClass("mobile_show_block");
-        }
-      } else if (content1count == 3) {
-        console.log("content count", content1count);
-        console.log("mobile content count ", mobile_content1count);
-        if (mobile_content1count == 5) {
-          waiverSection();
-          $(".waiver_left").addClass("mobile_show_block");
-          $(".waiver_right").addClass("hide_block");
-        } else if (mobile_content1count == 6) {
-          waiverSection();
-          $(".waiver_left").addClass("hide_block");
-          $(".waiver_right").addClass("mobile_show_block");
-        }
-      }
 
-      $(".manage_arrow_button").click(function (e) {
-        if (content1count === 3 && mobile_content1count === 6) {
-          content1count = 1;
-          mobile_content1count = 1;
-        } else {
-          content1count++;
-          mobile_content1count++;
-        }
-        organiseContentDisplay();
-      });
+  $(".manage_arrow_button").click(function (e) {
+    if (content1count === 3) {
+      content1count = 1;
     } else {
-      console.log("For larger screens");
-      organiseContentDisplay();
-      $(".management_left").addClass("show_left_block");
-      $(".management_right").addClass("show_right_block");
-      $(".manage_arrow_button").click(function (e) {
-        if (content1count === 3) {
-          content1count = 1;
-        } else {
-          content1count++;
-        }
-        organiseContentDisplay();
-      });
+      content1count++;
     }
-  };
-
-  mobileResponsive();
-
-  $(window).resize(function () {
-    mobileResponsive();
+    organiseContentDisplay();
   });
 
   $(".control_arrow").click(function (e) {
@@ -325,3 +249,62 @@ $(document).ready(function () {
     }
   });
 });
+
+if (screen.width <= 992) {
+  let mobile_content1count = 1;
+  let mobile_content2count = 1;
+  let mobile_content3count = 1;
+
+  $(".tablink").click(function (e) {
+    $(".tablink").removeClass("active-link");
+    $(this).addClass("active-link");
+    const text = $(this).text();
+    if (text.indexOf("Event Registration") >= 0) {
+      mobile_content1count = 3;
+      $(".management_1").addClass("hide_block");
+      $(".management_1").removeClass("show_block");
+      $(".management_2").addClass("hide_block");
+      $(".management_2").removeClass("show_block");
+      $(".registration_1").addClass("show_block");
+      $(".registration_1").removeClass("hide_block");
+      $(".registration_2").addClass("hide_block");
+      $(".registration_2").removeClass("show_block");
+      $(".waiver_1").addClass("hide_block");
+      $(".waiver_1").removeClass("show_block");
+      $(".waiver_2").addClas("hide_block");
+      $(".waiver_2").removeClass("show_block");
+    }
+
+    if (text.indexOf("Enterprise Account") >= 0) {
+      mobile_content1count = 1;
+      $(".management_1").removeClass("hide_block");
+      $(".management_1").addClass("show_block");
+      $(".management_2").addClass("hide_block");
+      $(".management_2").removeClass("show_block");
+      $(".registration_1").removeClass("show_block");
+      $(".registration_1").addClass("hide_block");
+      $(".registration_2").removeClass("show_block");
+      $(".registration_2").addClass("hide_block");
+      $(".waiver_1").addClass("hide_block");
+      $(".waiver_1").removeClass("show_block");
+      $(".waiver_2").addClass("hide_block");
+      $(".waiver_2").removeClass("show_block");
+    }
+
+    if (text.indexOf("Digital Waivers") >= 0) {
+      content1count = 3;
+      $(".management_1").removeClass("show_block");
+      $(".management_1").addClass("hide_block");
+      $(".management_2").removeClass("show_block");
+      $(".management_2").addClass("hide_block");
+      $(".registration_1").removeClass("show_block");
+      $(".registration_1").addClass("hide_block");
+      $(".registration_2").removeClass("show_block");
+      $(".registration_2").addClass("hide_block");
+      $(".waiver_1").removeClass("hide_block");
+      $(".waiver_1").addClass("show_block");
+      $(".waiver_2").removeClass("hide_block");
+      $(".waiver_2").addClass("show_block");
+    }
+  });
+}
