@@ -261,7 +261,8 @@ if (screen.width <= 992) {
     $(this).addClass("active-link");
     const text = $(this).text();
     console.log("text", text);
-    if (text.indexOf("Event Registration") >= 0) {
+
+    if (text.indexOf("Event Registration") >= 0 || content1count === 2) {
       mobile_content1count = 3;
       $(".management_1").addClass("hide_block");
       $(".management_1").removeClass("show_mobile_block");
@@ -277,7 +278,7 @@ if (screen.width <= 992) {
       $(".waiver_2").removeClass("show_mobile_block");
     }
 
-    if (text.indexOf("Enterprise Account") >= 0) {
+    if (text.indexOf("Enterprise Account") >= 0 || content1count === 1) {
       mobile_content1count = 1;
       $(".management_1").removeClass("hide_block");
       $(".management_1").addClass("show_mobile_block");
@@ -293,7 +294,7 @@ if (screen.width <= 992) {
       $(".waiver_2").removeClass("show_mobile_block");
     }
 
-    if (text.indexOf("Digital Waivers") >= 0) {
+    if (text.indexOf("Digital Waivers") >= 0 || content1count === 3) {
       mobile_content1count = 5;
       $(".management_1").removeClass("show_mobile_block");
       $(".management_1").addClass("hide_block");
@@ -447,5 +448,39 @@ if (screen.width <= 992) {
       mobile_content1count++;
     }
     mobileOrganiseContentDisplay();
+  });
+
+  $(".tab2link").click(function (e) {
+    $(".tab2link").removeClass("tab2-active-link");
+    $(this).addClass("tab2-active-link");
+    const text2 = $(this).text();
+    if (text2.indexOf("QR") >= 0) {
+      content2count = 1;
+      $(".checkin").addClass("show_block");
+      $(".checkin").removeClass("hide_block");
+      $(".masstext").addClass("hide_block");
+      $(".masstext").removeClass("show_block");
+      $(".hours").addClass("hide_block");
+      $(".hours").removeClass("show_block");
+    }
+
+    if (text2.indexOf("Mass Text") >= 0) {
+      content2count = 2;
+      $(".checkin").removeClass("show_block");
+      $(".checkin").addClass("hide_block");
+      $(".masstext").removeClass("hide_block");
+      $(".masstext").addClass("show_block");
+      $(".hours").addClass("hide_block");
+      $(".hours").removeClass("show_block");
+    }
+    if (text2.indexOf("Track volunteer") >= 0) {
+      content2count = 3;
+      $(".checkin").removeClass("show_block");
+      $(".checkin").addClass("hide_block");
+      $(".masstext").addClass("hide_block");
+      $(".masstext").removeClass("show_block");
+      $(".hours").removeClass("hide_block");
+      $(".hours").addClass("show_block");
+    }
   });
 }
