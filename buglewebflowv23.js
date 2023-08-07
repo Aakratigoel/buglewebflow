@@ -203,7 +203,7 @@ $(document).ready(function () {
     }
   });
 
-  $("control_arrow").click(function (e) {
+  $(".control_arrow").click(function (e) {
     const $organize = $("#control_tab");
     const $active = $organize.find(".active-link");
     const activeIndex = $active.index();
@@ -280,81 +280,42 @@ $(document).ready(function () {
   });
 
   $(".inform_arrow").click(function (e) {
-    const $organize = $("#organize_tab");
+    const $organize = $("#inform_tab");
     const $active = $organize.find(".active-link");
     const activeIndex = $active.index();
-    const $management = $(".management");
-    const $registration = $(".registration");
-    const $waiver = $(".waiver");
-    const $managementChildren = $management.find(
-      ".management_left:visible, .management_right:visible"
+    const $impact = $(".impact");
+    const $crm = $(".crm_content");
+    const $impactChildren = $impact.find(
+      ".impact_left:visible, .impact_right:visible"
     ).length;
-    const $registrationChildren = $registration.find(
-      ".registration_left:visible, .registration_right:visible"
-    ).length;
-    const $waiverChildren = $waiver.find(
-      ".waiver_left:visible, .waiver_right:visible"
-    ).length;
-    console.log($managementChildren);
-    console.log($registrationChildren);
-    console.log($waiverChildren);
+    const $crmChildren = $crm.find(".crm:visible").length;
 
     /* If 2 children are present at any time, assume desktop view */
-    if (
-      $managementChildren === 2 ||
-      $registrationChildren === 2 ||
-      $waiverChildren === 2
-    ) {
+    if ($impactChildren === 2 || $crmChildren === 2) {
       if (activeIndex === 2) {
-        showOrganize(0);
+        showInform(0);
       } else {
-        showOrganize(activeIndex + 1);
+        showInform(activeIndex + 1);
       }
-    } else if ($managementChildren === 1) {
-      const $leftVisible = $(".management .management_left:visible");
-      const $rightVisible = $(".management .management_right:visible");
+    } else if ($impactChildren === 1) {
+      const $leftVisible = $(".impact .impact_left:visible");
+      const $rightVisible = $(".impact .impact_right:visible");
 
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
-        $(".management .management_right").removeClass("mobile_hide_block");
+        $(".impact .impact_right").removeClass("mobile_hide_block");
       } else if ($rightVisible.length === 1) {
-        showOrganize(1);
+        showInform(1);
 
-        $(".management .management_left").removeClass("mobile_hide_block");
+        $(".impact .impact_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(1)").removeClass("active-link");
       }
-    } else if ($registrationChildren === 1) {
-      const $leftVisible = $(".registration .registration_left:visible");
-      const $rightVisible = $(".registration .registration_right:visible");
-
-      if ($leftVisible.length === 1) {
-        $leftVisible.addClass("mobile_hide_block");
-        $(".registration .registration_right").removeClass("mobile_hide_block");
-      } else if ($rightVisible.length === 1) {
-        showOrganize(2);
-
-        $(".registration .registration_left").removeClass("mobile_hide_block");
-        $rightVisible.addClass("mobile_hide_block");
-        $active.removeClass("active-link");
-        $parent.find(".tab:eq(2)").removeClass("active-link");
-      }
-    } else if ($waiverChildren === 1) {
-      const $leftVisible = $(".waiver .waiver_left:visible");
-      const $rightVisible = $(".waiver .waiver_right:visible");
-
-      if ($leftVisible.length === 1) {
-        $leftVisible.addClass("mobile_hide_block");
-        $(".waiver .waiver_right").removeClass("mobile_hide_block");
-      } else if ($rightVisible.length === 1) {
-        showOrganize(2);
-
-        $(".waiver .waiver_left").removeClass("mobile_hide_block");
-        $rightVisible.addClass("mobile_hide_block");
-        $active.removeClass("active-link");
-        $parent.find(".tab:eq(0)").removeClass("active-link");
-      }
+    } else if ($crmChildren === 1) {
+      showInform(0);
+      $active.removeClass("active-link");
+      $parent.find(".tab:eq(0)").removeClass("active-link");
     }
   });
 });
