@@ -7,528 +7,354 @@ $(document).ready(function () {
   $(".tab2link").first().addClass("tab2-active-link");
   $(".tab3link").first().addClass("tab3-active-link");
 
-  const managementSection = () => {
-    $(".tablink").first().addClass("active-link");
-    $(".tablink:nth-of-type(2)").removeClass("active-link");
-    $(".tablink:nth-of-type(3)").removeClass("active-link");
-    $(".management").addClass("show_block");
-    $(".registration").removeClass("show_block");
-    $(".registration").addClass("hide_block");
-    $(".waiver").addClass("hide_block");
-    $(".waiver").removeClass("show_block");
-  };
+  $(".registration").addClass("hide");
+  $(".waiver").addClass("hide");
+  $(".masstext").addClass("hide");
+  $(".hours").addClass("hide");
+  $(".crm_content").addClass("hide");
 
-  const registrationSection = () => {
-    $(".tablink:nth-of-type(2)").addClass("active-link");
-    $(".tablink").first().removeClass("active-link");
-    $(".tablink:nth-of-type(3)").removeClass("active-link");
-    $(".management").addClass("hide_block");
-    $(".management").removeClass("show_block");
-    $(".registration").addClass("show_block");
-    $(".waiver").addClass("hide_block");
-    $(".waiver").removeClass("show_block");
-  };
+  /* Initially hide organize mobile blocks */
+  $(".management_left, .registration_left, .waiver_left").addClass("");
+  $(".management_right, .registration_right, .waiver_right").addClass(
+    "mobile_hide_block"
+  );
 
-  const waiverSection = () => {
-    $(".tablink:nth-of-type(3)").addClass("active-link");
-    $(".tablink").first().removeClass("active-link");
-    $(".tablink:nth-of-type(2)").removeClass("active-link");
-    $(".management").removeClass("show_block");
-    $(".management").addClass("hide_block");
-    $(".registration").removeClass("show_block");
-    $(".registration").addClass("hide_block");
-    $(".waiver").removeClass("hide_block");
-    $(".waiver").addClass("show_block");
-  };
+  /* Initially hide control mobile blocks */
+  $(".checkin_left, .masstext_left, .hours_left").addClass("");
+  $(".checkin_right, .masstext_right, .hours_right").addClass(
+    "mobile_hide_block"
+  );
 
-  const qrSection = () => {
-    $(".tab2link").first().addClass("tab2-active-link");
-    $(".tab2link:nth-of-type(2)").removeClass("tab2-active-link");
-    $(".tab2link:nth-of-type(3)").removeClass("tab2-active-link");
-    $(".checkin").addClass("show_block");
-    $(".checkin").removeClass("hide_block");
-    $(".masstext").addClass("hide_block");
-    $(".masstext").removeClass("show_block");
-    $(".hours").addClass("hide_block");
-    $(".hours").removeClass("show_block");
-  };
+  /* Initially hide control mobile blocks */
+  $(".impact_left, .crm_content_left").addClass("");
+  $(".impact_right, .crm_content_right").addClass("mobile_hide_block");
 
-  const massTextSection = () => {
-    $(".tab2link").first().removeClass("tab2-active-link");
-    $(".tab2link:nth-of-type(2)").addClass("tab2-active-link");
-    $(".tab2link:nth-of-type(3)").removeClass("tab2-active-link");
-    $(".checkin").removeClass("show_block");
-    $(".checkin").addClass("hide_block");
-    $(".masstext").removeClass("hide_block");
-    $(".masstext").addClass("show_block");
-    $(".hours").addClass("hide_block");
-    $(".hours").removeClass("show_block");
-  };
+  const showOrganize = (index, previousIndex) => {
+    // let $previous;
 
-  const volunteerHoursSection = () => {
-    $(".tab2link").first().removeClass("tab2-active-link");
-    $(".tab2link:nth-of-type(2)").removeClass("tab2-active-link");
-    $(".tab2link:nth-of-type(3)").addClass("tab2-active-link");
-    $(".checkin").removeClass("show_block");
-    $(".checkin").addClass("hide_block");
-    $(".masstext").addClass("hide_block");
-    $(".masstext").removeClass("show_block");
-    $(".hours").removeClass("hide_block");
-    $(".hours").addClass("show_block");
-  };
+    // if (previousIndex === 0) {
+    //   $previous = $(".management");
+    // } else if (previousIndex === 1) {
+    //   $previous = $(".registration");
+    // } else if (previousIndex === 2) {
+    //   $previous = $(".waiver");
+    // }
 
-  const impactUpdateSection = () => {
-    $(".tab3link").first().addClass("tab3-active-link");
-    $(".tab3link:nth-of-type(2)").removeClass("tab3-active-link");
-    $(".impact").addClass("show_block");
-    $(".impact").removeClass("hide_block");
-    $(".crm_content").addClass("hide_block");
-    $(".crm_content").removeClass("show_block");
-  };
+    if (index === 0) {
+      $(".waiver").addClass("hide");
+      $(".registration").addClass("hide");
+      $(".management").removeClass("hide");
 
-  const crmSection = () => {
-    $(".tab3link").first().removeClass("tab3-active-link");
-    $(".tab3link:nth-of-type(2)").addClass("tab3-active-link");
-    $(".impact").removeClass("show_block");
-    $(".impact").addClass("hide_block");
-    $(".crm_content").removeClass("hide_block");
-    $(".crm_content").addClass("show_block");
-  };
+      // $previous.fadeOut(500, function () {
+      //   $(".management").fadeIn(500, function () {
 
-  const organiseContentDisplay = () => {
-    if (content1count === 1) {
-      managementSection();
-    }
+      //   });
+      // });
+    } else if (index === 1) {
+      $(".waiver").addClass("hide");
+      $(".management").addClass("hide");
+      $(".registration").removeClass("hide");
 
-    if (content1count === 2) {
-      registrationSection();
-    }
+      // $previous.fadeOut(500, function () {
+      //   $(".registration").fadeIn(500, function () {
 
-    if (content1count === 3) {
-      waiverSection();
+      //   });
+      // });
+    } else if (index === 2) {
+      $(".management").addClass("hide");
+      $(".registration").addClass("hide");
+      $(".waiver").removeClass("hide");
+
+      // $previous.fadeOut(500, function () {
+      //   $(".waiver").fadeIn(500, function () {
+
+      //   });
+      // });
     }
   };
 
-  const controlContentDisplay = () => {
-    if (content2count === 1) {
-      console.log(true);
-      qrSection();
-    }
-
-    if (content2count === 2) {
-      massTextSection();
-    }
-    if (content2count === 3) {
-      volunteerHoursSection();
-    }
-  };
-
-  const informContentDisplay = () => {
-    if (content3count === 1) {
-      impactUpdateSection();
-    }
-    if (content3count === 2) {
-      crmSection();
+  const showControl = (index) => {
+    if (index === 0) {
+      $(".checkin").removeClass("hide");
+      $(".masstext").addClass("hide");
+      $(".hours").addClass("hide");
+    } else if (index === 1) {
+      $(".checkin").addClass("hide");
+      $(".masstext").removeClass("hide");
+      $(".hours").addClass("hide");
+    } else if (index === 2) {
+      $(".checkin").addClass("hide");
+      $(".masstext").addClass("hide");
+      $(".hours").removeClass("hide");
     }
   };
 
-  $(".manage_arrow_button").click(function (e) {
-    if (content1count === 3) {
-      content1count = 1;
-    } else {
-      content1count++;
+  const showInform = (index) => {
+    if (index === 0) {
+      $(".impact").removeClass("hide");
+      $(".crm_content").addClass("hide");
+    } else if (index === 1) {
+      $(".impact").addClass("hide");
+      $(".crm_content").removeClass("hide");
     }
-    organiseContentDisplay();
+  };
+
+  $(".tablink").click(function (e) {
+    const $this = $(this);
+    const $parent = $this.parents(".tab:first");
+    const $active = $parent.find(".active-link");
+    const parentId = $parent.attr("id");
+    const tabIndex = $this.index();
+    const activeIndex = $active.index();
+
+    /* Do nothing if clicked on the same tab */
+    if (tabIndex === activeIndex) {
+      return;
+    }
+
+    if (parentId === "organize_tab") {
+      showOrganize(tabIndex, activeIndex);
+    } else if (parentId === "control_tab") {
+      showControl(tabIndex, activeIndex);
+    } else if (parentId === "inform_tab") {
+      showInform(tabIndex, activeIndex);
+    }
+
+    $parent.find(".tablink").removeClass("active-link");
+    $this.addClass("active-link");
   });
 
-  $(".control_arrow").click(function (e) {
-    if (content2count === 3) {
-      content2count = 1;
-    } else {
-      content2count++;
-    }
+  $(".manage_arrow_button").click(function (e) {
+    const $organize = $("#organize_tab");
+    const $active = $organize.find(".active-link");
+    const activeIndex = $active.index();
+    const $management = $(".management");
+    const $registration = $(".registration");
+    const $waiver = $(".waiver");
+    const $managementChildren = $management.find(
+      ".management_left:visible, .management_right:visible"
+    ).length;
+    const $registrationChildren = $registration.find(
+      ".registration_left:visible, .registration_right:visible"
+    ).length;
+    const $waiverChildren = $waiver.find(
+      ".waiver_left:visible, .waiver_right:visible"
+    ).length;
+    console.log($managementChildren);
+    console.log($registrationChildren);
+    console.log($waiverChildren);
 
-    controlContentDisplay();
+    /* If 2 children are present at any time, assume desktop view */
+    if (
+      $managementChildren === 2 ||
+      $registrationChildren === 2 ||
+      $waiverChildren === 2
+    ) {
+      if (activeIndex === 2) {
+        showOrganize(0);
+      } else {
+        showOrganize(activeIndex + 1);
+      }
+    } else if ($managementChildren === 1) {
+      const $leftVisible = $(".management .management_left:visible");
+      const $rightVisible = $(".management .management_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".management .management_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(1);
+
+        $(".management .management_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(1)").removeClass("active-link");
+      }
+    } else if ($registrationChildren === 1) {
+      const $leftVisible = $(".registration .registration_left:visible");
+      const $rightVisible = $(".registration .registration_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".registration .registration_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(2);
+
+        $(".registration .registration_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(2)").removeClass("active-link");
+      }
+    } else if ($waiverChildren === 1) {
+      const $leftVisible = $(".waiver .waiver_left:visible");
+      const $rightVisible = $(".waiver .waiver_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".waiver .waiver_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(0);
+
+        $(".waiver .waiver_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(0)").removeClass("active-link");
+      }
+    }
+  });
+
+  $("control_arrow").click(function (e) {
+    const $organize = $("#control_tab");
+    const $active = $organize.find(".active-link");
+    const activeIndex = $active.index();
+    const $checkin = $(".checkin");
+    const $masstext = $(".masstext");
+    const $hours = $(".hours");
+    const $checkInChildren = $checkin.find(
+      ".checkin_left:visible, .checkin_right:visible"
+    ).length;
+    const $masstextChildren = $masstext.find(
+      ".masstext_left:visible, .masstext_right:visible"
+    ).length;
+    const $hoursChildren = $hours.find(
+      ".hours_left:visible, .hours_right:visible"
+    ).length;
+
+    /* If 2 children are present at any time, assume desktop view */
+    if (
+      $checkInChildren === 2 ||
+      $masstextChildren === 2 ||
+      $hoursChildren === 2
+    ) {
+      if (activeIndex === 2) {
+        showControl(0);
+      } else {
+        showControl(activeIndex + 1);
+      }
+    } else if ($checkInChildren === 1) {
+      const $leftVisible = $(".checkin .checkin_left:visible");
+      const $rightVisible = $(".checkin .checkin_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".checkin .checkin_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showControl(1);
+
+        $(".checkin .checkin_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(1)").removeClass("active-link");
+      }
+    } else if ($masstextChildren === 1) {
+      const $leftVisible = $(".masstext .masstext_left:visible");
+      const $rightVisible = $(".masstext .masstext_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".masstext .masstext_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showControl(2);
+
+        $(".masstext .masstext_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(2)").removeClass("active-link");
+      }
+    } else if ($hoursChildren === 1) {
+      const $leftVisible = $(".hours .hours_left:visible");
+      const $rightVisible = $(".hours .hours_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".hours .hours_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showControl(0);
+
+        $(".hours .hours_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(0)").removeClass("active-link");
+      }
+    }
   });
 
   $(".inform_arrow").click(function (e) {
-    if (content3count === 2) {
-      content3count = 1;
-    } else {
-      content3count++;
-    }
+    const $organize = $("#organize_tab");
+    const $active = $organize.find(".active-link");
+    const activeIndex = $active.index();
+    const $management = $(".management");
+    const $registration = $(".registration");
+    const $waiver = $(".waiver");
+    const $managementChildren = $management.find(
+      ".management_left:visible, .management_right:visible"
+    ).length;
+    const $registrationChildren = $registration.find(
+      ".registration_left:visible, .registration_right:visible"
+    ).length;
+    const $waiverChildren = $waiver.find(
+      ".waiver_left:visible, .waiver_right:visible"
+    ).length;
+    console.log($managementChildren);
+    console.log($registrationChildren);
+    console.log($waiverChildren);
 
-    informContentDisplay();
-  });
-
-  $(".tablink").click(function (e) {
-    $(".tablink").removeClass("active-link");
-    $(this).addClass("active-link");
-    const text = $(this).text();
-    if (text.indexOf("Event Registration") >= 0) {
-      content1count = 2;
-      $(".management").addClass("hide_block");
-      $(".management").removeClass("show_block");
-      $(".registration").addClass("show_block");
-      $(".waiver").addClass("hide_block");
-      $(".waiver").removeClass("show_block");
-    }
-
-    if (text.indexOf("Enterprise Account") >= 0) {
-      content1count = 1;
-      $(".management").addClass("show_block");
-      $(".registration").removeClass("show_block");
-      $(".registration").addClass("hide_block");
-      $(".waiver").addClass("hide_block");
-      $(".waiver").removeClass("show_block");
-    }
-
-    if (text.indexOf("Digital Waivers") >= 0) {
-      content1count = 3;
-      $(".management").removeClass("show_block");
-      $(".management").addClass("hide_block");
-      $(".registration").removeClass("show_block");
-      $(".registration").addClass("hide_block");
-      $(".waiver").removeClass("hide_block");
-      $(".waiver").addClass("show_block");
-    }
-  });
-
-  $(".tab2link").click(function (e) {
-    $(".tab2link").removeClass("tab2-active-link");
-    $(this).addClass("tab2-active-link");
-    const text2 = $(this).text();
-    if (text2.indexOf("QR") >= 0) {
-      content2count = 1;
-      $(".checkin").addClass("show_block");
-      $(".checkin").removeClass("hide_block");
-      $(".masstext").addClass("hide_block");
-      $(".masstext").removeClass("show_block");
-      $(".hours").addClass("hide_block");
-      $(".hours").removeClass("show_block");
-    }
-
-    if (text2.indexOf("Mass Text") >= 0) {
-      content2count = 2;
-      $(".checkin").removeClass("show_block");
-      $(".checkin").addClass("hide_block");
-      $(".masstext").removeClass("hide_block");
-      $(".masstext").addClass("show_block");
-      $(".hours").addClass("hide_block");
-      $(".hours").removeClass("show_block");
-    }
-    if (text2.indexOf("Track volunteer") >= 0) {
-      content2count = 3;
-      $(".checkin").removeClass("show_block");
-      $(".checkin").addClass("hide_block");
-      $(".masstext").addClass("hide_block");
-      $(".masstext").removeClass("show_block");
-      $(".hours").removeClass("hide_block");
-      $(".hours").addClass("show_block");
-    }
-  });
-
-  $(".tab3link").click(function (e) {
-    $(".tab3link").removeClass("tab3-active-link");
-    $(this).addClass("tab3-active-link");
-    const text3 = $(this).text();
-    if (text3.indexOf("Impact Update") >= 0) {
-      content3count = 1;
-      $(".impact").addClass("show_block");
-      $(".impact").removeClass("hide_block");
-      $(".crm_content").addClass("hide_block");
-      $(".crm_content").removeClass("show_block");
-    }
-
-    if (text3.indexOf("CRM") >= 0) {
-      content3count = 2;
-      $(".impact").removeClass("show_block");
-      $(".impact").addClass("hide_block");
-      $(".crm_content").removeClass("hide_block");
-      $(".crm_content").addClass("show_block");
-    }
-  });
-
-  if (screen.width <= 992) {
-    console.log("entered width");
-    let mobile_content1count = 1;
-    let mobile_content2count = 1;
-    let mobile_content3count = 1;
-
-    // if (content1count === 1) {
-    //   mobile_content1count = 1;
-    //   $(".management_1").removeClass("hide_block");
-    //   $(".management_1").addClass("show_mobile_block");
-    //   $(".management_2").addClass("hide_block");
-    //   $(".management_2").removeClass("show_mobile_block");
-    //   $(".registration_1").removeClass("show_mobile_block");
-    //   $(".registration_1").addClass("hide_block");
-    //   $(".registration_2").removeClass("show_mobile_block");
-    //   $(".registration_2").addClass("hide_block");
-    //   $(".waiver_1").addClass("hide_block");
-    //   $(".waiver_1").removeClass("show_mobile_block");
-    //   $(".waiver_2").addClass("hide_block");
-    //   $(".waiver_2").removeClass("show_mobile_block");
-    // }
-
-    // if (content2count === 2) {
-    //   mobile_content1count = 3;
-    //   $(".management_1").addClass("hide_block");
-    //   $(".management_1").removeClass("show_mobile_block");
-    //   $(".management_2").addClass("hide_block");
-    //   $(".management_2").removeClass("show_mobile_block");
-    //   $(".registration_1").addClass("show_mobile_block");
-    //   $(".registration_1").removeClass("hide_block");
-    //   $(".registration_2").addClass("hide_block");
-    //   $(".registration_2").removeClass("show_mobile_block");
-    //   $(".waiver_1").addClass("hide_block");
-    //   $(".waiver_1").removeClass("show_mobile_block");
-    //   $(".waiver_2").addClass("hide_block");
-    //   $(".waiver_2").removeClass("show_mobile_block");
-    // }
-
-    // if (content2count === 3) {
-    //   mobile_content1count = 5;
-    //   $(".management_1").removeClass("show_mobile_block");
-    //   $(".management_1").addClass("hide_block");
-    //   $(".management_2").removeClass("show_mobile_block");
-    //   $(".management_2").addClass("hide_block");
-    //   $(".registration_1").removeClass("show_mobile_block");
-    //   $(".registration_1").addClass("hide_block");
-    //   $(".registration_2").removeClass("show_mobile_block");
-    //   $(".registration_2").addClass("hide_block");
-    //   $(".waiver_1").removeClass("hide_block");
-    //   $(".waiver_1").addClass("show_mobile_block");
-    //   $(".waiver_2").addClass("hide_block");
-    //   $(".waiver_2").removeClass("show_mobile_block");
-    // }
-
-    $(".tablink").click(function (e) {
-      $(".tablink").removeClass("active-link");
-      $(this).addClass("active-link");
-      const text = $(this).text();
-      console.log("text", text);
-
-      if (text.indexOf("Event Registration") >= 0) {
-        mobile_content1count = 3;
-        $(".management_1").addClass("hide_block");
-        $(".management_1").removeClass("show_mobile_block");
-        $(".management_2").addClass("hide_block");
-        $(".management_2").removeClass("show_mobile_block");
-        $(".registration_1").addClass("show_mobile_block");
-        $(".registration_1").removeClass("hide_block");
-        $(".registration_2").addClass("hide_block");
-        $(".registration_2").removeClass("show_mobile_block");
-        $(".waiver_1").addClass("hide_block");
-        $(".waiver_1").removeClass("show_mobile_block");
-        $(".waiver_2").addClass("hide_block");
-        $(".waiver_2").removeClass("show_mobile_block");
-      }
-
-      if (text.indexOf("Enterprise Account") >= 0) {
-        mobile_content1count = 1;
-        $(".management_1").removeClass("hide_block");
-        $(".management_1").addClass("show_mobile_block");
-        $(".management_2").addClass("hide_block");
-        $(".management_2").removeClass("show_mobile_block");
-        $(".registration_1").removeClass("show_mobile_block");
-        $(".registration_1").addClass("hide_block");
-        $(".registration_2").removeClass("show_mobile_block");
-        $(".registration_2").addClass("hide_block");
-        $(".waiver_1").addClass("hide_block");
-        $(".waiver_1").removeClass("show_mobile_block");
-        $(".waiver_2").addClass("hide_block");
-        $(".waiver_2").removeClass("show_mobile_block");
-      }
-
-      if (text.indexOf("Digital Waivers") >= 0) {
-        mobile_content1count = 5;
-        $(".management_1").removeClass("show_mobile_block");
-        $(".management_1").addClass("hide_block");
-        $(".management_2").removeClass("show_mobile_block");
-        $(".management_2").addClass("hide_block");
-        $(".registration_1").removeClass("show_mobile_block");
-        $(".registration_1").addClass("hide_block");
-        $(".registration_2").removeClass("show_mobile_block");
-        $(".registration_2").addClass("hide_block");
-        $(".waiver_1").removeClass("hide_block");
-        $(".waiver_1").addClass("show_mobile_block");
-        $(".waiver_2").addClass("hide_block");
-        $(".waiver_2").removeClass("show_mobile_block");
-      }
-    });
-
-    const management_1_section = () => {
-      $(".tablink").first().addClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management_1").removeClass("hide_block");
-      $(".management_1").addClass("show_mobile_block");
-      $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_mobile_block");
-      $(".registration_1").removeClass("show_mobile_block");
-      $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_mobile_block");
-      $(".registration_2").addClass("hide_block");
-      $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_mobile_block");
-    };
-
-    const management_2_section = () => {
-      $(".tablink").first().addClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_mobile_block");
-      $(".management_2").removeClass("hide_block");
-      $(".management_2").addClass("show_mobile_block");
-      $(".registration_1").removeClass("show_mobile_block");
-      $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_mobile_block");
-      $(".registration_2").addClass("hide_block");
-      $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_mobile_block");
-    };
-
-    const registration_1_section = () => {
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(2)").addClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_mobile_block");
-      $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_mobile_block");
-      $(".registration_1").addClass("show_mobile_block");
-      $(".registration_1").removeClass("hide_block");
-      $(".registration_2").removeClass("show_mobile_block");
-      $(".registration_2").addClass("hide_block");
-      $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_mobile_block");
-    };
-
-    const registration_2_section = () => {
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(2)").addClass("active-link");
-      $(".tablink:nth-of-type(3)").removeClass("active-link");
-      $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_mobile_block");
-      $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_mobile_block");
-      $(".registration_1").removeClass("show_mobile_block");
-      $(".registration_1").addClass("hide_block");
-      $(".registration_2").addClass("show_mobile_block");
-      $(".registration_2").removeClass("hide_block");
-      $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_mobile_block");
-    };
-
-    const waiver_1_section = () => {
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".tablink:nth-of-type(3)").addClass("active-link");
-      $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_mobile_block");
-      $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_mobile_block");
-      $(".registration_1").removeClass("show_mobile_block");
-      $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_mobile_block");
-      $(".registration_2").addClass("hide_block");
-      $(".waiver_1").removeClass("hide_block");
-      $(".waiver_1").addClass("show_mobile_block");
-      $(".waiver_2").addClass("hide_block");
-      $(".waiver_2").removeClass("show_mobile_block");
-    };
-
-    const waiver_2_section = () => {
-      $(".tablink").first().removeClass("active-link");
-      $(".tablink:nth-of-type(2)").removeClass("active-link");
-      $(".tablink:nth-of-type(3)").addClass("active-link");
-      $(".management_1").addClass("hide_block");
-      $(".management_1").removeClass("show_mobile_block");
-      $(".management_2").addClass("hide_block");
-      $(".management_2").removeClass("show_mobile_block");
-      $(".registration_1").removeClass("show_mobile_block");
-      $(".registration_1").addClass("hide_block");
-      $(".registration_2").removeClass("show_mobile_block");
-      $(".registration_2").addClass("hide_block");
-      $(".waiver_1").addClass("hide_block");
-      $(".waiver_1").removeClass("show_mobile_block");
-      $(".waiver_2").removeClass("hide_block");
-      $(".waiver_2").addClass("show_mobile_block");
-    };
-
-    const mobileOrganiseContentDisplay = () => {
-      if (mobile_content1count === 1) {
-        management_1_section();
-      }
-      if (mobile_content1count === 2) {
-        management_2_section();
-      }
-      if (mobile_content1count === 3) {
-        registration_1_section();
-      }
-      if (mobile_content1count === 4) {
-        registration_2_section();
-      }
-      if (mobile_content1count === 5) {
-        waiver_1_section();
-      }
-      if (mobile_content1count === 6) {
-        waiver_2_section();
-      }
-    };
-
-    $(".mobile_manage_arrow").click(function (e) {
-      console.log("Mobile content", mobile_content1count);
-      if (mobile_content1count === 6) {
-        mobile_content1count = 1;
+    /* If 2 children are present at any time, assume desktop view */
+    if (
+      $managementChildren === 2 ||
+      $registrationChildren === 2 ||
+      $waiverChildren === 2
+    ) {
+      if (activeIndex === 2) {
+        showOrganize(0);
       } else {
-        mobile_content1count++;
+        showOrganize(activeIndex + 1);
       }
-      mobileOrganiseContentDisplay();
-    });
+    } else if ($managementChildren === 1) {
+      const $leftVisible = $(".management .management_left:visible");
+      const $rightVisible = $(".management .management_right:visible");
 
-    $(".tab2link").click(function (e) {
-      $(".tab2link").removeClass("tab2-active-link");
-      $(this).addClass("tab2-active-link");
-      const text2 = $(this).text();
-      if (text2.indexOf("QR") >= 0) {
-        content2count = 1;
-        $(".checkin").addClass("show_block");
-        $(".checkin").removeClass("hide_block");
-        $(".masstext").addClass("hide_block");
-        $(".masstext").removeClass("show_block");
-        $(".hours").addClass("hide_block");
-        $(".hours").removeClass("show_block");
-      }
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".management .management_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(1);
 
-      if (text2.indexOf("Mass Text") >= 0) {
-        content2count = 2;
-        $(".checkin").removeClass("show_block");
-        $(".checkin").addClass("hide_block");
-        $(".masstext").removeClass("hide_block");
-        $(".masstext").addClass("show_block");
-        $(".hours").addClass("hide_block");
-        $(".hours").removeClass("show_block");
+        $(".management .management_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(1)").removeClass("active-link");
       }
-      if (text2.indexOf("Track volunteer") >= 0) {
-        content2count = 3;
-        $(".checkin").removeClass("show_block");
-        $(".checkin").addClass("hide_block");
-        $(".masstext").addClass("hide_block");
-        $(".masstext").removeClass("show_block");
-        $(".hours").removeClass("hide_block");
-        $(".hours").addClass("show_block");
+    } else if ($registrationChildren === 1) {
+      const $leftVisible = $(".registration .registration_left:visible");
+      const $rightVisible = $(".registration .registration_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".registration .registration_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(2);
+
+        $(".registration .registration_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(2)").removeClass("active-link");
       }
-    });
-  }
+    } else if ($waiverChildren === 1) {
+      const $leftVisible = $(".waiver .waiver_left:visible");
+      const $rightVisible = $(".waiver .waiver_right:visible");
+
+      if ($leftVisible.length === 1) {
+        $leftVisible.addClass("mobile_hide_block");
+        $(".waiver .waiver_right").removeClass("mobile_hide_block");
+      } else if ($rightVisible.length === 1) {
+        showOrganize(2);
+
+        $(".waiver .waiver_left").removeClass("mobile_hide_block");
+        $rightVisible.addClass("mobile_hide_block");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(0)").removeClass("active-link");
+      }
+    }
+  });
 });

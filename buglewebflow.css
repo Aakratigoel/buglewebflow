@@ -1,31 +1,186 @@
+.management,
+.registration,
+.waiver {
+  display: flex !important;
+}
+
+.checkin,
+.masstext,
+.hours {
+  display: flex !important;
+}
+
+.impact,
+.crm_content {
+  display: flex !important;
+}
+
 .active-link {
   color: #4726cc;
   border-bottom: 1px solid #4726cc;
 }
-.hide_block {
-  display: none;
-}
-.show_block {
-  display: flex;
-}
-.mobile_show_block {
-  display: block;
+
+.show {
+  display: flex !important;
 }
 
-.tab2-active-link {
+.hide {
+  display: none !important;
+}
+
+.mobile_hide {
+  display: none;
+}
+
+.tab2link.active-link {
   color: #156cf0;
   border-bottom: 1px solid #156cf0;
 }
 
-.tab3-active-link {
+.tab3link.active-link {
   color: #327563;
   border-bottom: 1px solid #327563;
 }
+
+.w-col-4 {
+  width: fit-content;
+}
+
+.column-24 {
+  margin-right: 80px;
+}
+
+.column-25 {
+  margin-right: 80px;
+}
+
+@media only screen and (max-width: 992px) {
+  .management_left,
+  .management_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .registration_left,
+  .registration_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .waiver_left,
+  .waiver_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .checkin_left,
+  .checkin_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .masstext_left,
+  .masstext_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .hours_left,
+  .hours_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .impact_left,
+  .impact_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .crm_content_left,
+  .crm_content_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .mobile_hide_block {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 375px) and (min-width: 320px) {
   .button-primary-orange-full {
     font-size: 9px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .mobile_hide_block {
+    display: none !important;
+  }
+
+  .management_left,
+  .management_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .registration_left,
+  .registration_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .waiver_left,
+  .waiver_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .checkin_left,
+  .checkin_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .masstext_left,
+  .masstext_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .hours_left,
+  .hours_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .impact_left,
+  .impact_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
+  }
+
+  .crm_content_left,
+  .crm_content_right {
+    width: 100%;
+    margin: 0;
+    padding: 24px 24px 0px 24px;
   }
 }
 @media only screen and (max-width: 393px) and (min-width: 376px) {
@@ -78,11 +233,25 @@
   .organise-para {
     font-size: 14px;
   }
+  .column-24 {
+    margin-right: 0px;
+  }
+
+  .column-25 {
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 858px) and (min-width: 800px) {
   .button-primary-orange-full {
     font-size: 15px;
+  }
+  .column-24 {
+    margin-right: 0px;
+  }
+
+  .column-25 {
+    margin-right: 0px;
   }
 }
 
@@ -91,8 +260,26 @@
     padding: 8px 13px;
   }
 }
+
+@media only screen and (max-width: 1112px) and (min-width: 834px) {
+  .column-24 {
+    margin-right: 0px;
+  }
+
+  .column-25 {
+    margin-right: 0px;
+  }
+}
 @media only screen and (max-width: 1100px) and (min-width: 992px) {
   .div-block-65 {
     width: 143%;
+  }
+
+  .column-24 {
+    margin-right: 0px;
+  }
+
+  .column-25 {
+    margin-right: 0px;
   }
 }
