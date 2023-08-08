@@ -158,6 +158,11 @@ $(document).ready(function () {
     const tabIndex = $this.index();
     const $parent = $this.parent();
 
+    console.log($parent);
+    console.log($parent.hasClass("organize_desk_dots"));
+    console.log($parent.hasClass("control_desk_dots"));
+    console.log($parent.hasClass("inform_desk_dots"));
+
     if ($parent.hasClass("organize_desk_dots")) {
       const $active = $parent.find(".dot-active");
       const activeIndex = $active.index();
@@ -178,7 +183,7 @@ $(document).ready(function () {
 
       $("#organize_tab").find(".tablink").removeClass("active-link");
       $("#organize_tab").find(".tablink").eq(tabIndex).addClass("active-link");
-    } else if ($parent.hasClass(".control_desk_dots")) {
+    } else if ($parent.hasClass("control_desk_dots")) {
       const $active = $parent.find(".control-dot-active");
       const activeIndex = $active.index();
 
@@ -187,7 +192,7 @@ $(document).ready(function () {
         return;
       }
 
-      const $deskDots = $("control_desk_dots");
+      const $deskDots = $(".control_desk_dots");
       const $mobileDots = $(".control_mobile_dots");
       showControl(tabIndex, activeIndex);
 
