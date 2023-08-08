@@ -187,7 +187,7 @@ $(document).ready(function () {
         return;
       }
 
-      const $deskDots = $(".control_desk_dots");
+      const $deskDots = $("control_desk_dots");
       const $mobileDots = $(".control_mobile_dots");
       showControl(tabIndex, activeIndex);
 
@@ -202,7 +202,7 @@ $(document).ready(function () {
 
       $("#control_tab").find(".tablink").removeClass("active-link");
       $("#control_tab").find(".tablink").eq(tabIndex).addClass("active-link");
-    } else if ($parent.hasClass(".inform_desk_dots")) {
+    } else if ($parent.hasClass("inform_desk_dots")) {
       const $active = $parent.find(".inform-dot-active");
       const activeIndex = $active.index();
 
