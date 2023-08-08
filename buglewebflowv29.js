@@ -170,7 +170,7 @@ $(document).ready(function () {
         $mobileDots.find(".dot-active").removeClass("dot-active");
         $mobileDots.find(".dot:eq(0)").addClass("dot-active");
         $active.removeClass("active-link");
-        $organize.find(".tab:eq(0)").removeClass("active-link");
+        $organize.find(".tablink:eq(0)").removeClass("active-link");
       } else {
         showOrganize(activeIndex + 1);
 
@@ -184,7 +184,7 @@ $(document).ready(function () {
           .addClass("dot-active");
         $active.removeClass("active-link");
         $organize
-          .find(".tab:eq(" + (activeIndex + 1) + ")")
+          .find(".tablink:eq(" + (activeIndex + 1) + ")")
           .removeClass("active-link");
       }
     } else if ($managementChildren === 1) {
@@ -202,7 +202,7 @@ $(document).ready(function () {
         $(".management .management_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
-        $organize.find(".tab:eq(1)").removeClass("active-link");
+        $organize.find(".tablink:eq(1)").removeClass("active-link");
 
         $deskDots.find(".dot-active").removeClass("dot-active");
         $deskDots.find(".dot:eq(1)").addClass("dot-active");
@@ -224,7 +224,7 @@ $(document).ready(function () {
         $(".registration .registration_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
-        $organize.find(".tab:eq(2)").removeClass("active-link");
+        $organize.find(".tablink:eq(2)").removeClass("active-link");
 
         $deskDots.find(".dot-active").removeClass("dot-active");
         $deskDots.find(".dot:eq(2)").addClass("dot-active");
@@ -247,7 +247,7 @@ $(document).ready(function () {
         $(".waiver .waiver_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
-        $organize.find(".tab:eq(0)").removeClass("active-link");
+        $organize.find(".tablink:eq(0)").removeClass("active-link");
 
         $deskDots.find(".dot-active").removeClass("dot-active");
         $deskDots.find(".dot:eq(0)").addClass("dot-active");
