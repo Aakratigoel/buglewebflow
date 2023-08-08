@@ -122,9 +122,31 @@ $(document).ready(function () {
       $mobileDots.find(".dot-active").removeClass("dot-active");
       $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("dot-active");
     } else if (parentId === "control_tab") {
+      const $deskDots = $(".control_desk_dots");
+      const $mobileDots = $(".control_mobile_dots");
       showControl(tabIndex, activeIndex);
+
+      $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+      $deskDots
+        .find(".control-dot:eq(" + tabIndex + ")")
+        .addClass("control-dot-active");
+      $mobileDots.find(".control-dot-active").removeClass("control-dot-active");
+      $mobileDots
+        .find(".control-dot:eq(" + tabIndex * 2 + ")")
+        .addClass("control-dot-active");
     } else if (parentId === "inform_tab") {
+      const $deskDots = $(".inform_desk_dots");
+      const $mobileDots = $(".inform_mobile_dots");
       showInform(tabIndex, activeIndex);
+
+      $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
+      $deskDots
+        .find(".inform-dot:eq(" + tabIndex + ")")
+        .addClass("inform-dot-active");
+      $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+      $mobileDots
+        .find(".inform-dot:eq(" + tabIndex * 2 + ")")
+        .addClass("inform-dot-active");
     }
 
     $parent.find(".tablink").removeClass("active-link");
@@ -267,7 +289,7 @@ $(document).ready(function () {
     const $checkInChildren = $checkin.find(
       ".checkin_left:visible, .checkin_right:visible"
     ).length;
-    const $masstextChildren = $masstext.find(".mass_text_left:visible").length;
+    const $masstextChildren = $masstext.find(".mass_text:visible").length;
     const $hoursChildren = $hours.find(
       ".volunteerhour_left:visible, .volunteerhour_right:visible"
     ).length;
