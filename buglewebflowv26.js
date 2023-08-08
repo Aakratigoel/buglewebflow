@@ -150,6 +150,13 @@ $(document).ready(function () {
     const $deskDots = $(".organize_desk_dots");
     const $mobileDots = $(".organize_mobile_dots");
 
+    console.log("Management: " + $managementChildren);
+    console.log("Registration: " + $registrationChildren);
+    console.log("Waiver: " + $waiverChildren);
+
+    console.log($deskDots);
+    console.log($mobileDots);
+
     /* If 2 children are present at any time, assume desktop view */
     if (
       $managementChildren === 2 ||
@@ -162,15 +169,23 @@ $(document).ready(function () {
         $deskDots.find(".dot:eq(0)").addClass("dot-active");
         $mobileDots.find(".dot-active").removeClass("dot-active");
         $mobileDots.find(".dot:eq(0)").addClass("dot-active");
+        $active.removeClass("active-link");
+        $parent.find(".tab:eq(0)").removeClass("active-link");
       } else {
         showOrganize(activeIndex + 1);
 
         $deskDots.find(".dot-active").removeClass("dot-active");
-        $deskDots.find(".dot:eq(" + activeIndex + ")").addClass("dot-active");
+        $deskDots
+          .find(".dot:eq(" + (activeIndex + 1) + ")")
+          .addClass("dot-active");
         $mobileDots.find(".dot-active").removeClass("dot-active");
         $mobileDots
           .find(".dot:eq(" + activeIndex * 2 + ")")
           .addClass("dot-active");
+        $active.removeClass("active-link");
+        $parent
+          .find(".tab:eq(" + (activeIndex + 1) + ")")
+          .removeClass("active-link");
       }
     } else if ($managementChildren === 1) {
       const $leftVisible = $(".management .management_left:visible");
