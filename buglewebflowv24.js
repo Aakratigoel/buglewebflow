@@ -4,8 +4,8 @@ $(document).ready(function () {
   let content3count = 1;
 
   $(".tablink").first().addClass("active-link");
-  $(".tab2link").first().addClass("tab2-active-link");
-  $(".tab3link").first().addClass("tab3-active-link");
+  $(".tab2link").first().addClass("active-link");
+  $(".tab3link").first().addClass("active-link");
 
   $(".registration").addClass("hide");
   $(".waiver").addClass("hide");
