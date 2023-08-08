@@ -80,12 +80,12 @@ $(document).ready(function () {
       $(".hours").addClass("hide");
     } else if (index === 1) {
       $(".checkin").addClass("hide");
-      $(".masstext").removeClass("hide");
-      $(".hours").addClass("hide");
-    } else if (index === 2) {
-      $(".checkin").addClass("hide");
       $(".masstext").addClass("hide");
       $(".hours").removeClass("hide");
+    } else if (index === 2) {
+      $(".checkin").addClass("hide");
+      $(".masstext").removeClass("hide");
+      $(".hours").addClass("hide");
     }
   };
 
@@ -117,10 +117,10 @@ $(document).ready(function () {
       const $mobileDots = $("#organize_mobile_dots");
       showOrganize(tabIndex, activeIndex);
 
-      $deskDots.find(".active-dot").removeClass("active-dot");
-      $deskDots.find(".dot:eq(" + tabIndex + ")").addClass("active-dot");
-      $mobileDots.find(".active-dot").removeClass("active-dot");
-      $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("active-dot");
+      $deskDots.find(".dot-active").removeClass("dot-active");
+      $deskDots.find(".dot:eq(" + tabIndex + ")").addClass("dot-active");
+      $mobileDots.find(".dot-active").removeClass("dot-active");
+      $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("dot-active");
     } else if (parentId === "control_tab") {
       showControl(tabIndex, activeIndex);
     } else if (parentId === "inform_tab") {
@@ -267,14 +267,12 @@ $(document).ready(function () {
     const $checkInChildren = $checkin.find(
       ".checkin_left:visible, .checkin_right:visible"
     ).length;
-    const $masstextChildren = $masstext.find(
-      ".masstext_left:visible, .masstext_right:visible"
-    ).length;
+    const $masstextChildren = $masstext.find(".mass_text_left:visible").length;
     const $hoursChildren = $hours.find(
       ".hours_left:visible, .hours_right:visible"
     ).length;
-    const $deskDots = $("#inform_desk_dots");
-    const $mobileDots = $("#inform_mobile_dots");
+    const $deskDots = $(".control_desk_dots");
+    const $mobileDots = $(".control_mobile_dots");
 
     console.log("CheckIn: " + $checkInChildren);
     console.log("Mass Text: " + $masstextChildren);
@@ -286,7 +284,7 @@ $(document).ready(function () {
     /* If 2 children are present at any time, assume desktop view */
     if (
       $checkInChildren === 2 ||
-      $masstextChildren === 2 ||
+      $masstextChildren === 1 ||
       $hoursChildren === 2
     ) {
       if (activeIndex === 2) {
@@ -406,8 +404,8 @@ $(document).ready(function () {
   });
 
   $(".inform_arrow").click(function (e) {
-    const $organize = $("#inform_tab");
-    const $active = $organize.find(".active-link");
+    const $inform = $("#inform_tab");
+    const $active = $inform.find(".active-link");
     const activeIndex = $active.index();
     const $impact = $(".impact");
     const $crm = $(".crm_content");
@@ -415,15 +413,41 @@ $(document).ready(function () {
       ".impact_left:visible, .impact_right:visible"
     ).length;
     const $crmChildren = $crm.find(".crm:visible").length;
-    const $deskDots = $("#inform_desk_dots");
-    const $mobileDots = $("#inform_mobile_dots");
+    const $deskDots = $(".inform_desk_dots");
+    const $mobileDots = $(".inform_mobile_dots");
+
+    console.log("Impact: " + $impactChildren);
+    console.log("CRM: " + $crmChildren);
+
+    console.log($deskDots);
+    console.log($mobileDots);
 
     /* If 2 children are present at any time, assume desktop view */
-    if ($impactChildren === 2 || $crmChildren === 2) {
-      if (activeIndex === 2) {
+    if ($impactChildren === 2 || $crmChildren === 1) {
+      if (activeIndex === 1) {
         showInform(0);
+        $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $deskDots.find(".inform-dot:eq(0)").addClass("inform-dot-active");
+        $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $mobileDots.find(".inform-dot:eq(0)").addClass("inform-dot-active");
+
+        $active.removeClass("active-link");
+        $inform.find(".tablink:eq(0)").addClass("active-link");
       } else {
         showInform(activeIndex + 1);
+
+        $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $deskDots
+          .find(".inform-dot:eq(" + (activeIndex + 1) + ")")
+          .addClass("inform-dot-active");
+        $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $mobileDots
+          .find(".inform-dot:eq(" + activeIndex * 2 + ")")
+          .addClass("inform-dot-active");
+        $active.removeClass("active-link");
+        $inform
+          .find(".tablink:eq(" + (activeIndex + 1) + ")")
+          .addClass("active-link");
       }
     } else if ($impactChildren === 1) {
       const $leftVisible = $(".impact .impact_left:visible");
@@ -433,30 +457,30 @@ $(document).ready(function () {
         $leftVisible.addClass("mobile_hide_block");
         $(".impact .impact_right").removeClass("mobile_hide_block");
 
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(1)").addClass("active-dot");
+        $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $mobileDots.find(".dot:eq(1)").addClass("inform-dot-active");
       } else if ($rightVisible.length === 1) {
         showInform(1);
 
         $(".impact .impact_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
-        $parent.find(".tab:eq(1)").removeClass("active-link");
+        $inform.find(".tablink:eq(1)").addClass("active-link");
 
-        $deskDots.find(".active-dot").removeClass("active-dot");
-        $deskDots.find(".dot:eq(1)").addClass("active-dot");
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(2)").addClass("active-dot");
+        $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $deskDots.find(".dot:eq(1)").addClass("inform-dot-active");
+        $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+        $mobileDots.find(".dot:eq(2)").addClass("inform-dot-active");
       }
     } else if ($crmChildren === 1) {
       showInform(0);
       $active.removeClass("active-link");
-      $parent.find(".tab:eq(0)").removeClass("active-link");
+      $inform.find(".tablink:eq(0)").addClass("active-link");
 
-      $deskDots.find(".active-dot").removeClass("active-dot");
-      $deskDots.find(".dot:eq(0)").addClass("active-dot");
-      $mobileDots.find(".active-dot").removeClass("active-dot");
-      $mobileDots.find(".dot:eq(0)").addClass("active-dot");
+      $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
+      $deskDots.find(".dot:eq(0)").addClass("inform-dot-active");
+      $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
+      $mobileDots.find(".dot:eq(0)").addClass("inform-dot-active");
     }
   });
 });
