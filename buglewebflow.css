@@ -83,15 +83,14 @@
     padding: 24px 24px 0px 24px;
   }
 
-  .masstext_left,
-  .masstext_right {
+  .mass_text {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
   }
 
-  .hours_left,
-  .hours_right {
+  .volunteerhour_left,
+  .volunteerhour_right {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
@@ -155,15 +154,14 @@
     padding: 24px 24px 0px 24px;
   }
 
-  .masstext_left,
-  .masstext_right {
+  .mass_text {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
   }
 
-  .hours_left,
-  .hours_right {
+  .volunteerhour_left,
+  .volunteerhour_right {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
