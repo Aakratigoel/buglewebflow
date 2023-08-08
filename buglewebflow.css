@@ -115,7 +115,7 @@
   }
 }
 
-@media only screen and (max-width: 375px) and (min-width: 320px) {
+@media only screen and (max-width: 479px) and (min-width: 320px) {
   .button-primary-orange-full {
     font-size: 9px;
     padding-left: 40px;
@@ -126,21 +126,36 @@
     display: none !important;
   }
 
-  .management_left,
+  .management_left {
+    width: 100%;
+    margin: 0;
+    padding: 24px 0px 0px 24px;
+  }
+
   .management_right {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
   }
 
-  .registration_left,
+  .registration_left {
+    width: 100%;
+    margin: 0;
+    padding: 24px 0px 0px 24px;
+  }
+
   .registration_right {
     width: 100%;
     margin: 0;
     padding: 24px 24px 0px 24px;
   }
 
-  .waiver_left,
+  .waiver_left {
+    width: 100%;
+    margin: 0;
+    padding: 24px 0px 0px 24px;
+  }
+
   .waiver_right {
     width: 100%;
     margin: 0;

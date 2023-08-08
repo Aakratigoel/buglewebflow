@@ -13,6 +13,13 @@ $(document).ready(function () {
   $(".hours").addClass("hide");
   $(".crm_content").addClass("hide");
 
+  $(".book_demo").click(function () {
+    Calendly.initPopupWidget({
+      url: "https://calendly.com/ryan-bugle/bugle-demo",
+    });
+    return false;
+  });
+
   /* Initially hide organize mobile blocks */
   $(".management_left, .registration_left, .waiver_left").addClass("");
   $(".management_right, .registration_right, .waiver_right").addClass(
