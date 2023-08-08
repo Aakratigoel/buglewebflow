@@ -113,7 +113,14 @@ $(document).ready(function () {
     }
 
     if (parentId === "organize_tab") {
+      const $deskDots = $("#organize_desk_dots");
+      const $mobileDots = $("#organize_mobile_dots");
       showOrganize(tabIndex, activeIndex);
+
+      $deskDots.find(".active-dot").removeClass("active-dot");
+      $deskDots.find(".dot:eq(" + tabIndex + ")").addClass("active-dot");
+      $mobileDots.find(".active-dot").removeClass("active-dot");
+      $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("active-dot");
     } else if (parentId === "control_tab") {
       showControl(tabIndex, activeIndex);
     } else if (parentId === "inform_tab") {
@@ -140,9 +147,8 @@ $(document).ready(function () {
     const $waiverChildren = $waiver.find(
       ".waiver_left:visible, .waiver_right:visible"
     ).length;
-    console.log($managementChildren);
-    console.log($registrationChildren);
-    console.log($waiverChildren);
+    const $deskDots = $(".organize_desk_dots");
+    const $mobileDots = $(".organize_mobile_dots");
 
     /* If 2 children are present at any time, assume desktop view */
     if (
@@ -152,8 +158,19 @@ $(document).ready(function () {
     ) {
       if (activeIndex === 2) {
         showOrganize(0);
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(0)").addClass("dot-active");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(0)").addClass("dot-active");
       } else {
         showOrganize(activeIndex + 1);
+
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(" + activeIndex + ")").addClass("dot-active");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots
+          .find(".dot:eq(" + activeIndex * 2 + ")")
+          .addClass("dot-active");
       }
     } else if ($managementChildren === 1) {
       const $leftVisible = $(".management .management_left:visible");
@@ -162,6 +179,8 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".management .management_right").removeClass("mobile_hide_block");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(1)").addClass("dot-active");
       } else if ($rightVisible.length === 1) {
         showOrganize(1);
 
@@ -169,6 +188,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(1)").removeClass("active-link");
+
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(1)").addClass("dot-active");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(2)").addClass("dot-active");
       }
     } else if ($registrationChildren === 1) {
       const $leftVisible = $(".registration .registration_left:visible");
@@ -177,6 +201,8 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".registration .registration_right").removeClass("mobile_hide_block");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(3)").addClass("dot-active");
       } else if ($rightVisible.length === 1) {
         showOrganize(2);
 
@@ -184,6 +210,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(2)").removeClass("active-link");
+
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(2)").addClass("dot-active");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(4)").addClass("dot-active");
       }
     } else if ($waiverChildren === 1) {
       const $leftVisible = $(".waiver .waiver_left:visible");
@@ -192,6 +223,9 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".waiver .waiver_right").removeClass("mobile_hide_block");
+
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(5)").addClass("dot-active");
       } else if ($rightVisible.length === 1) {
         showOrganize(0);
 
@@ -199,6 +233,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(0)").removeClass("active-link");
+
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(0)").addClass("dot-active");
+        $mobileDots.find(".dot-active").removeClass("dot-active");
+        $mobileDots.find(".dot:eq(0)").addClass("dot-active");
       }
     }
   });
@@ -219,6 +258,8 @@ $(document).ready(function () {
     const $hoursChildren = $hours.find(
       ".hours_left:visible, .hours_right:visible"
     ).length;
+    const $deskDots = $("#inform_desk_dots");
+    const $mobileDots = $("#inform_mobile_dots");
 
     /* If 2 children are present at any time, assume desktop view */
     if (
@@ -238,6 +279,9 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".checkin .checkin_right").removeClass("mobile_hide_block");
+
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(1)").addClass("active-dot");
       } else if ($rightVisible.length === 1) {
         showControl(1);
 
@@ -245,6 +289,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(1)").removeClass("active-link");
+
+        $deskDots.find(".active-dot").removeClass("active-dot");
+        $deskDots.find(".dot:eq(1)").addClass("active-dot");
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(2)").addClass("active-dot");
       }
     } else if ($masstextChildren === 1) {
       const $leftVisible = $(".masstext .masstext_left:visible");
@@ -253,6 +302,9 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".masstext .masstext_right").removeClass("mobile_hide_block");
+
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(3)").addClass("active-dot");
       } else if ($rightVisible.length === 1) {
         showControl(2);
 
@@ -260,6 +312,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(2)").removeClass("active-link");
+
+        $deskDots.find(".active-dot").removeClass("active-dot");
+        $deskDots.find(".dot:eq(2)").addClass("active-dot");
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(4)").addClass("active-dot");
       }
     } else if ($hoursChildren === 1) {
       const $leftVisible = $(".hours .hours_left:visible");
@@ -268,6 +325,9 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".hours .hours_right").removeClass("mobile_hide_block");
+
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(5)").addClass("active-dot");
       } else if ($rightVisible.length === 1) {
         showControl(0);
 
@@ -275,6 +335,11 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(0)").removeClass("active-link");
+
+        $deskDots.find(".active-dot").removeClass("active-dot");
+        $deskDots.find(".dot:eq(0)").addClass("active-dot");
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(0)").addClass("active-dot");
       }
     }
   });
@@ -289,6 +354,8 @@ $(document).ready(function () {
       ".impact_left:visible, .impact_right:visible"
     ).length;
     const $crmChildren = $crm.find(".crm:visible").length;
+    const $deskDots = $("#inform_desk_dots");
+    const $mobileDots = $("#inform_mobile_dots");
 
     /* If 2 children are present at any time, assume desktop view */
     if ($impactChildren === 2 || $crmChildren === 2) {
@@ -304,6 +371,9 @@ $(document).ready(function () {
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
         $(".impact .impact_right").removeClass("mobile_hide_block");
+
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(1)").addClass("active-dot");
       } else if ($rightVisible.length === 1) {
         showInform(1);
 
@@ -311,11 +381,21 @@ $(document).ready(function () {
         $rightVisible.addClass("mobile_hide_block");
         $active.removeClass("active-link");
         $parent.find(".tab:eq(1)").removeClass("active-link");
+
+        $deskDots.find(".active-dot").removeClass("active-dot");
+        $deskDots.find(".dot:eq(1)").addClass("active-dot");
+        $mobileDots.find(".active-dot").removeClass("active-dot");
+        $mobileDots.find(".dot:eq(2)").addClass("active-dot");
       }
     } else if ($crmChildren === 1) {
       showInform(0);
       $active.removeClass("active-link");
       $parent.find(".tab:eq(0)").removeClass("active-link");
+
+      $deskDots.find(".active-dot").removeClass("active-dot");
+      $deskDots.find(".dot:eq(0)").addClass("active-dot");
+      $mobileDots.find(".active-dot").removeClass("active-dot");
+      $mobileDots.find(".dot:eq(0)").addClass("active-dot");
     }
   });
 });
