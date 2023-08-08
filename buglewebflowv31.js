@@ -150,12 +150,12 @@ $(document).ready(function () {
     const $deskDots = $(".organize_desk_dots");
     const $mobileDots = $(".organize_mobile_dots");
 
-    console.log("Management: " + $managementChildren);
-    console.log("Registration: " + $registrationChildren);
-    console.log("Waiver: " + $waiverChildren);
+    // console.log("Management: " + $checkInChildren);
+    // console.log("Registration: " + $masstextChildren);
+    // console.log("Waiver: " + $hoursChildren);
 
-    console.log($deskDots);
-    console.log($mobileDots);
+    // console.log($deskDots);
+    // console.log($mobileDots);
 
     /* If 2 children are present at any time, assume desktop view */
     if (
@@ -258,7 +258,7 @@ $(document).ready(function () {
   });
 
   $(".control_arrow").click(function (e) {
-    const $organize = $("#control_tab");
+    const $control = $("#control_tab");
     const $active = $organize.find(".active-link");
     const activeIndex = $active.index();
     const $checkin = $(".checkin");
@@ -276,6 +276,13 @@ $(document).ready(function () {
     const $deskDots = $("#inform_desk_dots");
     const $mobileDots = $("#inform_mobile_dots");
 
+    console.log("CheckIn: " + $checkInChildren);
+    console.log("Mass Text: " + $masstextChildren);
+    console.log("Hours: " + $hoursChildren);
+
+    console.log($deskDots);
+    console.log($mobileDots);
+
     /* If 2 children are present at any time, assume desktop view */
     if (
       $checkInChildren === 2 ||
@@ -284,8 +291,32 @@ $(document).ready(function () {
     ) {
       if (activeIndex === 2) {
         showControl(0);
+        $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+        $deskDots.find(".control-dot:eq(0)").addClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(0)").addClass("control-dot-active");
+
+        $active.removeClass("active-link");
+        $control.find(".tablink:eq(0)").addClass("active-link");
       } else {
         showControl(activeIndex + 1);
+
+        $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+        $deskDots
+          .find(".control-dot:eq(" + (activeIndex + 1) + ")")
+          .addClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot:eq(" + activeIndex * 2 + ")")
+          .addClass("control-dot-active");
+        $active.removeClass("active-link");
+        $organize
+          .find(".tablink:eq(" + (activeIndex + 1) + ")")
+          .addClass("active-link");
       }
     } else if ($checkInChildren === 1) {
       const $leftVisible = $(".checkin .checkin_left:visible");
@@ -295,8 +326,10 @@ $(document).ready(function () {
         $leftVisible.addClass("mobile_hide_block");
         $(".checkin .checkin_right").removeClass("mobile_hide_block");
 
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(1)").addClass("active-dot");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(1)").addClass("control-dot-active");
       } else if ($rightVisible.length === 1) {
         showControl(1);
 
@@ -305,10 +338,15 @@ $(document).ready(function () {
         $active.removeClass("active-link");
         $parent.find(".tab:eq(1)").removeClass("active-link");
 
-        $deskDots.find(".active-dot").removeClass("active-dot");
-        $deskDots.find(".dot:eq(1)").addClass("active-dot");
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(2)").addClass("active-dot");
+        $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+        $deskDots.find(".control-dot:eq(1)").addClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(2)").addClass("control-dot-active");
+
+        $active.removeClass("active-link");
+        $control.find(".tablink:eq(1)").addClass("active-link");
       }
     } else if ($masstextChildren === 1) {
       const $leftVisible = $(".masstext .masstext_left:visible");
@@ -318,8 +356,10 @@ $(document).ready(function () {
         $leftVisible.addClass("mobile_hide_block");
         $(".masstext .masstext_right").removeClass("mobile_hide_block");
 
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(3)").addClass("active-dot");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(3)").addClass("control-dot-active");
       } else if ($rightVisible.length === 1) {
         showControl(2);
 
@@ -328,10 +368,15 @@ $(document).ready(function () {
         $active.removeClass("active-link");
         $parent.find(".tab:eq(2)").removeClass("active-link");
 
-        $deskDots.find(".active-dot").removeClass("active-dot");
-        $deskDots.find(".dot:eq(2)").addClass("active-dot");
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(4)").addClass("active-dot");
+        $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+        $deskDots.find(".control-dot:eq(2)").addClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(4)").addClass("control-dot-active");
+
+        $active.removeClass("active-link");
+        $control.find(".tablink:eq(2)").addClass("active-link");
       }
     } else if ($hoursChildren === 1) {
       const $leftVisible = $(".hours .hours_left:visible");
@@ -341,8 +386,10 @@ $(document).ready(function () {
         $leftVisible.addClass("mobile_hide_block");
         $(".hours .hours_right").removeClass("mobile_hide_block");
 
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(5)").addClass("active-dot");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(5)").addClass("control-dot-active");
       } else if ($rightVisible.length === 1) {
         showControl(0);
 
@@ -351,10 +398,15 @@ $(document).ready(function () {
         $active.removeClass("active-link");
         $parent.find(".tab:eq(0)").removeClass("active-link");
 
-        $deskDots.find(".active-dot").removeClass("active-dot");
-        $deskDots.find(".dot:eq(0)").addClass("active-dot");
-        $mobileDots.find(".active-dot").removeClass("active-dot");
-        $mobileDots.find(".dot:eq(0)").addClass("active-dot");
+        $deskDots.find(".control-dot-active").removeClass("control-dot-active");
+        $deskDots.find(".control-dot:eq(0)").addClass("control-dot-active");
+        $mobileDots
+          .find(".control-dot-active")
+          .removeClass("control-dot-active");
+        $mobileDots.find(".control-dot:eq(0)").addClass("control-dot-active");
+
+        $active.removeClass("active-link");
+        $control.find(".tablink:eq(0)").addClass("active-link");
       }
     }
   });
