@@ -251,6 +251,11 @@ $(document).ready(function () {
       const $active = $parent.find(".dot-active");
       const activeIndex = $active.index();
 
+      console.log($this);
+      console.log($parent);
+      console.log(tabIndex);
+      console.log(activeIndex);
+
       /* Do nothing if clicked on the same tab */
       if (tabIndex === activeIndex) {
         return;
@@ -258,15 +263,50 @@ $(document).ready(function () {
 
       const $deskDots = $(".organize_desk_dots");
       const $mobileDots = $(".organize_mobile_dots");
-      showOrganize(tabIndex, activeIndex);
+      /* 0, 2, and 4 are similar to tab clicks */
+      if (tabIndex === 0) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(0)").addClass("dot-active");
+        showOrganize(0);
 
-      $deskDots.find(".dot-active").removeClass("dot-active");
-      $deskDots.find(".dot:eq(" + tabIndex + ")").addClass("dot-active");
+        $("#organize_tab").find(".tablink").removeClass("active-link");
+        $("#organize_tab").find(".tablink").eq(0).addClass("active-link");
+      } else if (tabIndex === 2) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(1)").addClass("dot-active");
+        showOrganize(1);
+
+        $("#organize_tab").find(".tablink").removeClass("active-link");
+        $("#organize_tab").find(".tablink").eq(1).addClass("active-link");
+      } else if (tabIndex === 4) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(2)").addClass("dot-active");
+        showOrganize(2);
+
+        $("#organize_tab").find(".tablink").removeClass("active-link");
+        $("#organize_tab").find(".tablink").eq(2).addClass("active-link");
+      } else if (tabIndex === 1) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(0)").addClass("dot-active");
+
+        $(".management .management_left").addClass("mobile_hide_block");
+        $(".management .management_right").removeClass("mobile_hide_block");
+      } else if (tabIndex === 3) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(1)").addClass("dot-active");
+
+        $(".registration .registration_left").addClass("mobile_hide_block");
+        $(".registration .registration_right").removeClass("mobile_hide_block");
+      } else if (tabIndex === 5) {
+        $deskDots.find(".dot-active").removeClass("dot-active");
+        $deskDots.find(".dot:eq(2)").addClass("dot-active");
+
+        $(".waiver .waiver_left").addClass("mobile_hide_block");
+        $(".waiver .waiver_right").removeClass("mobile_hide_block");
+      }
+
       $mobileDots.find(".dot-active").removeClass("dot-active");
-      $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("dot-active");
-
-      $("#organize_tab").find(".tablink").removeClass("active-link");
-      $("#organize_tab").find(".tablink").eq(tabIndex).addClass("active-link");
+      $this.addClass("dot-active");
     } else if ($parent.hasClass("control_mobile_dots")) {
       const $active = $parent.find(".control-dot-active");
       const activeIndex = $active.index();
