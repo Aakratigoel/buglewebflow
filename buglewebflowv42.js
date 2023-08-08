@@ -384,13 +384,6 @@ $(document).ready(function () {
     const $deskDots = $(".organize_desk_dots");
     const $mobileDots = $(".organize_mobile_dots");
 
-    // console.log("Management: " + $checkInChildren);
-    // console.log("Registration: " + $masstextChildren);
-    // console.log("Waiver: " + $hoursChildren);
-
-    // console.log($deskDots);
-    // console.log($mobileDots);
-
     /* If 2 children are present at any time, assume desktop view */
     if (
       $managementChildren === 2 ||
@@ -579,8 +572,8 @@ $(document).ready(function () {
         $control.find(".tablink:eq(1)").addClass("active-link");
       }
     } else if ($hoursChildren === 1) {
-      const $leftVisible = $(".hours .hours_left:visible");
-      const $rightVisible = $(".hours .hours_right:visible");
+      const $leftVisible = $(".hours .volunteerhour_left:visible");
+      const $rightVisible = $(".hours .volunteerHour_right:visible");
 
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
