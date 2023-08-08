@@ -314,7 +314,7 @@ $(document).ready(function () {
           .find(".control-dot:eq(" + activeIndex * 2 + ")")
           .addClass("control-dot-active");
         $active.removeClass("active-link");
-        $organize
+        $control
           .find(".tablink:eq(" + (activeIndex + 1) + ")")
           .addClass("active-link");
       }
