@@ -259,7 +259,7 @@ $(document).ready(function () {
 
   $(".control_arrow").click(function (e) {
     const $control = $("#control_tab");
-    const $active = $organize.find(".active-link");
+    const $active = $control.find(".active-link");
     const activeIndex = $active.index();
     const $checkin = $(".checkin");
     const $masstext = $(".masstext");
@@ -335,8 +335,6 @@ $(document).ready(function () {
 
         $(".checkin .checkin_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
-        $active.removeClass("active-link");
-        $parent.find(".tab:eq(1)").removeClass("active-link");
 
         $deskDots.find(".control-dot-active").removeClass("control-dot-active");
         $deskDots.find(".control-dot:eq(1)").addClass("control-dot-active");
@@ -365,8 +363,6 @@ $(document).ready(function () {
 
         $(".masstext .masstext_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
-        $active.removeClass("active-link");
-        $parent.find(".tab:eq(2)").removeClass("active-link");
 
         $deskDots.find(".control-dot-active").removeClass("control-dot-active");
         $deskDots.find(".control-dot:eq(2)").addClass("control-dot-active");
@@ -395,8 +391,6 @@ $(document).ready(function () {
 
         $(".hours .hours_left").removeClass("mobile_hide_block");
         $rightVisible.addClass("mobile_hide_block");
-        $active.removeClass("active-link");
-        $parent.find(".tab:eq(0)").removeClass("active-link");
 
         $deskDots.find(".control-dot-active").removeClass("control-dot-active");
         $deskDots.find(".control-dot:eq(0)").addClass("control-dot-active");
