@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   function checkWidth() {
     var windowsize = $window.width();
-    if (windowsize > 900) {
+    if (windowsize < 900) {
       //if the window is greater than 440px wide then turn on jScrollPane..
       $(".management_right, .registration_right, .waiver_right").addClass(
         "splide__slide"
