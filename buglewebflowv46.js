@@ -3,6 +3,19 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
+  function checkWidth() {
+    var windowsize = $window.width();
+    if (windowsize < 900) {
+      //if the window is greater than 440px wide then turn on jScrollPane..
+      $(".management_right, .registration_right, .waiver_right").addClass(
+        "splide__slide"
+      );
+    }
+  }
+
+  checkWidth();
+  $(window).resize(checkWidth);
+
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
   $(".tab3link").first().addClass("active-link");
