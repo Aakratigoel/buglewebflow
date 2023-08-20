@@ -20,6 +20,14 @@ $(document).ready(function () {
     return false;
   });
 
+  new Splide("#organize-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: true,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
   /* Initially hide organize mobile blocks */
   $(".management_left, .registration_left, .waiver_left").addClass("");
   $(".management_right, .registration_right, .waiver_right").addClass(

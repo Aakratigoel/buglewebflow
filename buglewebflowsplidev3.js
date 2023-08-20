@@ -1,10 +1,4 @@
 $(document).ready(function () {
-  new Splide("#my-splide", {
-    type: "slide",
-    perPage: 1,
-    autoplay: false,
-  }).mount();
-
   let content1count = 1;
   let content2count = 1;
   let content3count = 1;
