@@ -28,6 +28,46 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
+  new Splide("#mobile-organize-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#control-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#mobile-control-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#impact-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#mobile-impact-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
   /* Initially hide organize mobile blocks */
   $(".management_left, .registration_left, .waiver_left").addClass("");
   $(".management_right, .registration_right, .waiver_right").addClass(
