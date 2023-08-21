@@ -22,7 +22,7 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  new Splide("#mobile-organize-splide", {
+  const mobile_organize_splide = new Splide("#mobile-organize-splide", {
     type: "slide",
     perPage: 1,
     autoplay: false,
@@ -38,7 +38,7 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  new Splide("#mobile-control-splide", {
+  const mobile_control_splide = new Splide("#mobile-control-splide", {
     type: "slide",
     perPage: 1,
     autoplay: false,
@@ -54,7 +54,7 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  new Splide("#mobile-impact-splide", {
+  const mobile_impact_splide = new Splide("#mobile-impact-splide", {
     type: "slide",
     perPage: 1,
     autoplay: false,
@@ -64,11 +64,23 @@ $(document).ready(function () {
 
   const showOrganize = (index, previousIndex) => {
     if (index === 0) {
-      organize_splide.go(0);
+      if (screen.width <= 992) {
+        mobile_organize_splide.go(0);
+      } else {
+        organize_splide.go(0);
+      }
     } else if (index === 1) {
-      organize_splide.go(1);
+      if (screen.width <= 992) {
+        mobile_organize_splide.go(2);
+      } else {
+        organize_splide.go(1);
+      }
     } else if (index === 2) {
-      organize_splide.go(2);
+      if (screen.width <= 992) {
+        mobile_organize_splide.go(4);
+      } else {
+        organize_splide.go(2);
+      }
     }
   };
 
@@ -106,40 +118,11 @@ $(document).ready(function () {
     }
 
     if (parentId === "organize_tab") {
-      const $deskDots = $(".organize_desk_dots");
-      const $mobileDots = $(".organize_mobile_dots");
       showOrganize(tabIndex, activeIndex);
-
-      $deskDots.find(".dot-active").removeClass("dot-active");
-      $deskDots.find(".dot:eq(" + tabIndex + ")").addClass("dot-active");
-      $mobileDots.find(".dot-active").removeClass("dot-active");
-      $mobileDots.find(".dot:eq(" + tabIndex * 2 + ")").addClass("dot-active");
     } else if (parentId === "control_tab") {
-      const $deskDots = $(".control_desk_dots");
-      const $mobileDots = $(".control_mobile_dots");
       showControl(tabIndex, activeIndex);
-
-      $deskDots.find(".control-dot-active").removeClass("control-dot-active");
-      $deskDots
-        .find(".control-dot:eq(" + tabIndex + ")")
-        .addClass("control-dot-active");
-      $mobileDots.find(".control-dot-active").removeClass("control-dot-active");
-      $mobileDots
-        .find(".control-dot:eq(" + tabIndex * 2 + ")")
-        .addClass("control-dot-active");
     } else if (parentId === "inform_tab") {
-      const $deskDots = $(".inform_desk_dots");
-      const $mobileDots = $(".inform_mobile_dots");
       showInform(tabIndex, activeIndex);
-
-      $deskDots.find(".inform-dot-active").removeClass("inform-dot-active");
-      $deskDots
-        .find(".inform-dot:eq(" + tabIndex + ")")
-        .addClass("inform-dot-active");
-      $mobileDots.find(".inform-dot-active").removeClass("inform-dot-active");
-      $mobileDots
-        .find(".inform-dot:eq(" + tabIndex * 2 + ")")
-        .addClass("inform-dot-active");
     }
 
     $parent.find(".tablink").removeClass("active-link");
