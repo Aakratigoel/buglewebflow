@@ -7,12 +7,6 @@ $(document).ready(function () {
   $(".tab2link").first().addClass("active-link");
   $(".tab3link").first().addClass("active-link");
 
-  $(".registration").addClass("hide");
-  $(".waiver").addClass("hide");
-  $(".masstext").addClass("hide");
-  $(".hours").addClass("hide");
-  $(".crm_content").addClass("hide");
-
   $(".book_demo").click(function () {
     Calendly.initPopupWidget({
       url: "https://calendly.com/ryan-bugle/bugle-demo",
@@ -67,20 +61,6 @@ $(document).ready(function () {
     rewind: true,
     interval: 4000,
   }).mount();
-
-  /* Initially hide organize mobile blocks */
-  $(".management_left, .registration_left, .waiver_left").addClass("");
-  $(".management_right, .registration_right, .waiver_right").addClass(
-    "mobile_hide_block"
-  );
-
-  /* Initially hide control mobile blocks */
-  $(".checkin_left, .volunteerhour_left").addClass("");
-  $(".checkin_right, .volunteerhour_right").addClass("mobile_hide_block");
-
-  /* Initially hide control mobile blocks */
-  $(".impact_left").addClass("");
-  $(".impact_right").addClass("mobile_hide_block");
 
   const showOrganize = (index, previousIndex) => {
     // let $previous;
