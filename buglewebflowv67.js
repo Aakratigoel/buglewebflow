@@ -128,19 +128,39 @@ $(document).ready(function () {
 
   const showControl = (index) => {
     if (index === 0) {
-      control_splide.go(0);
+      if (screen.width <= 992) {
+        mobile_control_splide.go(0);
+      } else {
+        control_splide.go(0);
+      }
     } else if (index === 1) {
-      control_splide.go(1);
+      if (screen.width <= 992) {
+        mobile_control_splide.go(2);
+      } else {
+        control_splide.go(1);
+      }
     } else if (index === 2) {
-      control_splide.go(2);
+      if (screen.width <= 992) {
+        mobile_control_splide.go(4);
+      } else {
+        control_splide.go(2);
+      }
     }
   };
 
   const showInform = (index) => {
     if (index === 0) {
-      impact_splide.go(0);
+      if (screen.width <= 992) {
+        mobile_impact_splide.go(0);
+      } else {
+        impact_splide.go(0);
+      }
     } else if (index === 1) {
-      impact_splide.go(1);
+      if (screen.width <= 992) {
+        mobile_impact_splide.go(2);
+      } else {
+        impact_splide.go(1);
+      }
     }
   };
 
