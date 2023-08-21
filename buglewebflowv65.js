@@ -79,6 +79,10 @@ $(document).ready(function () {
     console.log("newIndex", newIndex);
     if (newIndex === 0 || newIndex === 1) {
       $("#organize_tab").find(".tablink").eq(0).addClass("active-link");
+    } else if (newIndex === 2 || newIndex === 3) {
+      $("#organize_tab").find(".tablink").eq(1).addClass("active-link");
+    } else if (newIndex === 4 || newIndex === 5) {
+      $("#organize_tab").find(".tablink").eq(2).addClass("active-link");
     }
   });
   mobile_control_splide.on("move", function (newIndex) {
