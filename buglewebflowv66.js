@@ -87,11 +87,21 @@ $(document).ready(function () {
   });
   mobile_control_splide.on("move", function (newIndex) {
     $("#control_tab").find(".tab2link").removeClass("active-link");
-    $("#control_tab").find(".tab2link").eq(newIndex).addClass("active-link");
+    if (newIndex === 0 || newIndex === 1) {
+      $("#control_tab").find(".tab2link").eq(0).addClass("active-link");
+    } else if (newIndex === 2 || newIndex === 3) {
+      $("#control_tab").find(".tab2link").eq(1).addClass("active-link");
+    } else if (newIndex === 4) {
+      $("#control_tab").find(".tab2link").eq(2).addClass("active-link");
+    }
   });
   mobile_impact_splide.on("move", function (newIndex) {
     $("#inform_tab").find(".tab3link").removeClass("active-link");
-    $("#inform_tab").find(".tab3link").eq(newIndex).addClass("active-link");
+    if (newIndex === 0 || newIndex === 1) {
+      $("#inform_tab").find(".tab3link").eq(0).addClass("active-link");
+    } else if (newIndex === 2) {
+      $("#inform_tab").find(".tab3link").eq(1).addClass("active-link");
+    }
   });
 
   const showOrganize = (index) => {
