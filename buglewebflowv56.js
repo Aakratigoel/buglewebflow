@@ -62,7 +62,12 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  const showOrganize = (index, previousIndex) => {
+  $(window).on("resize", function () {
+    showOrganize(0);
+    showControl(0);
+    showInform(0);
+  });
+  const showOrganize = (index) => {
     if (index === 0) {
       if (screen.width <= 992) {
         mobile_organize_splide.go(0);
