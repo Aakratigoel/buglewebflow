@@ -63,13 +63,9 @@ $(document).ready(function () {
   }).mount();
 
   $(window).on("resize", function () {
-    if (screen.width <= 992) {
-      mobile_organize_splide.go(0);
-    } else {
-      organize_splide.go(0);
-    }
-    showControl(0);
-    showInform(0);
+    $(".tablink").first().addClass("active-link");
+    $(".tab2link").first().addClass("active-link");
+    $(".tab3link").first().addClass("active-link");
   });
   const showOrganize = (index) => {
     if (index === 0) {
