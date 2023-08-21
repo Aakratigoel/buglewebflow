@@ -30,7 +30,7 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  new Splide("#control-splide", {
+  const control_splide = new Splide("#control-splide", {
     type: "slide",
     perPage: 1,
     autoplay: false,
@@ -46,7 +46,7 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  new Splide("#impact-splide", {
+  const impact_splide = new Splide("#impact-splide", {
     type: "slide",
     perPage: 1,
     autoplay: false,
@@ -65,58 +65,28 @@ $(document).ready(function () {
   const showOrganize = (index, previousIndex) => {
     if (index === 0) {
       organize_splide.go(0);
-      // $(".waiver").addClass("hide");
-      // $(".registration").addClass("hide");
-      // $(".management").removeClass("hide");
-      // $(".management .management_left").removeClass("mobile_hide_block");
-      // $(".management .management_right").addClass("mobile_hide_block");
     } else if (index === 1) {
       organize_splide.go(1);
-
-      // $(".waiver").addClass("hide");
-      // $(".management").addClass("hide");
-      // $(".registration").removeClass("hide");
-      // $(".registration .registration_left").removeClass("mobile_hide_block");
-      // $(".registration .registration_right").addClass("mobile_hide_block");
     } else if (index === 2) {
       organize_splide.go(2);
-      // $(".management").addClass("hide");
-      // $(".registration").addClass("hide");
-      // $(".waiver").removeClass("hide");
-      // $(".waiver .waiver_left").removeClass("mobile_hide_block");
-      // $(".waiver .waiver_right").addClass("mobile_hide_block");
     }
   };
 
   const showControl = (index) => {
     if (index === 0) {
-      $(".checkin").removeClass("hide");
-      $(".masstext").addClass("hide");
-      $(".hours").addClass("hide");
-
-      $(".checkin .checkin_left").removeClass("mobile_hide_block");
-      $(".checkin .checkin_right").addClass("mobile_hide_block");
+      control_splide.go(0);
     } else if (index === 1) {
-      $(".checkin").addClass("hide");
-      $(".masstext").addClass("hide");
-      $(".hours").removeClass("hide");
-
-      $(".hours .volunteerhour_left").removeClass("mobile_hide_block");
-      $(".hours .volunteerhour_right").addClass("mobile_hide_block");
+      control_splide.go(0);
     } else if (index === 2) {
-      $(".checkin").addClass("hide");
-      $(".masstext").removeClass("hide");
-      $(".hours").addClass("hide");
+      control_splide.go(0);
     }
   };
 
   const showInform = (index) => {
     if (index === 0) {
-      $(".impact").removeClass("hide");
-      $(".crm_content").addClass("hide");
+      impact_splide.go(0);
     } else if (index === 1) {
-      $(".impact").addClass("hide");
-      $(".crm_content").removeClass("hide");
+      impact_splide.go(1);
     }
   };
 
