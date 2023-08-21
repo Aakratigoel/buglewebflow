@@ -64,23 +64,27 @@ $(document).ready(function () {
 
   const showOrganize = (index, previousIndex) => {
     if (index === 0) {
-      $(".waiver").addClass("hide");
-      $(".registration").addClass("hide");
-      $(".management").removeClass("hide");
-      $(".management .management_left").removeClass("mobile_hide_block");
-      $(".management .management_right").addClass("mobile_hide_block");
+      splide.go(0);
+      // $(".waiver").addClass("hide");
+      // $(".registration").addClass("hide");
+      // $(".management").removeClass("hide");
+      // $(".management .management_left").removeClass("mobile_hide_block");
+      // $(".management .management_right").addClass("mobile_hide_block");
     } else if (index === 1) {
-      $(".waiver").addClass("hide");
-      $(".management").addClass("hide");
-      $(".registration").removeClass("hide");
-      $(".registration .registration_left").removeClass("mobile_hide_block");
-      $(".registration .registration_right").addClass("mobile_hide_block");
+      splide.go(1);
+
+      // $(".waiver").addClass("hide");
+      // $(".management").addClass("hide");
+      // $(".registration").removeClass("hide");
+      // $(".registration .registration_left").removeClass("mobile_hide_block");
+      // $(".registration .registration_right").addClass("mobile_hide_block");
     } else if (index === 2) {
-      $(".management").addClass("hide");
-      $(".registration").addClass("hide");
-      $(".waiver").removeClass("hide");
-      $(".waiver .waiver_left").removeClass("mobile_hide_block");
-      $(".waiver .waiver_right").addClass("mobile_hide_block");
+      splide.go(2);
+      // $(".management").addClass("hide");
+      // $(".registration").addClass("hide");
+      // $(".waiver").removeClass("hide");
+      // $(".waiver .waiver_left").removeClass("mobile_hide_block");
+      // $(".waiver .waiver_right").addClass("mobile_hide_block");
     }
   };
 
