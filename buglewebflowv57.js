@@ -63,7 +63,11 @@ $(document).ready(function () {
   }).mount();
 
   $(window).on("resize", function () {
-    showOrganize(0);
+    if (screen.width <= 992) {
+      mobile_organize_splide.go(0);
+    } else {
+      organize_splide.go(0);
+    }
     showControl(0);
     showInform(0);
   });
