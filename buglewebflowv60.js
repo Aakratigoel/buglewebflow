@@ -62,14 +62,11 @@ $(document).ready(function () {
     interval: 4000,
   }).mount();
 
-  $(window).on("resize", function () {
-    $(".tablink").removeClass("active-link");
-    $(".tablink").first().addClass("active-link");
-    $(".tab2link").removeClass("active-link");
-    $(".tab2link").first().addClass("active-link");
-    $(".tab3link").removeClass("active-link");
-    $(".tab3link").first().addClass("active-link");
+  organize_splide.on("move", function (newIndex) {
+    $("#organize_tab").find(".tablink").removeClass("active-link");
+    $("#organize_tab").find(".tablink").eq(newIndex).addClass("active-link");
   });
+
   const showOrganize = (index) => {
     if (index === 0) {
       if (screen.width <= 992) {
