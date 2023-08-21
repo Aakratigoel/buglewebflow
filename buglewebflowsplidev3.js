@@ -3,28 +3,9 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
-  function checkWidth() {
-    var windowsize = $window.width();
-    if (windowsize < 900) {
-      //if the window is greater than 440px wide then turn on jScrollPane..
-      $(".management_right, .registration_right, .waiver_right").addClass(
-        "splide__slide"
-      );
-    }
-  }
-  // Execute on load
-  checkWidth();
-  $(window).resize(checkWidth);
-
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
   $(".tab3link").first().addClass("active-link");
-
-  $(".registration").addClass("hide");
-  $(".waiver").addClass("hide");
-  $(".masstext").addClass("hide");
-  $(".hours").addClass("hide");
-  $(".crm_content").addClass("hide");
 
   $(".book_demo").click(function () {
     Calendly.initPopupWidget({
@@ -33,19 +14,53 @@ $(document).ready(function () {
     return false;
   });
 
-  /* Initially hide organize mobile blocks */
-  $(".management_left, .registration_left, .waiver_left").addClass("");
-  $(".management_right, .registration_right, .waiver_right").addClass(
-    "mobile_hide_block"
-  );
+  new Splide("#organize-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: true,
+    rewind: true,
+    interval: 4000,
+  }).mount();
 
-  /* Initially hide control mobile blocks */
-  $(".checkin_left, .volunteerhour_left").addClass("");
-  $(".checkin_right, .volunteerhour_right").addClass("mobile_hide_block");
+  new Splide("#mobile-organize-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
 
-  /* Initially hide control mobile blocks */
-  $(".impact_left").addClass("");
-  $(".impact_right").addClass("mobile_hide_block");
+  new Splide("#control-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#mobile-control-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#impact-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
+
+  new Splide("#mobile-impact-splide", {
+    type: "slide",
+    perPage: 1,
+    autoplay: false,
+    rewind: true,
+    interval: 4000,
+  }).mount();
 
   const showOrganize = (index, previousIndex) => {
     // let $previous;
@@ -514,13 +529,6 @@ $(document).ready(function () {
     const $deskDots = $(".control_desk_dots");
     const $mobileDots = $(".control_mobile_dots");
 
-    console.log("CheckIn: " + $checkInChildren);
-    console.log("Mass Text: " + $masstextChildren);
-    console.log("Hours: " + $hoursChildren);
-
-    console.log($deskDots);
-    console.log($mobileDots);
-
     /* If 2 children are present at any time, assume desktop view */
     if (
       $checkInChildren === 2 ||
@@ -586,7 +594,7 @@ $(document).ready(function () {
       }
     } else if ($hoursChildren === 1) {
       const $leftVisible = $(".hours .volunteerhour_left:visible");
-      const $rightVisible = $(".hours .volunteerHour_right:visible");
+      const $rightVisible = $(".hours .volunteerhour_right:visible");
 
       if ($leftVisible.length === 1) {
         $leftVisible.addClass("mobile_hide_block");
