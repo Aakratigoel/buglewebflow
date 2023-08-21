@@ -17,7 +17,7 @@ $(document).ready(function () {
   new Splide("#organize-splide", {
     type: "slide",
     perPage: 1,
-    autoplay: true,
+    autoplay: false,
     rewind: true,
     interval: 4000,
   }).mount();
@@ -63,51 +63,24 @@ $(document).ready(function () {
   }).mount();
 
   const showOrganize = (index, previousIndex) => {
-    // let $previous;
-
-    // if (previousIndex === 0) {
-    //   $previous = $(".management");
-    // } else if (previousIndex === 1) {
-    //   $previous = $(".registration");
-    // } else if (previousIndex === 2) {
-    //   $previous = $(".waiver");
-    // }
-
     if (index === 0) {
       $(".waiver").addClass("hide");
       $(".registration").addClass("hide");
       $(".management").removeClass("hide");
       $(".management .management_left").removeClass("mobile_hide_block");
       $(".management .management_right").addClass("mobile_hide_block");
-
-      // $previous.fadeOut(500, function () {
-      //   $(".management").fadeIn(500, function () {
-
-      //   });
-      // });
     } else if (index === 1) {
       $(".waiver").addClass("hide");
       $(".management").addClass("hide");
       $(".registration").removeClass("hide");
       $(".registration .registration_left").removeClass("mobile_hide_block");
       $(".registration .registration_right").addClass("mobile_hide_block");
-      // $previous.fadeOut(500, function () {
-      //   $(".registration").fadeIn(500, function () {
-
-      //   });
-      // });
     } else if (index === 2) {
       $(".management").addClass("hide");
       $(".registration").addClass("hide");
       $(".waiver").removeClass("hide");
       $(".waiver .waiver_left").removeClass("mobile_hide_block");
       $(".waiver .waiver_right").addClass("mobile_hide_block");
-
-      // $previous.fadeOut(500, function () {
-      //   $(".waiver").fadeIn(500, function () {
-
-      //   });
-      // });
     }
   };
 
@@ -151,6 +124,8 @@ $(document).ready(function () {
     const tabIndex = $this.index();
     const activeIndex = $active.index();
 
+    console.log("tab index", tabIndex);
+    console.log("Active index", activeIndex);
     /* Do nothing if clicked on the same tab */
     if (tabIndex === activeIndex) {
       return;
