@@ -76,9 +76,9 @@ $(document).ready(function () {
     if (index === 0) {
       control_splide.go(0);
     } else if (index === 1) {
-      control_splide.go(0);
+      control_splide.go(1);
     } else if (index === 2) {
-      control_splide.go(0);
+      control_splide.go(2);
     }
   };
 
