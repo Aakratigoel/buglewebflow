@@ -63,8 +63,11 @@ $(document).ready(function () {
   }).mount();
 
   $(window).on("resize", function () {
+    $(".tablink").removeClass("active-link");
     $(".tablink").first().addClass("active-link");
+    $(".tab2link").removeClass("active-link");
     $(".tab2link").first().addClass("active-link");
+    $(".tab3link").removeClass("active-link");
     $(".tab3link").first().addClass("active-link");
   });
   const showOrganize = (index) => {
