@@ -56,8 +56,8 @@
 
 @media only screen and (max-width: 1259px) and (min-width: 952px) {
   .create_event_steps_section {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 
