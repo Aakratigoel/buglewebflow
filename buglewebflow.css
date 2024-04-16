@@ -295,6 +295,16 @@
     width: 143%;
   }
 
+  .div-block-104 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eventCreation_card {
+    width: 100%;
+    height: 183px;
+  }
+
   .column-24 {
     margin-right: 0px;
   }
