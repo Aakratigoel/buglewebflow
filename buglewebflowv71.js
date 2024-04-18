@@ -192,7 +192,7 @@ $(document).ready(function () {
     $this.addClass("active-link");
   });
 
-  $(".acc_feature_header").click(function (e) {
+  $("#enterprise_account_heading").click(function (e) {
     console.log("Hi");
     $(".acc_feature_header").removeClass("hover");
   });
