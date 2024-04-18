@@ -4,6 +4,11 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
+  $(".acc_feature_header").click(function (e) {
+    console.log("Hi");
+    $(".acc_feature_header").removeClass("hover");
+  });
+
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
   $(".tab3link").first().addClass("active-link");
@@ -190,10 +195,5 @@ $(document).ready(function () {
 
     $parent.find(".tablink").removeClass("active-link");
     $this.addClass("active-link");
-  });
-
-  $(".feature_link").click(function (e) {
-    console.log("Hi");
-    $(".acc_feature_header").removeClass("hover");
   });
 });
