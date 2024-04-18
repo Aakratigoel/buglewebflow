@@ -15,9 +15,9 @@ $(document).ready(function () {
     return;
   }
 
-  $(".acc_feature_header").click(function (e) {
+  $(".acc_feature_header").click(function () {
     console.log("Hi");
-    $(this).off("mouseenter mouseleave");
+    $(this).off("mouseleave");
   });
 
   $(".tablink").first().addClass("active-link");
