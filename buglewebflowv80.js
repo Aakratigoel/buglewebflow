@@ -17,12 +17,7 @@ $(document).ready(function () {
 
   $(".acc_feature_header").click(function (e) {
     console.log("Hi");
-    // $(".acc_feature_header").removeClass("acc_hover_out");
-    $(".acc_feature_header").off("mouseleave");
-    $(".acc_feature_header").css({
-      opacity: "100%",
-      // Add more properties as needed
-    });
+    $(this).off("mouseenter mouseleave");
   });
 
   $(".tablink").first().addClass("active-link");
