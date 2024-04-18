@@ -10,7 +10,7 @@ $(document).ready(function () {
   }
 
   // Check if the element exists
-  if ($(".your-element-class").length === 0) {
+  if ($(".acc_feature_header").length === 0) {
     console.error('Element with class "your-element-class" not found.');
     return;
   }
