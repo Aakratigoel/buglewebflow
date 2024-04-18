@@ -4,6 +4,17 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
+  if (typeof jQuery === "undefined") {
+    console.error("jQuery is not loaded.");
+    return;
+  }
+
+  // Check if the element exists
+  if ($(".your-element-class").length === 0) {
+    console.error('Element with class "your-element-class" not found.');
+    return;
+  }
+
   $(".acc_feature_header").click(function (e) {
     console.log("Hi");
     // $(".acc_feature_header").removeClass("acc_hover_out");
