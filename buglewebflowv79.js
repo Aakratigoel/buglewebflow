@@ -19,6 +19,10 @@ $(document).ready(function () {
     console.log("Hi");
     // $(".acc_feature_header").removeClass("acc_hover_out");
     $(".acc_feature_header").off("mouseleave");
+    $(".acc_feature_header").css({
+      opacity: "100%",
+      // Add more properties as needed
+    });
   });
 
   $(".tablink").first().addClass("active-link");
