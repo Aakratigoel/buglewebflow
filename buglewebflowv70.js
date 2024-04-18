@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log("document ready");
   let content1count = 1;
   let content2count = 1;
   let content3count = 1;
@@ -192,6 +193,7 @@ $(document).ready(function () {
   });
 
   $(".acc_feature_header").click(function (e) {
+    console.log("Hi");
     $(".acc_feature_header").removeClass("hover");
   });
 });
