@@ -7,7 +7,7 @@ $(document).ready(function () {
   $(".acc_feature_header").click(function (e) {
     console.log("Hi");
     // $(".acc_feature_header").removeClass("acc_hover_out");
-    $(".acc_feature_header").off("mouseenter mouseleave");
+    $(".acc_feature_header").off("mouseleave");
   });
 
   $(".tablink").first().addClass("active-link");
