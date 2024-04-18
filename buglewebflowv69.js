@@ -190,4 +190,8 @@ $(document).ready(function () {
     $parent.find(".tablink").removeClass("active-link");
     $this.addClass("active-link");
   });
+
+  $(".acc_feature_header").click(function (e) {
+    $(".acc_feature_header").removeClass("hover");
+  });
 });
