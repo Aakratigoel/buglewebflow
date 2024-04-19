@@ -4,21 +4,10 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
-  if (typeof jQuery === "undefined") {
-    console.error("jQuery is not loaded.");
-    return;
-  }
-
-  // Check if the element exists
-  if ($(".acc_feature_header").length === 0) {
-    console.error('Element with class "your-element-class" not found.');
-    return;
-  }
-
-  $(".acc_feature_header").click(function () {
-    console.log("Hi");
-    $(this).off("mouseleave");
-  });
+  // $(".acc_feature_header").click(function () {
+  //   console.log("Hi");
+  //   $(this).off("mouseleave");
+  // });
 
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
