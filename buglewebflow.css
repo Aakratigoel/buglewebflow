@@ -313,3 +313,17 @@
     margin-right: 0px;
   }
 }
+@media only screen and (max-width: 874px) and (min-width: 768px) {
+}
+
+@media only screen and (max-width: 550px) and (min-width: 480px) {
+  .eventCreation_card {
+    width: 237px;
+  }
+}
+
+@media only screen and (max-width: 479px) and (min-width: 463px) {
+  .eventCreation_card {
+    width: 237px;
+  }
+}
