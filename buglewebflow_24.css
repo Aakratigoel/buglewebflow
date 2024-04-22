@@ -85,12 +85,16 @@
   .image-86 {
     display: none;
   }
+  .image-96 {
+    display: none;
+  }
   .image-88 {
     width: auto;
   }
   .image-87 {
     width: auto;
   }
+
   .control_left {
     display: none;
   }
@@ -157,5 +161,16 @@
   }
   .signUp_section {
     margin-top: 60px;
+  }
+  .bugle_plans {
+    padding: 100px 30px;
+  }
+  .plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .packages_header {
+    margin-bottom: 40px;
   }
 }
