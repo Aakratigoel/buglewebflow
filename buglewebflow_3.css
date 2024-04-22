@@ -8,10 +8,11 @@
   }
 
   .hero-split {
-    width: 100% !important;
+    width: 100%;
+    text-align: center;
   }
 
   .div-block-47 {
-    width: 100% !important;
+    width: 100%;
   }
 }
