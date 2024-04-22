@@ -181,4 +181,8 @@
   .packages_header {
     margin-bottom: 40px;
   }
+  .cardbutton.sendmessage {
+    width: 94%;
+    left: 3%;
+  }
 }
