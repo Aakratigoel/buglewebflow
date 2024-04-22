@@ -58,4 +58,38 @@
     margin-top: 8px;
     margin-bottom: 16px !important;
   }
+  .container-45 {
+    display: none;
+  }
+  .container-46 {
+    display: none;
+  }
+  .mobile_organize {
+    display: block;
+  }
+  .image-95 {
+    display: none;
+  }
+  .image-94 {
+    display: none;
+  }
+  .control_left {
+    display: none;
+  }
+  .control_right {
+    display: none;
+  }
+  .mobile_control {
+    display: block;
+  }
+
+  .inform_left {
+    display: none;
+  }
+  .inform_right {
+    display: none;
+  }
+  .mobile_inform {
+    display: block;
+  }
 }
