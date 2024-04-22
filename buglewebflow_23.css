@@ -137,6 +137,7 @@
   }
   .container-48 {
     padding: 50px 20px 50px 20px;
+    height: auto !important;
   }
   .why_bugle_content {
     display: flex;
