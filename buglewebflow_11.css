@@ -50,4 +50,8 @@
     width: 100% !important;
     height: auto;
   }
+  .eventContent_para {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
 }
