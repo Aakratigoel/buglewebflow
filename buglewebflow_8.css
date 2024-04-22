@@ -43,8 +43,11 @@
     margin-bottom: 40px;
   }
   .eventCreation_card {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
     padding: 30px 30px 40px 30px;
-    width: 100%;
+    width: 100% !important;
     height: 183px;
   }
 }
