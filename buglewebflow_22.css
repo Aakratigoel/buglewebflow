@@ -131,4 +131,30 @@
   .inform_features {
     margin-top: 50px;
   }
+  .why_bugle_section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .container-48 {
+    padding: 50px 20px 50px 20px;
+  }
+  .why_bugle_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    height: auto;
+  }
+  .why_bugle_tile1 {
+    margin-bottom: 50px;
+    height: auto;
+  }
+  .why_bugle_tile2 {
+    margin-bottom: 50px;
+    height: auto;
+  }
+  .signUp_section {
+    margin-top: 60px;
+  }
 }
