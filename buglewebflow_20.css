@@ -61,6 +61,9 @@
   .organize_section {
     padding: 80px 30px 100px 30px;
   }
+  .control_section {
+    padding: 80px 30px 100px 30px;
+  }
   .container-45 {
     display: none;
   }
@@ -101,5 +104,12 @@
   }
   .features {
     margin-top: 50px;
+  }
+
+  .container-54 {
+    margin-top: 50px;
+  }
+  .control_features {
+    margin-top: 60px;
   }
 }
