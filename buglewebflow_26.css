@@ -157,10 +157,15 @@
   .why_bugle_tile1 {
     margin-bottom: 50px;
     height: auto;
+    width: 100%;
   }
   .why_bugle_tile2 {
     margin-bottom: 50px;
     height: auto;
+    width: 100%;
+  }
+  .why_bugle_tile3 {
+    width: 100%;
   }
   .signUp_section {
     margin-top: 60px;
