@@ -58,6 +58,9 @@
     margin-top: 8px;
     margin-bottom: 16px !important;
   }
+  .organize_section {
+    padding: 80px 30px 100px 30px;
+  }
   .container-45 {
     display: none;
   }
