@@ -49,6 +49,7 @@
     padding: 30px 30px 40px 30px;
     width: 100% !important;
     height: auto;
+    align-items: baseline;
   }
   .step_content {
     width: auto !important;
