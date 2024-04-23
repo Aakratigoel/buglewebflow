@@ -1,3 +1,15 @@
+@media only screen and (max-width: 400px) {
+  .inform_update_images {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 474px) and (min-width: 400px) {
+  .inform_update_images {
+    width: 80%;
+  }
+}
+
 @media only screen and (max-width: 479px) {
   .vol_profiles_images {
     height: 357px;
