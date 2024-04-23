@@ -226,12 +226,10 @@
     align-items: center;
   }
   .inform_update_images {
-    display: flex;
     align-items: center;
     justify-content: center;
   }
   .vol_profiles_images {
-    display: flex;
     align-items: center;
     justify-content: center;
   }
