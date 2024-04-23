@@ -1,3 +1,20 @@
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+  /* .image-90 {
+    top: 11%;
+    left: 55%;
+  } */
+  .vol_profile_images {
+    height: 357px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 600px) {
+  .image-90 {
+    width: 45%;
+    top: 14%;
+    left: 55%;
+  }
+}
+
 @media only screen and (max-width: 1100px) and (min-width: 992px) {
   .hero-wrapper-2 {
     display: flex;
@@ -96,6 +113,10 @@
   }
   .image-87 {
     width: auto;
+  }
+  .image-90 {
+    top: 12%;
+    left: 53%;
   }
 
   .control_left {
