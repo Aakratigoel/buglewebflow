@@ -1,5 +1,5 @@
 @media only screen and (max-width: 479px) {
-  .vol_profile_images {
+  .vol_profiles_images {
     height: 357px;
   }
 }
@@ -9,7 +9,7 @@
     top: 14%;
     left: 55%;
   }
-  .vol_profile_images {
+  .vol_profiles_images {
     height: 357px;
   }
 }
