@@ -226,9 +226,11 @@
     align-items: center;
   }
   .inform_update_images {
+    width: 80%;
     margin: 0 auto;
   }
   .vol_profiles_images {
+    width: 80%;
     margin: 0 auto;
   }
 }
