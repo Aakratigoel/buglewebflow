@@ -21,20 +21,20 @@
 .event_feature_header:hover {
   opacity: 1;
 }
-.event_feature_header span {
+.event_feature_header {
   opacity: 0.5;
 }
-.event_feature_header.active span {
+.event_feature_header.active {
   opacity: 1;
 }
 
 .shift_feature_header:hover {
   opacity: 1;
 }
-.shift_feature_header span {
+.shift_feature_header {
   opacity: 0.5;
 }
-.shift_feature_header.active span {
+.shift_feature_header.active {
   opacity: 1;
 }
 
