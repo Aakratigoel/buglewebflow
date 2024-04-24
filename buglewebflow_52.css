@@ -23,6 +23,9 @@
   .vol_profiles_images {
     height: 320px;
   }
+  .event_calendar_image {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) and (min-width: 521px) {
