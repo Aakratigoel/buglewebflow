@@ -9,6 +9,7 @@ $(document).ready(function () {
   //   $(this).off("mouseleave");
   // });
   $(".acc_feature_header").on("click", function () {
+    console.log("Hi");
     $(this).addClass("active");
   });
 
