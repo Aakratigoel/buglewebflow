@@ -285,3 +285,9 @@
     height: 52%;
   }
 }
+
+@media only screen and (max-width: 400px) and (min-width: 320px) {
+  .event_calendar_image {
+    width: 100%;
+  }
+}
