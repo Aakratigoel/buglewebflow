@@ -245,6 +245,13 @@
     width: 80%;
     margin: 0 auto;
   }
+  .event_registration_image {
+    display: flex;
+    justify-content: center;
+  }
+  .event_reg_image_2 {
+    width: 26%;
+  }
 }
 
 @media only screen and (max-width: 1197px) and (min-width: 1101px) {
