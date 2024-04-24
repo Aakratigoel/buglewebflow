@@ -175,9 +175,10 @@
     margin-top: 50px;
   }
 
-  /* .container-54 {
+  .container-54 {
     margin-top: 50px;
-  } */
+    height: auto;
+  }
   .control_features {
     margin-top: 60px;
   }
