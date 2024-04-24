@@ -2,6 +2,9 @@
   .inform_update_images {
     width: 100%;
   }
+  .event_featurelink_heading {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width: 474px) and (min-width: 400px) {
