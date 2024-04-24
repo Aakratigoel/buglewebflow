@@ -246,8 +246,8 @@
     margin: 0 auto;
   }
   .event_registration_image {
-    display: flex;
-    justify-content: center;
+    width: 80%;
+    margin: auto;
   }
   .event_reg_image_2 {
     width: 26%;
