@@ -252,6 +252,20 @@
   .event_reg_image_2 {
     width: 31%;
   }
+  .event_calendar_image {
+    height: 530px;
+    justify-content: center;
+  }
+  .event_calendar_image_1 {
+    width: 53%;
+    height: 58%;
+  }
+  .event_calendar_image_2 {
+    width: 53%;
+    height: 58%;
+    top: 37%;
+    left: 41.5%;
+  }
 }
 
 @media only screen and (max-width: 1197px) and (min-width: 1101px) {
