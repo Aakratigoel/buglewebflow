@@ -1,11 +1,11 @@
 .acc_feature_header:hover {
-  color: purple;
+  opacity: 1;
 }
-.acc_feature_header span {
-  color: light purple;
+.acc_feature_header {
+  opacity: 0.5;
 }
-.acc_feature_header.active span {
-  color: purple;
+.acc_feature_header.active {
+  opacity: 1;
 }
 
 .register_feature_header:hover {
@@ -19,23 +19,23 @@
 }
 
 .event_feature_header:hover {
-  color: purple;
+  opacity: 1;
 }
 .event_feature_header span {
-  color: light purple;
+  opacity: 0.5;
 }
 .event_feature_header.active span {
-  color: purple;
+  opacity: 1;
 }
 
 .shift_feature_header:hover {
-  color: purple;
+  opacity: 1;
 }
 .shift_feature_header span {
-  color: light purple;
+  opacity: 0.5;
 }
 .shift_feature_header.active span {
-  color: purple;
+  opacity: 1;
 }
 
 @media only screen and (max-width: 400px) {
