@@ -19,11 +19,11 @@
   }
 }
 @media only screen and (max-width: 767px) and (min-width: 600px) {
-  .image-90 {
+  /* .image-90 {
     width: 45%;
     top: 14%;
     left: 55%;
-  }
+  } */
   .vol_profiles_images {
     height: 357px;
   }
