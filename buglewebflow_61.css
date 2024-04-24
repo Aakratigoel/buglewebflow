@@ -253,11 +253,11 @@
     margin: 0 auto;
   }
   .event_registration_image {
-    width: 80%;
+    width: 58%;
     margin: auto;
   }
   .event_reg_image_2 {
-    width: 31%;
+    width: auto;
   }
   .event_calendar_image {
     height: 530px;
