@@ -258,10 +258,12 @@
   }
   .event_reg_image_2 {
     width: auto;
+    left: 62%;
   }
   .event_calendar_image {
     height: 530px;
     justify-content: center;
+    width: 90%;
   }
   .event_calendar_image_1 {
     width: 53%;
@@ -282,6 +284,7 @@
   }
   .image-83 {
     width: 65%;
+    left: 31%;
   }
   .track_volunteer_hours {
     justify-content: center;
