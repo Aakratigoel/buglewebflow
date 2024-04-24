@@ -1,3 +1,13 @@
+.acc_feature_header:hover {
+  color: purple;
+}
+.acc_feature_header span {
+  color: light purple;
+}
+.acc_feature_header.active span {
+  color: purple;
+}
+
 @media only screen and (max-width: 400px) {
   .inform_update_images {
     width: 100%;

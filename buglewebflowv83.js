@@ -8,6 +8,9 @@ $(document).ready(function () {
   //   console.log("Hi");
   //   $(this).off("mouseleave");
   // });
+  $(".acc_feature_header").on("click", function () {
+    $(this).addClass("active");
+  });
 
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
