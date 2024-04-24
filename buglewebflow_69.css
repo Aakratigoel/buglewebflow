@@ -348,22 +348,6 @@
   }
 }
 
-@media only screen and (max-width: 600px) and (min-width: 480px) {
-  .event_calendar_image_1 {
-    height: 52%;
-  }
-  .event_calendar_image_2 {
-    height: 52%;
-  }
-}
-
-@media only screen and (max-width: 400px) and (min-width: 320px) {
-  .event_calendar_image {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
 @media only screen and (max-width: 540px) and (min-width: 480px) {
   .digital_waiver_image {
     width: 80%;
@@ -374,13 +358,6 @@
   }
   .image-83 {
     width: 70%;
-  }
-}
-
-@media only screen and (max-width: 620px) and (min-width: 540px) {
-  .digital_waiver_image {
-    width: 80%;
-    height: 347px;
   }
 }
 
@@ -398,10 +375,79 @@
   }
 }
 
+@media only screen and (max-width: 600px) and (min-width: 540px) {
+  .digital_checkout_images {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 620px) and (min-width: 540px) {
+  .digital_waiver_image {
+    width: 80%;
+    height: 347px;
+  }
+}
+
 @media only screen and (max-width: 600px) and (min-width: 480px) {
   .digital_waiver_image {
     width: 80%;
     height: 300px;
+  }
+  .event_calendar_image_1 {
+    height: 52%;
+  }
+  .event_calendar_image_2 {
+    height: 52%;
+  }
+  .image-77 {
+    max-height: 180px;
+  }
+  .image-76 {
+    max-height: 450px;
+  }
+  .image-78 {
+    max-height: 135px;
+  }
+}
+
+@media only screen and (max-width: 540px) and (min-width: 480px) {
+  .digital_checkout_images {
+    width: 92%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 460px) {
+  .digital_checkout_images {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 460px) and (min-width: 440px) {
+  .digital_checkout_images {
+    width: 85%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 440px) and (min-width: 414px) {
+  .digital_checkout_images {
+    width: 94%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 325px) {
+  .image-77 {
+    max-height: 140px;
+  }
+  .image-76 {
+    max-height: 356px;
+  }
+  .image-78 {
+    max-height: 117px;
   }
 }
 
@@ -409,5 +455,19 @@
   .digital_waiver_image {
     width: 80%;
     height: 193px;
+  }
+}
+
+@media only screen and (max-width: 414px) and (min-width: 325px) {
+  .digital_checkout_images {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 320px) {
+  .event_calendar_image {
+    width: 90%;
+    margin: 0 auto;
   }
 }
