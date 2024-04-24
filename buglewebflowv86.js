@@ -13,6 +13,7 @@ $(document).ready(function () {
   });
   $(".register_feature_header").on("click", function () {
     $(this).addClass("active");
+    $(".acc_feature_header").removeClass("active");
   });
   $(".event_feature_header").on("click", function () {
     $(this).addClass("active");
