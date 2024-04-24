@@ -18,7 +18,7 @@
     height: 267px;
   }
   .image-90 {
-    left: 57%;
+    left: 48%;
   }
 }
 
@@ -27,7 +27,8 @@
     height: 320px;
   }
   .event_calendar_image {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -326,7 +327,8 @@
 
 @media only screen and (max-width: 400px) and (min-width: 320px) {
   .event_calendar_image {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
