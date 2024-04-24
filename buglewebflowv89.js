@@ -8,6 +8,7 @@ $(document).ready(function () {
   //   console.log("Hi");
   //   $(this).off("mouseleave");
   // });
+  $(".acc_feature_header").addClass("active");
   $(".acc_feature_header").on("click", function () {
     $(this).addClass("active");
     $(".register_feature_header").removeClass("active");
