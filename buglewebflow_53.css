@@ -277,8 +277,11 @@
   }
 }
 
-@media only screen and (max-width: 667px) and (min-width: 480px) {
-  /* .container-53 {
-    max-height: 269px;
-  } */
+@media only screen and (max-width: 600px) and (min-width: 480px) {
+  .event_calendar_image_1 {
+    height: 52%;
+  }
+  .event_calendar_image_2 {
+    height: 52%;
+  }
 }
