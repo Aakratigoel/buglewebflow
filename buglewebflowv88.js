@@ -10,16 +10,27 @@ $(document).ready(function () {
   // });
   $(".acc_feature_header").on("click", function () {
     $(this).addClass("active");
+    $(".register_feature_header").removeClass("active");
+    $(".event_feature_header").removeClass("active");
+    $(".shift_feature_header").removeClass("active");
   });
   $(".register_feature_header").on("click", function () {
     $(this).addClass("active");
     $(".acc_feature_header").removeClass("active");
+    $(".event_feature_header").removeClass("active");
+    $(".shift_feature_header").removeClass("active");
   });
   $(".event_feature_header").on("click", function () {
     $(this).addClass("active");
+    $(".acc_feature_header").removeClass("active");
+    $(".register_feature_header").removeClass("active");
+    $(".shift_feature_header").removeClass("active");
   });
   $(".shift_feature_header").on("click", function () {
     $(this).addClass("active");
+    $(".acc_feature_header").removeClass("active");
+    $(".event_feature_header").removeClass("active");
+    $(".register_feature_header").removeClass("active");
   });
 
   $(".tablink").first().addClass("active-link");
