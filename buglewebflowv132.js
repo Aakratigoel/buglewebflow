@@ -356,6 +356,47 @@ $(document).ready(function () {
         $(".digital_checkout_images").fadeIn(500);
       }, 500);
     });
+
+    $(".volunteer_hours_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".mass_text_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_waivers_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_check_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $(".volunteer_hours_header").on("click", function () {
@@ -379,6 +420,47 @@ $(document).ready(function () {
         $(".track_volunteer_hours").fadeIn(500);
       }, 500);
     });
+
+    $(".digital_check_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".mass_text_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_waivers_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".volunteer_hours_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $(".mass_text_header").on("click", function () {
@@ -402,6 +484,47 @@ $(document).ready(function () {
         $(".image-81").fadeIn(500);
       }, 500);
     });
+
+    $(".volunteer_hours_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_check_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_waivers_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".mass_text_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
   $(".digital_waivers_header").on("click", function () {
     $(this).addClass("active");
@@ -424,6 +547,47 @@ $(document).ready(function () {
         $(".digital_waiver_image").fadeIn(500);
       }, 500);
     });
+
+    $(".volunteer_hours_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".mass_text_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_check_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".digital_waivers_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   /* Inform section links */
@@ -450,6 +614,47 @@ $(document).ready(function () {
         $(".inform_update_images").fadeIn(500);
       }, 500);
     });
+
+    $(".analytics_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".data_transfer_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".volunteer_profiles_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".impact_update_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $(".analytics_header").on("click", function () {
@@ -473,6 +678,47 @@ $(document).ready(function () {
         $(".analytics_image").fadeIn(500);
       }, 500);
     });
+
+    $(".impact_update_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".data_transfer_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".volunteer_profiles_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".analytics_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $(".data_transfer_header").on("click", function () {
@@ -496,6 +742,47 @@ $(document).ready(function () {
         $(".data_transfer_image").fadeIn(500);
       }, 500);
     });
+
+    $(".analytics_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".impact_update_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".volunteer_profiles_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".data_transfer_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   $(".volunteer_profiles_header").on("click", function () {
@@ -519,6 +806,47 @@ $(document).ready(function () {
         $(".vol_profiles_images").fadeIn(500);
       }, 500);
     });
+
+    $(".analytics_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".data_transfer_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".impact_update_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".volunteer_profiles_content").css("display", "block").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
   });
 
   /**------------------ --------------------------------- */
