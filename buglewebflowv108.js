@@ -16,19 +16,19 @@ $(document).ready(function () {
       setTimeout(function () {
         // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
-      }, 0);
+      }, 100);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
         // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
-      }, 0);
+      }, 100);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
         // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
-      }, 0);
+      }, 100);
     });
   });
   $(".register_feature_header").on("click", function () {
