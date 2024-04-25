@@ -199,6 +199,22 @@ $(document).ready(function () {
     $(".analytics_header").removeClass("active");
     $(".data_transfer_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
+
+    $(".analytics_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".inform_update_images").fadeIn();
+      }, 1000);
+    });
+    $(".data_transfer_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".inform_update_images").fadeIn();
+      }, 1000);
+    });
+    $(".vol_profiles_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".inform_update_images").fadeIn();
+      }, 1000);
+    });
   });
 
   $(".analytics_header").on("click", function () {
@@ -206,6 +222,22 @@ $(document).ready(function () {
     $(".impact_update_header").removeClass("active");
     $(".data_transfer_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
+
+    $(".inform_update_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".analytics_image").fadeIn();
+      }, 1000);
+    });
+    $(".data_transfer_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".analytics_image").fadeIn();
+      }, 1000);
+    });
+    $(".vol_profiles_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".analytics_image").fadeIn();
+      }, 1000);
+    });
   });
 
   $(".data_transfer_header").on("click", function () {
@@ -213,6 +245,22 @@ $(document).ready(function () {
     $(".impact_update_header").removeClass("active");
     $(".analytics_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
+
+    $(".analytics_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".data_transfer_image").fadeIn();
+      }, 1000);
+    });
+    $(".inform_update_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".data_transfer_image").fadeIn();
+      }, 1000);
+    });
+    $(".vol_profiles_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".data_transfer_image").fadeIn();
+      }, 1000);
+    });
   });
 
   $(".volunteer_profiles_header").on("click", function () {
@@ -220,6 +268,22 @@ $(document).ready(function () {
     $(".impact_update_header").removeClass("active");
     $(".analytics_header").removeClass("active");
     $(".data_transfer_header").removeClass("active");
+
+    $(".analytics_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".vol_profiles_images").fadeIn();
+      }, 1000);
+    });
+    $(".inform_update_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".vol_profiles_images").fadeIn();
+      }, 1000);
+    });
+    $(".data_transfer_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".vol_profiles_images").fadeIn();
+      }, 1000);
+    });
   });
 
   /**------------------ --------------------------------- */
