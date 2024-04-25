@@ -105,24 +105,90 @@ $(document).ready(function () {
     $(".volunteer_hours_header").removeClass("active");
     $(".mass_text_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
+
+    $(".track_volunteer_hours").fadeOut(function () {
+      setTimeout(function () {
+        $(".digital_checkout_images").fadeIn();
+      }, 1000);
+    });
+    $(".image-81").fadeOut(function () {
+      setTimeout(function () {
+        $(".digital_checkout_images").fadeIn();
+      }, 1000);
+    });
+    $(".digital_waiver_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".digital_checkout_images").fadeIn();
+      }, 1000);
+    });
   });
+
   $(".volunteer_hours_header").on("click", function () {
     $(this).addClass("active");
     $(".digital_check_header").removeClass("active");
     $(".mass_text_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
+
+    $(".digital_checkout_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".track_volunteer_hours").fadeIn();
+      }, 1000);
+    });
+    $(".image-81").fadeOut(function () {
+      setTimeout(function () {
+        $(".track_volunteer_hours").fadeIn();
+      }, 1000);
+    });
+    $(".digital_waiver_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".track_volunteer_hours").fadeIn();
+      }, 1000);
+    });
   });
+
   $(".mass_text_header").on("click", function () {
     $(this).addClass("active");
     $(".digital_check_header").removeClass("active");
     $(".volunteer_hours_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
+
+    $(".digital_checkout_images").fadeOut(function () {
+      setTimeout(function () {
+        $(".image-81").fadeIn();
+      }, 1000);
+    });
+    $(".track_volunteer_hours").fadeOut(function () {
+      setTimeout(function () {
+        $(".image-81").fadeIn();
+      }, 1000);
+    });
+    $(".digital_waiver_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".image-81").fadeIn();
+      }, 1000);
+    });
   });
   $(".digital_waivers_header").on("click", function () {
     $(this).addClass("active");
     $(".digital_check_header").removeClass("active");
     $(".volunteer_hours_header").removeClass("active");
     $(".mass_text_header").removeClass("active");
+
+    $(".digital_checkout_images").fadeOut(function () {
+      setTimeout(function () {
+        $("digital_waiver_image").fadeIn();
+      }, 1000);
+    });
+    $(".track_volunteer_hours").fadeOut(function () {
+      setTimeout(function () {
+        $("digital_waiver_image").fadeIn();
+      }, 1000);
+    });
+    $(".image-81").fadeOut(function () {
+      setTimeout(function () {
+        $("digital_waiver_image").fadeIn();
+      }, 1000);
+    });
   });
 
   /* Inform section links */
