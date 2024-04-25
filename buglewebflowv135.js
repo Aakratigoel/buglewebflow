@@ -23,7 +23,7 @@ $(document).ready(function () {
     $(".event_registration_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500, function () {
-          // $(".acc_feature_header").removeClass("transitionActive");
+          $(".acc_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
@@ -31,7 +31,7 @@ $(document).ready(function () {
     $(".event_calendar_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500, function () {
-          // $(".acc_feature_header").removeClass("transitionActive");
+          $(".acc_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
@@ -39,7 +39,7 @@ $(document).ready(function () {
     $(".volunteer_shifts_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500, function () {
-          // $(".acc_feature_header").removeClass("transitionActive");
+          $(".acc_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
@@ -104,21 +104,21 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
         $(".event_registration_image").fadeIn(500, function () {
-          // $(".register_feature_header").removeClass("transitionActive");
+          $(".register_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".event_calendar_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".event_registration_image").fadeIn(500, function () {
-          // $(".register_feature_header").removeClass("transitionActive");
+          $(".register_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".volunteer_shifts_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".event_registration_image").fadeIn(500, function () {
-          // $(".register_feature_header").removeClass("transitionActive");
+          $(".register_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
@@ -180,21 +180,21 @@ $(document).ready(function () {
     $(".enterprise_account").fadeOut(500, function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn(500, function () {
-          // $(".event_feature_header").removeClass("transitionActive");
+          $(".event_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".event_registration_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn(500, function () {
-          // $(".event_feature_header").removeClass("transitionActive");
+          $(".event_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".volunteer_shifts_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn(500, function () {
-          // $(".event_feature_header").removeClass("transitionActive");
+          $(".event_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
@@ -257,21 +257,21 @@ $(document).ready(function () {
     $(".enterprise_account").fadeOut(500, function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn(500, function () {
-          // $(".shift_feature_header").removeClass("transitionActive");
+          $(".shift_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".event_registration_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn(500, function () {
-          // $(".shift_feature_header").removeClass("transitionActive");
+          $(".shift_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
     $(".event_calendar_image").fadeOut(500, function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn(500, function () {
-          // $(".shift_feature_header").removeClass("transitionActive");
+          $(".shift_feature_header").removeClass("transitionActive");
         });
       }, 450);
     });
