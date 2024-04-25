@@ -13,6 +13,47 @@ $(document).ready(function () {
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
 
+    $(".register_link_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".event_link_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".shift_link_content").animate(
+      {
+        height: 0,
+        opacity: 0,
+      },
+      500,
+      function () {
+        $(this).css("display", "none");
+        $(this).css("height", "");
+      }
+    );
+    $(".acc_link_content").css("display", "flex").animate(
+      {
+        height: "auto",
+        opacity: 1,
+      },
+      500
+    );
+
     $(".event_registration_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500);
