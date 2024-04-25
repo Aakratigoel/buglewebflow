@@ -13,6 +13,7 @@ $(document).ready(function () {
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
     $(".enterprise_account").fadeIn(2000);
+    $(".event_registration_image").fadeOut(2000);
   });
   $(".register_feature_header").on("click", function () {
     $(this).addClass("active");
