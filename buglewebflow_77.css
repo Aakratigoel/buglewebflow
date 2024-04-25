@@ -117,7 +117,7 @@
 .volunteer_profiles_header {
   opacity: 0.5;
 }
-.volunteer_profiles_header {
+.volunteer_profiles_header.active {
   opacity: 1;
 }
 
