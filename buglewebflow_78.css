@@ -261,12 +261,15 @@
   }
   .organize_section {
     padding: 80px 30px 100px 30px;
+    height: auto;
   }
   .control_section {
     padding: 80px 30px 100px 30px;
+    height: auto;
   }
   .inform_section {
     padding: 80px 30px 100px 30px;
+    height: auto;
   }
   .container-45 {
     display: none;
