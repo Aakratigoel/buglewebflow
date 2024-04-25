@@ -110,20 +110,20 @@ $(document).ready(function () {
     $(".mass_text_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
 
-    $(".track_volunteer_hours").fadeOut(function () {
+    $(".track_volunteer_hours").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_checkout_images").fadeIn();
-      }, 1000);
+        $(".digital_checkout_images").fadeIn(500);
+      }, 500);
     });
-    $(".image-81").fadeOut(function () {
+    $(".image-81").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_checkout_images").fadeIn();
-      }, 1000);
+        $(".digital_checkout_images").fadeIn(500);
+      }, 500);
     });
-    $(".digital_waiver_image").fadeOut(function () {
+    $(".digital_waiver_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_checkout_images").fadeIn();
-      }, 1000);
+        $(".digital_checkout_images").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -133,20 +133,20 @@ $(document).ready(function () {
     $(".mass_text_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
 
-    $(".digital_checkout_images").fadeOut(function () {
+    $(".digital_checkout_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn();
-      }, 1000);
+        $(".track_volunteer_hours").fadeIn(500);
+      }, 500);
     });
-    $(".image-81").fadeOut(function () {
+    $(".image-81").fadeOut(500, function () {
       setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn();
-      }, 1000);
+        $(".track_volunteer_hours").fadeIn(500);
+      }, 500);
     });
-    $(".digital_waiver_image").fadeOut(function () {
+    $(".digital_waiver_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn();
-      }, 1000);
+        $(".track_volunteer_hours").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -156,20 +156,20 @@ $(document).ready(function () {
     $(".volunteer_hours_header").removeClass("active");
     $(".digital_waivers_header").removeClass("active");
 
-    $(".digital_checkout_images").fadeOut(function () {
+    $(".digital_checkout_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".image-81").fadeIn();
-      }, 1000);
+        $(".image-81").fadeIn(500);
+      }, 500);
     });
-    $(".track_volunteer_hours").fadeOut(function () {
+    $(".track_volunteer_hours").fadeOut(500, function () {
       setTimeout(function () {
-        $(".image-81").fadeIn();
-      }, 1000);
+        $(".image-81").fadeIn(500);
+      }, 500);
     });
-    $(".digital_waiver_image").fadeOut(function () {
+    $(".digital_waiver_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".image-81").fadeIn();
-      }, 1000);
+        $(".image-81").fadeIn(500);
+      }, 500);
     });
   });
   $(".digital_waivers_header").on("click", function () {
@@ -178,20 +178,20 @@ $(document).ready(function () {
     $(".volunteer_hours_header").removeClass("active");
     $(".mass_text_header").removeClass("active");
 
-    $(".digital_checkout_images").fadeOut(function () {
+    $(".digital_checkout_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_waiver_image").fadeIn();
-      }, 1000);
+        $(".digital_waiver_image").fadeIn(500);
+      }, 500);
     });
-    $(".track_volunteer_hours").fadeOut(function () {
+    $(".track_volunteer_hours").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_waiver_image").fadeIn();
-      }, 1000);
+        $(".digital_waiver_image").fadeIn(500);
+      }, 500);
     });
-    $(".image-81").fadeOut(function () {
+    $(".image-81").fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_waiver_image").fadeIn();
-      }, 1000);
+        $(".digital_waiver_image").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -204,20 +204,20 @@ $(document).ready(function () {
     $(".data_transfer_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
 
-    $(".analytics_image").fadeOut(function () {
+    $(".analytics_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".inform_update_images").fadeIn();
-      }, 1000);
+        $(".inform_update_images").fadeIn(500);
+      }, 500);
     });
-    $(".data_transfer_image").fadeOut(function () {
+    $(".data_transfer_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".inform_update_images").fadeIn();
-      }, 1000);
+        $(".inform_update_images").fadeIn(500);
+      }, 500);
     });
-    $(".vol_profiles_images").fadeOut(function () {
+    $(".vol_profiles_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".inform_update_images").fadeIn();
-      }, 1000);
+        $(".inform_update_images").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -227,20 +227,20 @@ $(document).ready(function () {
     $(".data_transfer_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
 
-    $(".inform_update_images").fadeOut(function () {
+    $(".inform_update_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".analytics_image").fadeIn();
-      }, 1000);
+        $(".analytics_image").fadeIn(500);
+      }, 500);
     });
-    $(".data_transfer_image").fadeOut(function () {
+    $(".data_transfer_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".analytics_image").fadeIn();
-      }, 1000);
+        $(".analytics_image").fadeIn(500);
+      }, 500);
     });
-    $(".vol_profiles_images").fadeOut(function () {
+    $(".vol_profiles_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".analytics_image").fadeIn();
-      }, 1000);
+        $(".analytics_image").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -250,20 +250,20 @@ $(document).ready(function () {
     $(".analytics_header").removeClass("active");
     $(".volunteer_profiles_header").removeClass("active");
 
-    $(".analytics_image").fadeOut(function () {
+    $(".analytics_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".data_transfer_image").fadeIn();
-      }, 1000);
+        $(".data_transfer_image").fadeIn(500);
+      }, 500);
     });
-    $(".inform_update_images").fadeOut(function () {
+    $(".inform_update_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".data_transfer_image").fadeIn();
-      }, 1000);
+        $(".data_transfer_image").fadeIn(500);
+      }, 500);
     });
-    $(".vol_profiles_images").fadeOut(function () {
+    $(".vol_profiles_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".data_transfer_image").fadeIn();
-      }, 1000);
+        $(".data_transfer_image").fadeIn(500);
+      }, 500);
     });
   });
 
@@ -273,20 +273,20 @@ $(document).ready(function () {
     $(".analytics_header").removeClass("active");
     $(".data_transfer_header").removeClass("active");
 
-    $(".analytics_image").fadeOut(function () {
+    $(".analytics_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".vol_profiles_images").fadeIn();
-      }, 1000);
+        $(".vol_profiles_images").fadeIn(500);
+      }, 500);
     });
-    $(".inform_update_images").fadeOut(function () {
+    $(".inform_update_images").fadeOut(500, function () {
       setTimeout(function () {
-        $(".vol_profiles_images").fadeIn();
-      }, 1000);
+        $(".vol_profiles_images").fadeIn(500);
+      }, 500);
     });
-    $(".data_transfer_image").fadeOut(function () {
+    $(".data_transfer_image").fadeOut(500, function () {
       setTimeout(function () {
-        $(".vol_profiles_images").fadeIn();
-      }, 1000);
+        $(".vol_profiles_images").fadeIn(500);
+      }, 500);
     });
   });
 
