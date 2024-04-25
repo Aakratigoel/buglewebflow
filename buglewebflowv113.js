@@ -37,24 +37,21 @@ $(document).ready(function () {
     $(".shift_feature_header").removeClass("active");
 
     $(".enterprise_account").fadeOut(function () {
+      $(".event_registration_image").css("display", "flex");
       setTimeout(function () {
-        $(".event_registration_image").fadeIn(function () {
-          $(".event_registration_image").css("display", "flex");
-        });
+        $(".event_registration_image").fadeIn();
       }, 500);
     });
     $(".event_calendar_image").fadeOut(function () {
+      $(".event_registration_image").css("display", "flex");
       setTimeout(function () {
-        $(".event_registration_image").fadeIn(function () {
-          $(".event_registration_image").css("display", "flex");
-        });
+        $(".event_registration_image").fadeIn();
       }, 500);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
+      $(".event_registration_image").css("display", "flex");
       setTimeout(function () {
-        $(".event_registration_image").fadeIn(function () {
-          $(".event_registration_image").css("display", "flex");
-        });
+        $(".event_registration_image").fadeIn();
       }, 500);
     });
   });
