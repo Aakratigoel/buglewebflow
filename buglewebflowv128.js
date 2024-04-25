@@ -19,11 +19,11 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".register_link_content").fadeOut(200, function () {
-      setTimeout(function () {
-        $(".acc_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".register_link_content").fadeOut(200, function () {
+    //   setTimeout(function () {
+    //     $(".acc_link_content").fadeIn(500);
+    //   }, 450);
+    // });
 
     $(".event_calendar_image").fadeOut(200, function () {
       setTimeout(function () {
@@ -31,11 +31,11 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".event_link_content").fadeOut(200, function () {
-      setTimeout(function () {
-        $(".acc_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".event_link_content").fadeOut(200, function () {
+    //   setTimeout(function () {
+    //     $(".acc_link_content").fadeIn(500);
+    //   }, 450);
+    // });
 
     $(".volunteer_shifts_image").fadeOut(200, function () {
       setTimeout(function () {
@@ -43,11 +43,11 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".shift_link_content").fadeOut(200, function () {
-      setTimeout(function () {
-        $(".acc_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".shift_link_content").fadeOut(200, function () {
+    //   setTimeout(function () {
+    //     $(".acc_link_content").fadeIn(500);
+    //   }, 450);
+    // });
   });
 
   $(".register_feature_header").on("click", function () {
@@ -73,21 +73,21 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".acc_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".register_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".event_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".register_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".shift_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".register_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".acc_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".register_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".event_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".register_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".shift_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".register_link_content").fadeIn(500);
+    //   }, 450);
+    // });
   });
 
   $(".event_feature_header").on("click", function () {
@@ -112,21 +112,21 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".acc_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".register_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".shift_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".acc_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".event_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".register_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".event_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".shift_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".event_link_content").fadeIn(500);
+    //   }, 450);
+    // });
   });
 
   $(".shift_feature_header").on("click", function () {
@@ -151,21 +151,21 @@ $(document).ready(function () {
       }, 450);
     });
 
-    $(".acc_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".shift_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".register_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".shift_link_content").fadeIn(500);
-      }, 450);
-    });
-    $(".event_link_content").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".shift_link_content").fadeIn(500);
-      }, 450);
-    });
+    // $(".acc_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".shift_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".register_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".shift_link_content").fadeIn(500);
+    //   }, 450);
+    // });
+    // $(".event_link_content").fadeOut(500, function () {
+    //   setTimeout(function () {
+    //     $(".shift_link_content").fadeIn(500);
+    //   }, 450);
+    // });
   });
 
   /* Control section links */
