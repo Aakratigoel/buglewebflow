@@ -38,17 +38,23 @@ $(document).ready(function () {
 
     $(".enterprise_account").fadeOut(function () {
       setTimeout(function () {
-        $(".event_registration_image").fadeIn();
+        $(".event_registration_image").fadeIn(function () {
+          $(".event_registration_image").css("display", "flex");
+        });
       }, 500);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
-        $(".event_registration_image").fadeIn();
+        $(".event_registration_image").fadeIn(function () {
+          $(".event_registration_image").css("display", "flex");
+        });
       }, 500);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
-        $(".event_registration_image").fadeIn();
+        $(".event_registration_image").fadeIn(function () {
+          $(".event_registration_image").css("display", "flex");
+        });
       }, 500);
     });
   });
