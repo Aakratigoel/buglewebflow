@@ -21,7 +21,7 @@ $(document).ready(function () {
         // Fade in the second element with class "element-to-fade-in" after a delay of 1000 milliseconds (1 second)
         $(".enterprise_account").fadeIn();
       }, 3000); // Adjust the delay as needed (in milliseconds)
-    }, 3000);
+    });
   });
   $(".register_feature_header").on("click", function () {
     $(this).addClass("active");
