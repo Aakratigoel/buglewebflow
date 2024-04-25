@@ -16,17 +16,17 @@ $(document).ready(function () {
     $(".event_registration_image").fadeOut(function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn();
-      }, 500);
+      }, 1000);
     });
   });
 
@@ -40,19 +40,19 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
         $(".event_registration_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
         $(".event_registration_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
         $(".event_registration_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
   });
   $(".event_feature_header").on("click", function () {
@@ -64,17 +64,17 @@ $(document).ready(function () {
     $(".enterprise_account").fadeOut(function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".event_registration_image").fadeOut(function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
         $(".event_calendar_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
   });
   $(".shift_feature_header").on("click", function () {
@@ -86,17 +86,17 @@ $(document).ready(function () {
     $(".enterprise_account").fadeOut(function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".event_registration_image").fadeOut(function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
         $(".volunteer_shifts_image").fadeIn();
-      }, 500);
+      }, 1000);
     });
   });
 
