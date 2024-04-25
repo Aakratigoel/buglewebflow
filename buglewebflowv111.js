@@ -12,42 +12,89 @@ $(document).ready(function () {
     $(".register_feature_header").removeClass("active");
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
+
     $(".event_registration_image").fadeOut(function () {
       setTimeout(function () {
-        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
       }, 500);
     });
     $(".event_calendar_image").fadeOut(function () {
       setTimeout(function () {
-        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
       }, 500);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
       setTimeout(function () {
-        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
         $(".enterprise_account").fadeIn();
       }, 500);
     });
   });
+
   $(".register_feature_header").on("click", function () {
     $(this).addClass("active");
     $(".acc_feature_header").removeClass("active");
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
+
+    $(".enterprise_account").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_registration_image").fadeIn();
+      }, 500);
+    });
+    $(".event_calendar_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_registration_image").fadeIn();
+      }, 500);
+    });
+    $(".volunteer_shifts_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_registration_image").fadeIn();
+      }, 500);
+    });
   });
   $(".event_feature_header").on("click", function () {
     $(this).addClass("active");
     $(".acc_feature_header").removeClass("active");
     $(".register_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
+
+    $(".enterprise_account").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_calendar_image").fadeIn();
+      }, 500);
+    });
+    $(".event_registration_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_calendar_image").fadeIn();
+      }, 500);
+    });
+    $(".volunteer_shifts_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".event_calendar_image").fadeIn();
+      }, 500);
+    });
   });
   $(".shift_feature_header").on("click", function () {
     $(this).addClass("active");
     $(".acc_feature_header").removeClass("active");
     $(".event_feature_header").removeClass("active");
     $(".register_feature_header").removeClass("active");
+
+    $(".enterprise_account").fadeOut(function () {
+      setTimeout(function () {
+        $(".volunteer_shifts_image").fadeIn();
+      }, 500);
+    });
+    $(".event_registration_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".volunteer_shifts_image").fadeIn();
+      }, 500);
+    });
+    $(".event_calendar_image").fadeOut(function () {
+      setTimeout(function () {
+        $(".volunteer_shifts_image").fadeIn();
+      }, 500);
+    });
   });
 
   /* Control section links */
