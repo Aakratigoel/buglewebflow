@@ -176,17 +176,17 @@ $(document).ready(function () {
 
     $(".digital_checkout_images").fadeOut(function () {
       setTimeout(function () {
-        $("digital_waiver_image").fadeIn();
+        $(".digital_waiver_image").fadeIn();
       }, 1000);
     });
     $(".track_volunteer_hours").fadeOut(function () {
       setTimeout(function () {
-        $("digital_waiver_image").fadeIn();
+        $(".digital_waiver_image").fadeIn();
       }, 1000);
     });
     $(".image-81").fadeOut(function () {
       setTimeout(function () {
-        $("digital_waiver_image").fadeIn();
+        $(".digital_waiver_image").fadeIn();
       }, 1000);
     });
   });
