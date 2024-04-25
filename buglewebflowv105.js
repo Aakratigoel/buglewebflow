@@ -13,12 +13,13 @@ $(document).ready(function () {
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
     $(".event_registration_image").fadeOut(function () {
+      $(".enterprise_account").fadeIn();
       // This function will be called once the fadeOut animation is complete
       // Use setTimeout to add a delay before fading in the next element
-      setTimeout(function () {
-        // Fade in the second element with class "element-to-fade-in" after a delay of 1000 milliseconds (1 second)
-        $(".enterprise_account").fadeIn();
-      }, 0); // Adjust the delay as needed (in milliseconds)
+      // setTimeout(function () {
+      //   // Fade in the second element with class "element-to-fade-in" after a delay of 1000 milliseconds (1 second)
+      //   $(".enterprise_account").fadeIn();
+      // }, 0); // Adjust the delay as needed (in milliseconds)
     });
   });
   $(".register_feature_header").on("click", function () {
