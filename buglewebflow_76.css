@@ -79,6 +79,48 @@
 .digital_waivers_header.active {
   opacity: 1;
 }
+
+/* Inform section links*/
+.impact_update_header:hover {
+  opacity: 1;
+}
+.impact_update_header {
+  opacity: 0.5;
+}
+.impact_update_header.active {
+  opacity: 1;
+}
+
+.analytics_header:hover {
+  opacity: 1;
+}
+.analytics_header {
+  opacity: 0.5;
+}
+.analytics_header.active {
+  opacity: 1;
+}
+
+.data_transfer_header:hover {
+  opacity: 1;
+}
+.data_transfer_header {
+  opacity: 0.5;
+}
+.data_transfer_header.active {
+  opacity: 1;
+}
+
+.volunteer_profiles_header:hover {
+  opacity: 1;
+}
+.volunteer_profiles_header {
+  opacity: 0.5;
+}
+.volunteer_profiles_header {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 400px) {
   .inform_update_images {
     width: 100%;

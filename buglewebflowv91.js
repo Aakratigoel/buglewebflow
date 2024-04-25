@@ -4,10 +4,8 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
-  // $(".acc_feature_header").click(function () {
-  //   console.log("Hi");
-  //   $(this).off("mouseleave");
-  // });
+  /* Organize section links */
+
   $(".acc_feature_header").addClass("active");
   $(".acc_feature_header").on("click", function () {
     $(this).addClass("active");
@@ -34,6 +32,8 @@ $(document).ready(function () {
     $(".register_feature_header").removeClass("active");
   });
 
+  /* Control section links */
+
   $(".digital_check_header").addClass("active");
   $(".digital_check_header").on("click", function () {
     $(this).addClass("active");
@@ -59,6 +59,39 @@ $(document).ready(function () {
     $(".volunteer_hours_header").removeClass("active");
     $(".mass_text_header").removeClass("active");
   });
+
+  /* Inform section links */
+
+  $(".impact_update_header").addClass("active");
+  $(".impact_update_header").on("click", function () {
+    $(this).addClass("active");
+    $(".analytics_header").removeClass("active");
+    $(".data_transfer_header").removeClass("active");
+    $(".volunteer_profiles_header").removeClass("active");
+  });
+
+  $(".analytics_header").on("click", function () {
+    $(this).addClass("active");
+    $(".impact_update_header").removeClass("active");
+    $(".data_transfer_header").removeClass("active");
+    $(".volunteer_profiles_header").removeClass("active");
+  });
+
+  $(".data_transfer_header").on("click", function () {
+    $(this).addClass("active");
+    $(".impact_update_header").removeClass("active");
+    $(".analytics_header").removeClass("active");
+    $(".volunteer_profiles_header").removeClass("active");
+  });
+
+  $(".volunteer_profiles_header").on("click", function () {
+    $(this).addClass("active");
+    $(".impact_update_header").removeClass("active");
+    $(".analytics_header").removeClass("active");
+    $(".data_transfer_header").removeClass("active");
+  });
+
+  /**------------------ --------------------------------- */
 
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
