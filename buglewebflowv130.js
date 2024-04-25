@@ -46,7 +46,7 @@ $(document).ready(function () {
         $(this).css("height", "");
       }
     );
-    $(".acc_link_content").css("display", "flex").animate(
+    $(".acc_link_content").css("display", "block").animate(
       {
         height: "auto",
         opacity: 1,
