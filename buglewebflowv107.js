@@ -13,13 +13,22 @@ $(document).ready(function () {
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
     $(".event_registration_image").fadeOut(function () {
-      $(".enterprise_account").fadeIn();
+      setTimeout(function () {
+        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
+        $(".enterprise_account").fadeIn();
+      }, 0);
     });
     $(".event_calendar_image").fadeOut(function () {
-      $(".enterprise_account").fadeIn();
+      setTimeout(function () {
+        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
+        $(".enterprise_account").fadeIn();
+      }, 0);
     });
     $(".volunteer_shifts_image").fadeOut(function () {
-      $(".enterprise_account").fadeIn();
+      setTimeout(function () {
+        // Fade in the second element with class "element-to-fade-in" immediately after the fadeOut
+        $(".enterprise_account").fadeIn();
+      }, 0);
     });
   });
   $(".register_feature_header").on("click", function () {
