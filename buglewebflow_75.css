@@ -38,6 +38,47 @@
   opacity: 1;
 }
 
+/* control section*/
+
+.digital_check_header:hover {
+  opacity: 1;
+}
+.digital_check_header {
+  opacity: 0.5;
+}
+.digital_check_header.active {
+  opacity: 1;
+}
+
+.volunteer_hours_header:hover {
+  opacity: 1;
+}
+.volunteer_hours_header {
+  opacity: 0.5;
+}
+.volunteer_hours_header.active {
+  opacity: 1;
+}
+
+.mass_text_header:hover {
+  opacity: 1;
+}
+.mass_text_header {
+  opacity: 0.5;
+}
+.mass_text_header.active {
+  opacity: 1;
+}
+
+.digital_waivers_header:hover {
+  opacity: 1;
+}
+.digital_waivers_header {
+  opacity: 0.5;
+}
+.digital_waivers_header.active {
+  opacity: 1;
+}
 @media only screen and (max-width: 400px) {
   .inform_update_images {
     width: 100%;

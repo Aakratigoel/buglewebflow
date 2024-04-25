@@ -34,6 +34,32 @@ $(document).ready(function () {
     $(".register_feature_header").removeClass("active");
   });
 
+  $(".digital_check_header").addClass("active");
+  $(".digital_check_header").on("click", function () {
+    $(this).addClass("active");
+    $(".volunteer_hours_header").removeClass("active");
+    $(".mass_text_header").removeClass("active");
+    $(".digital_waivers_header").removeClass("active");
+  });
+  $(".volunteer_hours_header").on("click", function () {
+    $(this).addClass("active");
+    $(".digital_check_header").removeClass("active");
+    $(".mass_text_header").removeClass("active");
+    $(".digital_waivers_header").removeClass("active");
+  });
+  $(".mass_text_header").on("click", function () {
+    $(this).addClass("active");
+    $(".digital_check_header").removeClass("active");
+    $(".volunteer_hours_header").removeClass("active");
+    $(".digital_waivers_header").removeClass("active");
+  });
+  $(".digital_waivers_header").on("click", function () {
+    $(this).addClass("active");
+    $(".digital_check_header").removeClass("active");
+    $(".volunteer_hours_header").removeClass("active");
+    $(".mass_text_header").removeClass("active");
+  });
+
   $(".tablink").first().addClass("active-link");
   $(".tab2link").first().addClass("active-link");
   $(".tab3link").first().addClass("active-link");
