@@ -13,37 +13,37 @@ $(document).ready(function () {
     $(".event_feature_header").removeClass("active");
     $(".shift_feature_header").removeClass("active");
 
-    $(".event_registration_image").fadeOut(500, function () {
+    $(".event_registration_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500);
       }, 450);
     });
 
-    $(".register_link_content").fadeOut(500, function () {
+    $(".register_link_content").fadeOut(200, function () {
       setTimeout(function () {
         $(".acc_link_content").fadeIn(500);
       }, 450);
     });
 
-    $(".event_calendar_image").fadeOut(500, function () {
+    $(".event_calendar_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500);
       }, 450);
     });
 
-    $(".event_link_content").fadeOut(500, function () {
+    $(".event_link_content").fadeOut(200, function () {
       setTimeout(function () {
         $(".acc_link_content").fadeIn(500);
       }, 450);
     });
 
-    $(".volunteer_shifts_image").fadeOut(500, function () {
+    $(".volunteer_shifts_image").fadeOut(200, function () {
       setTimeout(function () {
         $(".enterprise_account").fadeIn(500);
       }, 450);
     });
 
-    $(".shift_link_content").fadeOut(500, function () {
+    $(".shift_link_content").fadeOut(200, function () {
       setTimeout(function () {
         $(".acc_link_content").fadeIn(500);
       }, 450);
