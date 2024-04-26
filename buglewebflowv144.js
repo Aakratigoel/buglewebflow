@@ -4,6 +4,12 @@ $(document).ready(function () {
   let content2count = 1;
   let content3count = 1;
 
+  $(window).resize(() => {
+    console.log("Resixe");
+    let windowWidth = $(window).width();
+    console.log("Window width", windowWidth);
+  });
+
   /* Organize section links */
 
   const findFadeOutSelector = function (activeHeader) {
