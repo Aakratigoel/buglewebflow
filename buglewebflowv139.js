@@ -9,7 +9,7 @@ $(document).ready(function () {
   const findFadeOutSelector = function (activeHeader) {
     if (activeHeader.hasClass("acc_feature_header")) {
       return ".enterprise_account";
-    } else if ("register_feature_header") {
+    } else if (activeHeader.class("register_feature_header")) {
       return ".event_registration_image";
     } else if (activeHeader.hasClass("event_feature_header")) {
       return ".event_calendar_image";
