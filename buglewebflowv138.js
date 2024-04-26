@@ -26,7 +26,7 @@ $(document).ready(function () {
     }
 
     //find current active header and remove active status
-    let activeHeader = $(".organize_section").find("active");
+    let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
 
     // setting registration as transitioning and new active
@@ -94,7 +94,7 @@ $(document).ready(function () {
     }
 
     //find current active header and remove active status
-    let activeHeader = $(".organize_section").find("active");
+    let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
 
     // setting registration as transitioning and new active
@@ -162,7 +162,7 @@ $(document).ready(function () {
     }
 
     //find current active header and remove active status
-    let activeHeader = $(".organize_section").find("active");
+    let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
 
     // setting registration as transitioning and new active
@@ -230,7 +230,7 @@ $(document).ready(function () {
     }
 
     //find current active header and remove active status
-    let activeHeader = $(".organize_section").find("active");
+    let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
 
     // setting registration as transitioning and new active
