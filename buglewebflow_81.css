@@ -337,6 +337,7 @@
   .container-54 {
     margin-top: 50px;
     height: 555px;
+    min-height: 419px;
   }
   .control_features {
     margin-top: 60px;
