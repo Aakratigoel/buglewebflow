@@ -625,7 +625,7 @@ $(document).ready(function () {
     }
 
     $(".container-56").addClass("transition");
-    $(".container-56").css("transition", "height 1s ease-in-out");
+    $(".container-56").css("transition", "min-height 1s ease-in-out");
     //find current active header and remove active status
     let activeHeader = $(".inform_section").find(".active");
     activeHeader.removeClass("active");
@@ -696,7 +696,7 @@ $(document).ready(function () {
     }
 
     $(".container-56").addClass("transition");
-    $(".container-56").css("transition", "height 1s ease-in-out");
+    $(".container-56").css("transition", "min-height 1s ease-in-out");
     //find current active header and remove active status
     let activeHeader = $(".inform_section").find(".active");
     activeHeader.removeClass("active");
@@ -767,7 +767,7 @@ $(document).ready(function () {
     }
 
     $(".container-56").addClass("transition");
-    $(".container-56").css("transition", "height 1s ease-in-out ");
+    $(".container-56").css("transition", "min-height 1s ease-in-out ");
     //find current active header and remove active status
     let activeHeader = $(".inform_section").find(".active");
     activeHeader.removeClass("active");
@@ -838,7 +838,7 @@ $(document).ready(function () {
     }
 
     $(".container-56").addClass("transition");
-    $(".container-56").css("transition", "height 1s ease-in-out");
+    $(".container-56").css("transition", "min-height 1s ease-in-out");
     //find current active header and remove active status
     let activeHeader = $(".inform_section").find(".active");
     activeHeader.removeClass("active");
