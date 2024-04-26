@@ -75,6 +75,7 @@ $(document).ready(function () {
       setTimeout(function () {
         // $(".enterprise_account").css("display", "flex");
         $(".enterprise_account").fadeIn(fadeInDuration, function () {
+          $(".container-53").removeClass("transition");
           $(".acc_feature_header").removeClass("transitionActive");
         });
       }, 450);
@@ -143,6 +144,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
         $(".event_registration_image").fadeIn(fadeInDuration, function () {
+          $(".container-53").removeClass("transition");
           $(".register_feature_header").removeClass("transitionActive");
         });
       }, 450);
@@ -211,6 +213,7 @@ $(document).ready(function () {
       setTimeout(function () {
         // $(".event_calendar_image").css("display", "flex");
         $(".event_calendar_image").fadeIn(fadeInDuration, function () {
+          $(".container-53").removeClass("transition");
           $(".event_feature_header").removeClass("transitionActive");
         });
       }, 450);
@@ -279,6 +282,7 @@ $(document).ready(function () {
       setTimeout(function () {
         // $(".volunteer_shifts_image").css("display", "flex");
         $(".volunteer_shifts_image").fadeIn(fadeInDuration, function () {
+          $(".container-53").removeClass("transition");
           $(".shift_feature_header").removeClass("transitionActive");
         });
       }, 450);
