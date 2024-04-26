@@ -614,10 +614,16 @@
   .transition {
     min-height: 400px;
   }
+  .controlTransition {
+    min-height: 400px;
+  }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .transition {
+    min-height: 380px;
+  }
+  .controlTransition {
     min-height: 380px;
   }
 }
@@ -625,5 +631,9 @@
 @media only screen and (max-width: 480px) {
   .transition {
     min-height: 267px;
+  }
+
+  .controlTransition {
+    min-height: 300px;
   }
 }

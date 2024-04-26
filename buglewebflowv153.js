@@ -339,7 +339,7 @@ $(document).ready(function () {
       return;
     }
 
-    $(".container-54").addClass("transition");
+    $(".container-54").addClass("controlTransition");
     //find current active header and remove active status
     let activeHeader = $(".control_section").find(".active");
     activeHeader.removeClass("active");
@@ -355,7 +355,7 @@ $(document).ready(function () {
       setTimeout(function () {
         // $(".digital_checkout_images").css("display", "flex");
         $(".digital_checkout_images").fadeIn(fadeInDuration, function () {
-          $(".container-54").removeClass("transition");
+          $(".container-54").removeClass("controlTransition");
           $(".digital_check_header").removeClass("transitionActive");
         });
       }, 450);
@@ -409,7 +409,7 @@ $(document).ready(function () {
       return;
     }
 
-    $(".container-54").addClass("transition");
+    $(".container-54").addClass("controlTransition");
 
     //find current active header and remove active status
     let activeHeader = $(".control_section").find(".active");
@@ -426,7 +426,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".track_volunteer_hours").css("display", "flex");
         $(".track_volunteer_hours").fadeIn(fadeInDuration, function () {
-          $(".container-54").removeClass("transition");
+          $(".container-54").removeClass("controlTransition");
           $(".volunteer_hours_header").removeClass("transitionActive");
         });
       }, 450);
@@ -480,7 +480,7 @@ $(document).ready(function () {
       return;
     }
 
-    $(".container-54").addClass("transition");
+    $(".container-54").addClass("controlTransition");
 
     //find current active header and remove active status
     let activeHeader = $(".control_section").find(".active");
@@ -497,7 +497,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $(".image-81").css("display", "flex");
         $(".image-81").fadeIn(fadeInDuration, function () {
-          $(".container-54").removeClass("transition");
+          $(".container-54").removeClass("controlTransition");
           $(".mass_text_header").removeClass("transitionActive");
         });
       }, 450);
@@ -550,7 +550,7 @@ $(document).ready(function () {
       return;
     }
 
-    $(".container-54").addClass("transition");
+    $(".container-54").addClass("controlTransition");
 
     //find current active header and remove active status
     let activeHeader = $(".control_section").find(".active");
@@ -567,7 +567,7 @@ $(document).ready(function () {
       setTimeout(function () {
         // $(".digital_waiver_image").css("display", "flex");
         $(".digital_waiver_image").fadeIn(fadeInDuration, function () {
-          $(".container-54").removeClass("transition");
+          $(".container-54").removeClass("controlTransition");
           $(".digital_waivers_header").removeClass("transitionActive");
         });
       }, 450);
