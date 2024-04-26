@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".enterprise_account").css("display", "flex");
+        // $(".enterprise_account").css("display", "flex");
         $(".enterprise_account").fadeIn(fadeInDuration, function () {
           $(".acc_feature_header").removeClass("transitionActive");
         });
@@ -208,7 +208,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".event_calendar_image").css("display", "flex");
+        // $(".event_calendar_image").css("display", "flex");
         $(".event_calendar_image").fadeIn(fadeInDuration, function () {
           $(".event_feature_header").removeClass("transitionActive");
         });
@@ -276,7 +276,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".volunteer_shifts_image").css("display", "flex");
+        // $(".volunteer_shifts_image").css("display", "flex");
         $(".volunteer_shifts_image").fadeIn(fadeInDuration, function () {
           $(".shift_feature_header").removeClass("transitionActive");
         });
@@ -347,7 +347,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_checkout_images").css("display", "flex");
+        // $(".digital_checkout_images").css("display", "flex");
         $(".digital_checkout_images").fadeIn(fadeInDuration, function () {
           $(".digital_check_header").removeClass("transitionActive");
         });
@@ -415,7 +415,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".track_volunteer_hours").css("display", "flex");
+        // $(".track_volunteer_hours").css("display", "flex");
         $(".track_volunteer_hours").fadeIn(fadeInDuration, function () {
           $(".volunteer_hours_header").removeClass("transitionActive");
         });
@@ -483,7 +483,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".image-81").css("display", "flex");
+        // $(".image-81").css("display", "flex");
         $(".image-81").fadeIn(fadeInDuration, function () {
           $(".mass_text_header").removeClass("transitionActive");
         });
@@ -550,7 +550,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_waiver_image").css("display", "flex");
+        // $(".digital_waiver_image").css("display", "flex");
         $(".digital_waiver_image").fadeIn(fadeInDuration, function () {
           $(".digital_waivers_header").removeClass("transitionActive");
         });
@@ -621,7 +621,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".inform_update_images").css("display", "flex");
+        // $(".inform_update_images").css("display", "flex");
         $(".inform_update_images").fadeIn(fadeInDuration, function () {
           $(".impact_update_header").removeClass("transitionActive");
         });
@@ -689,7 +689,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".analytics_image").css("display", "flex");
+        // $(".analytics_image").css("display", "flex");
         $(".analytics_image").fadeIn(fadeInDuration, function () {
           $(".analytics_header").removeClass("transitionActive");
         });
@@ -757,7 +757,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".data_transfer_image").css("display", "flex");
+        // $(".data_transfer_image").css("display", "flex");
         $(".data_transfer_image").fadeIn(fadeInDuration, function () {
           $(".data_transfer_header").removeClass("transitionActive");
         });
@@ -825,7 +825,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".vol_profiles_images").css("display", "flex");
+        // $(".vol_profiles_images").css("display", "flex");
         $(".vol_profiles_images").fadeIn(fadeInDuration, function () {
           $(".volunteer_profiles_header").removeClass("transitionActive");
         });
