@@ -18,6 +18,30 @@ $(document).ready(function () {
     }
   };
 
+  const controlFindFadeOutSelector = function (activeHeader) {
+    if (activeHeader.hasClass("digital_check_header")) {
+      return ".digital_checkout_images";
+    } else if (activeHeader.hasClass("volunteer_hours_header")) {
+      return ".track_volunteer_hours";
+    } else if (activeHeader.hasClass("mass_text_header")) {
+      return ".image-81";
+    } else if (activeHeader.hasClass("digital_waivers_header")) {
+      return ".digital_waiver_image";
+    }
+  };
+
+  const informFindFadeOutSelector = function (activeHeader) {
+    if (activeHeader.hasClass("impact_update_header")) {
+      return ".inform_update_images";
+    } else if (activeHeader.hasClass("analytics_header")) {
+      return ".analytics_image";
+    } else if (activeHeader.hasClass("data_transfer_header")) {
+      return ".data_transfer_image";
+    } else if (activeHeader.hasClass("volunteer_profiles_header")) {
+      return ".vol_profiles_images";
+    }
+  };
+
   $(".acc_feature_header").addClass("active");
   $(".acc_feature_header").on("click", function () {
     let transition = $(".organize_section").find(".transitionActive");
@@ -295,25 +319,29 @@ $(document).ready(function () {
 
   $(".digital_check_header").addClass("active");
   $(".digital_check_header").on("click", function () {
-    $(this).addClass("active");
-    $(".volunteer_hours_header").removeClass("active");
-    $(".mass_text_header").removeClass("active");
-    $(".digital_waivers_header").removeClass("active");
+    let transition = $(".control_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".track_volunteer_hours").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".control_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = controlFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_checkout_images").fadeIn(500);
-      }, 500);
-    });
-    $(".image-81").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".digital_checkout_images").fadeIn(500);
-      }, 500);
-    });
-    $(".digital_waiver_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".digital_checkout_images").fadeIn(500);
-      }, 500);
+        $(".digital_checkout_images").css("display", "flex");
+        $(".digital_checkout_images").fadeIn(500, function () {
+          $(".digital_check_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".volunteer_hours_content").animate(
@@ -359,25 +387,29 @@ $(document).ready(function () {
   });
 
   $(".volunteer_hours_header").on("click", function () {
-    $(this).addClass("active");
-    $(".digital_check_header").removeClass("active");
-    $(".mass_text_header").removeClass("active");
-    $(".digital_waivers_header").removeClass("active");
+    let transition = $(".control_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".digital_checkout_images").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".control_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = controlFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn(500);
-      }, 500);
-    });
-    $(".image-81").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn(500);
-      }, 500);
-    });
-    $(".digital_waiver_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".track_volunteer_hours").fadeIn(500);
-      }, 500);
+        $(".track_volunteer_hours").css("display", "flex");
+        $(".track_volunteer_hours").fadeIn(500, function () {
+          $(".volunteer_hours_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".digital_check_content").animate(
@@ -423,25 +455,29 @@ $(document).ready(function () {
   });
 
   $(".mass_text_header").on("click", function () {
-    $(this).addClass("active");
-    $(".digital_check_header").removeClass("active");
-    $(".volunteer_hours_header").removeClass("active");
-    $(".digital_waivers_header").removeClass("active");
+    let transition = $(".control_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".digital_checkout_images").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".control_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = controlFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".image-81").fadeIn(500);
-      }, 500);
-    });
-    $(".track_volunteer_hours").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".image-81").fadeIn(500);
-      }, 500);
-    });
-    $(".digital_waiver_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".image-81").fadeIn(500);
-      }, 500);
+        $(".image-81").css("display", "flex");
+        $(".image-81").fadeIn(500, function () {
+          $(".mass_text_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".volunteer_hours_content").animate(
@@ -486,25 +522,29 @@ $(document).ready(function () {
     );
   });
   $(".digital_waivers_header").on("click", function () {
-    $(this).addClass("active");
-    $(".digital_check_header").removeClass("active");
-    $(".volunteer_hours_header").removeClass("active");
-    $(".mass_text_header").removeClass("active");
+    let transition = $(".control_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".digital_checkout_images").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".control_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = controlFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".digital_waiver_image").fadeIn(500);
-      }, 500);
-    });
-    $(".track_volunteer_hours").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".digital_waiver_image").fadeIn(500);
-      }, 500);
-    });
-    $(".image-81").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".digital_waiver_image").fadeIn(500);
-      }, 500);
+        $(".digital_waiver_image").css("display", "flex");
+        $(".digital_waiver_image").fadeIn(500, function () {
+          $(".digital_waivers_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".volunteer_hours_content").animate(
@@ -553,25 +593,29 @@ $(document).ready(function () {
 
   $(".impact_update_header").addClass("active");
   $(".impact_update_header").on("click", function () {
-    $(this).addClass("active");
-    $(".analytics_header").removeClass("active");
-    $(".data_transfer_header").removeClass("active");
-    $(".volunteer_profiles_header").removeClass("active");
+    let transition = $(".inform_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".analytics_image").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".inform_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = informFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".inform_update_images").fadeIn(500);
-      }, 500);
-    });
-    $(".data_transfer_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".inform_update_images").fadeIn(500);
-      }, 500);
-    });
-    $(".vol_profiles_images").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".inform_update_images").fadeIn(500);
-      }, 500);
+        $(".inform_update_images").css("display", "flex");
+        $(".inform_update_images").fadeIn(500, function () {
+          $(".impact_update_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".analytics_content").animate(
@@ -617,25 +661,29 @@ $(document).ready(function () {
   });
 
   $(".analytics_header").on("click", function () {
-    $(this).addClass("active");
-    $(".impact_update_header").removeClass("active");
-    $(".data_transfer_header").removeClass("active");
-    $(".volunteer_profiles_header").removeClass("active");
+    let transition = $(".inform_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".inform_update_images").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".inform_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = informFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".analytics_image").fadeIn(500);
-      }, 500);
-    });
-    $(".data_transfer_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".analytics_image").fadeIn(500);
-      }, 500);
-    });
-    $(".vol_profiles_images").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".analytics_image").fadeIn(500);
-      }, 500);
+        $(".analytics_image").css("display", "flex");
+        $(".analytics_image").fadeIn(500, function () {
+          $(".analytics_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".impact_update_content").animate(
@@ -681,25 +729,29 @@ $(document).ready(function () {
   });
 
   $(".data_transfer_header").on("click", function () {
-    $(this).addClass("active");
-    $(".impact_update_header").removeClass("active");
-    $(".analytics_header").removeClass("active");
-    $(".volunteer_profiles_header").removeClass("active");
+    let transition = $(".inform_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".analytics_image").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".inform_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = informFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".data_transfer_image").fadeIn(500);
-      }, 500);
-    });
-    $(".inform_update_images").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".data_transfer_image").fadeIn(500);
-      }, 500);
-    });
-    $(".vol_profiles_images").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".data_transfer_image").fadeIn(500);
-      }, 500);
+        $(".data_transfer_image").css("display", "flex");
+        $(".data_transfer_image").fadeIn(500, function () {
+          $(".data_transfer_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".analytics_content").animate(
@@ -745,25 +797,29 @@ $(document).ready(function () {
   });
 
   $(".volunteer_profiles_header").on("click", function () {
-    $(this).addClass("active");
-    $(".impact_update_header").removeClass("active");
-    $(".analytics_header").removeClass("active");
-    $(".data_transfer_header").removeClass("active");
+    let transition = $(".inform_section").find(".transitionActive");
+    if (transition.length > 0) {
+      return;
+    }
 
-    $(".analytics_image").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".inform_section").find(".active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = informFindFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".vol_profiles_images").fadeIn(500);
-      }, 500);
-    });
-    $(".inform_update_images").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".vol_profiles_images").fadeIn(500);
-      }, 500);
-    });
-    $(".data_transfer_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".vol_profiles_images").fadeIn(500);
-      }, 500);
+        $(".vol_profiles_images").css("display", "flex");
+        $(".vol_profiles_images").fadeIn(500, function () {
+          $(".volunteer_profiles_header").removeClass("transitionActive");
+        });
+      }, 450);
     });
 
     $(".analytics_content").animate(
