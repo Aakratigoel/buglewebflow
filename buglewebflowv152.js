@@ -211,7 +211,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        // $(".event_calendar_image").css("display", "flex");
+        $(".event_calendar_image").css("display", "flex");
         $(".event_calendar_image").fadeIn(fadeInDuration, function () {
           $(".container-53").removeClass("transition");
           $(".event_feature_header").removeClass("transitionActive");
@@ -280,7 +280,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        // $(".volunteer_shifts_image").css("display", "flex");
+        $(".volunteer_shifts_image").css("display", "flex");
         $(".volunteer_shifts_image").fadeIn(fadeInDuration, function () {
           $(".container-53").removeClass("transition");
           $(".shift_feature_header").removeClass("transitionActive");
