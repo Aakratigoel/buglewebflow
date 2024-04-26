@@ -424,7 +424,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        // $(".track_volunteer_hours").css("display", "flex");
+        $(".track_volunteer_hours").css("display", "flex");
         $(".track_volunteer_hours").fadeIn(fadeInDuration, function () {
           $(".container-54").removeClass("transition");
           $(".volunteer_hours_header").removeClass("transitionActive");
@@ -495,7 +495,7 @@ $(document).ready(function () {
 
     $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        // $(".image-81").css("display", "flex");
+        $(".image-81").css("display", "flex");
         $(".image-81").fadeIn(fadeInDuration, function () {
           $(".container-54").removeClass("transition");
           $(".mass_text_header").removeClass("transitionActive");
