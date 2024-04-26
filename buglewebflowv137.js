@@ -23,33 +23,22 @@ $(document).ready(function () {
     let transition = $(".organize_section").find(".transitionActive");
     if (transition.length > 0) {
       return;
-    } else {
-      $(this).addClass("transitionActive");
     }
 
+    //find current active header and remove active status
+    let activeHeader = $(".organize_section").find("active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
     $(this).addClass("active");
-    $(".register_feature_header").removeClass("active");
-    $(".event_feature_header").removeClass("active");
-    $(".shift_feature_header").removeClass("active");
 
-    $(".event_registration_image").fadeOut(200, function () {
-      setTimeout(function () {
-        $(".enterprise_account").fadeIn(500, function () {
-          $(".acc_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
+    // for current active image fade out and fade in new
+    let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(".event_calendar_image").fadeOut(200, function () {
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".enterprise_account").fadeIn(500, function () {
-          $(".acc_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-
-    $(".volunteer_shifts_image").fadeOut(200, function () {
-      setTimeout(function () {
+        $(".enterprise_account").css("display", "flex");
         $(".enterprise_account").fadeIn(500, function () {
           $(".acc_feature_header").removeClass("transitionActive");
         });
@@ -170,30 +159,22 @@ $(document).ready(function () {
     let transition = $(".organize_section").find(".transitionActive");
     if (transition.length > 0) {
       return;
-    } else {
-      $(this).addClass("transitionActive");
     }
-    $(this).addClass("active");
-    $(".acc_feature_header").removeClass("active");
-    $(".register_feature_header").removeClass("active");
-    $(".shift_feature_header").removeClass("active");
 
-    $(".enterprise_account").fadeOut(500, function () {
+    //find current active header and remove active status
+    let activeHeader = $(".organize_section").find("active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = findFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".event_calendar_image").fadeIn(500, function () {
-          $(".event_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".event_registration_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_calendar_image").fadeIn(500, function () {
-          $(".event_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".volunteer_shifts_image").fadeOut(500, function () {
-      setTimeout(function () {
+        $(".event_calendar_image").css("display", "flex");
         $(".event_calendar_image").fadeIn(500, function () {
           $(".event_feature_header").removeClass("transitionActive");
         });
@@ -246,31 +227,22 @@ $(document).ready(function () {
     let transition = $(".organize_section").find(".transitionActive");
     if (transition.length > 0) {
       return;
-    } else {
-      $(this).addClass("transitionActive");
     }
 
-    $(this).addClass("active");
-    $(".acc_feature_header").removeClass("active");
-    $(".event_feature_header").removeClass("active");
-    $(".register_feature_header").removeClass("active");
+    //find current active header and remove active status
+    let activeHeader = $(".organize_section").find("active");
+    activeHeader.removeClass("active");
 
-    $(".enterprise_account").fadeOut(500, function () {
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
+    $(this).addClass("active");
+
+    // for current active image fade out and fade in new
+    let fadeOutSelector = findFadeOutSelector(activeHeader);
+
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
-        $(".volunteer_shifts_image").fadeIn(500, function () {
-          $(".shift_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".event_registration_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".volunteer_shifts_image").fadeIn(500, function () {
-          $(".shift_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".event_calendar_image").fadeOut(500, function () {
-      setTimeout(function () {
+        $(".volunteer_shifts_image").css("display", "flex");
         $(".volunteer_shifts_image").fadeIn(500, function () {
           $(".shift_feature_header").removeClass("transitionActive");
         });
