@@ -58,6 +58,7 @@ $(document).ready(function () {
     if (transition.length > 0) {
       return;
     }
+    $(".container-53").addClass("transition");
 
     //find current active header and remove active status
     let activeHeader = $(".organize_section").find(".active");
@@ -126,7 +127,7 @@ $(document).ready(function () {
     if (transition.length > 0) {
       return;
     }
-
+    $(".container-53").addClass("transition");
     //find current active header and remove active status
     let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
@@ -194,7 +195,7 @@ $(document).ready(function () {
     if (transition.length > 0) {
       return;
     }
-
+    $(".container-53").addClass("transition");
     //find current active header and remove active status
     let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
@@ -262,7 +263,7 @@ $(document).ready(function () {
     if (transition.length > 0) {
       return;
     }
-
+    $(".container-53").addClass("transition");
     //find current active header and remove active status
     let activeHeader = $(".organize_section").find(".active");
     activeHeader.removeClass("active");
