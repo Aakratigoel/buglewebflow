@@ -6,6 +6,18 @@ $(document).ready(function () {
 
   /* Organize section links */
 
+  const findFadeOutSelector = function (activeHeader) {
+    if (activeHeader.hasClass("acc_feature_header")) {
+      return ".enterprise_account";
+    } else if ("register_feature_header") {
+      return ".event_registration_image";
+    } else if (activeHeader.hasClass("event_feature_header")) {
+      return ".event_calendar_image";
+    } else if (activeHeader.hasClass("shift_feature_header")) {
+      return ".volunteer_shifts_image";
+    }
+  };
+
   $(".acc_feature_header").addClass("active");
   $(".acc_feature_header").on("click", function () {
     let transition = $(".organize_section").find(".transitionActive");
@@ -90,33 +102,22 @@ $(document).ready(function () {
     let transition = $(".organize_section").find(".transitionActive");
     if (transition.length > 0) {
       return;
-    } else {
-      $(this).addClass("transitionActive");
     }
 
+    //find current active header and remove active status
+    let activeHeader = $(".organize_section").find("active");
+    activeHeader.removeClass("active");
+
+    // setting registration as transitioning and new active
+    $(this).addClass("transitionActive");
     $(this).addClass("active");
 
-    $(".acc_feature_header").removeClass("active");
-    $(".event_feature_header").removeClass("active");
-    $(".shift_feature_header").removeClass("active");
+    // for current active image fade out and fade in new
+    let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(".enterprise_account").fadeOut(500, function () {
+    $(fadeOutSelector).fadeOut(500, function () {
       setTimeout(function () {
         $(".event_registration_image").css("display", "flex");
-        $(".event_registration_image").fadeIn(500, function () {
-          $(".register_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".event_calendar_image").fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_registration_image").fadeIn(500, function () {
-          $(".register_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
-    $(".volunteer_shifts_image").fadeOut(500, function () {
-      setTimeout(function () {
         $(".event_registration_image").fadeIn(500, function () {
           $(".register_feature_header").removeClass("transitionActive");
         });
