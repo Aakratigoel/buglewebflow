@@ -60,14 +60,18 @@ $(document).ready(function () {
     // for current active image fade out and fade in new
     let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(fadeOutSelector).fadeOut(500, function () {
-      setTimeout(function () {
-        $(".enterprise_account").css("display", "flex");
-        $(".enterprise_account").fadeIn(500, function () {
-          $(".acc_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
+    $(fadeOutSelector)
+      .css("visibility", "hidden")
+      .fadeOut(500, function () {
+        setTimeout(function () {
+          $(".enterprise_account").css("display", "flex");
+          $(".enterprise_account")
+            .css("visibility", "visible")
+            .fadeIn(500, function () {
+              $(".acc_feature_header").removeClass("transitionActive");
+            });
+        }, 450);
+      });
 
     $(".register_link_content").animate(
       {
@@ -128,14 +132,18 @@ $(document).ready(function () {
     // for current active image fade out and fade in new
     let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(fadeOutSelector).fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_registration_image").css("display", "flex");
-        $(".event_registration_image").fadeIn(500, function () {
-          $(".register_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
+    $(fadeOutSelector)
+      .css("visibility", "hidden")
+      .fadeOut(500, function () {
+        setTimeout(function () {
+          $(".event_registration_image").css("display", "flex");
+          $(".event_registration_image")
+            .css("visibility", "visible")
+            .fadeIn(500, function () {
+              $(".register_feature_header").removeClass("transitionActive");
+            });
+        }, 450);
+      });
 
     $(".acc_link_content").animate(
       {
@@ -196,14 +204,18 @@ $(document).ready(function () {
     // for current active image fade out and fade in new
     let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(fadeOutSelector).fadeOut(500, function () {
-      setTimeout(function () {
-        $(".event_calendar_image").css("display", "flex");
-        $(".event_calendar_image").fadeIn(500, function () {
-          $(".event_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
+    $(fadeOutSelector)
+      .css("visibility", "hidden")
+      .fadeOut(500, function () {
+        setTimeout(function () {
+          $(".event_calendar_image").css("display", "flex");
+          $(".event_calendar_image")
+            .css("visibility", "visible")
+            .fadeIn(500, function () {
+              $(".event_feature_header").removeClass("transitionActive");
+            });
+        }, 450);
+      });
 
     $(".register_link_content").animate(
       {
@@ -264,14 +276,18 @@ $(document).ready(function () {
     // for current active image fade out and fade in new
     let fadeOutSelector = findFadeOutSelector(activeHeader);
 
-    $(fadeOutSelector).fadeOut(500, function () {
-      setTimeout(function () {
-        $(".volunteer_shifts_image").css("display", "flex");
-        $(".volunteer_shifts_image").fadeIn(500, function () {
-          $(".shift_feature_header").removeClass("transitionActive");
-        });
-      }, 450);
-    });
+    $(fadeOutSelector)
+      .css("visiblity", "hidden")
+      .fadeOut(500, function () {
+        setTimeout(function () {
+          $(".volunteer_shifts_image").css("display", "flex");
+          $(".volunteer_shifts_image")
+            .css("visibility", "visible")
+            .fadeIn(500, function () {
+              $(".shift_feature_header").removeClass("transitionActive");
+            });
+        }, 450);
+      });
 
     $(".register_link_content").animate(
       {
