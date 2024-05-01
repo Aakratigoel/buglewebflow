@@ -258,6 +258,7 @@
   .eventcontent_para {
     margin-top: 8px;
     margin-bottom: 16px !important;
+    height: auto;
   }
   .organize_section {
     padding: 80px 30px 100px 30px;
